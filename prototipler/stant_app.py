@@ -48,21 +48,29 @@ KENDI_IMLECI = {"p_neon_kilic", "p_maske"}  # parmağı kendisi çiziyor; oyun d
 UCLAR = (8,)  # yalnız oyunu oynatan işaret parmağı ucu (Enes 2026-10-13: tek parmak izi)
 
 
+def _az_hareket() -> bool:
+    """REDUCED_MOTION veya AZ_HAREKET=1 ortam değişkeni kontrolü."""
+    return os.environ.get("REDUCED_MOTION", "").lower() in ("1", "true", "yes") or os.environ.get("AZ_HAREKET", "").lower() in ("1", "true", "yes")
+
+
 def parmak_izi(kare: np.ndarray, algi: Any, izler: List[list], simdi: float) -> None:
-    """Algılanan her elin işaret parmağı ucu: neon nokta + kısa kuyruklu iz (Enes 2026-10-13)."""
+    """Algılanan her elin işaret parmağı ucu: neon nokta + yumuşak ışıltılı iz."""
     eller = [e for e in (algi.eller or []) if len(e) > 20]
     if not eller:
         izler.clear()
         return
     katman = np.zeros_like(kare)
     yeni: List[list] = []
+    az = _az_hareket()
+    max_iz = 3 if az else 7
+    sure_limit = 0.12 if az else 0.25
     for el in eller:
         ux, uy = px(el, 8)
         iz = min((z for z in izler if all(z is not y for y in yeni)),
                  key=lambda z: math.hypot(z[-1][0] - ux, z[-1][1] - uy), default=None)
         if iz is None or math.hypot(iz[-1][0] - ux, iz[-1][1] - uy) > 220:
             iz = []
-        iz = [p for p in iz if simdi - p[2] <= 0.25][-7:] + [(ux, uy, simdi)]
+        iz = [p for p in iz if simdi - p[2] <= sure_limit][-max_iz:] + [(ux, uy, simdi)]
         yeni.append(iz)
         for k in range(1, len(iz)):
             cv2.line(katman, tuple(map(int, iz[k - 1][:2])), tuple(map(int, iz[k][:2])), CAMGOBEGI, 2 + 2 * k, cv2.LINE_AA)
@@ -71,7 +79,10 @@ def parmak_izi(kare: np.ndarray, algi: Any, izler: List[list], simdi: float) -> 
             cv2.circle(katman, (x, y), 13 if i == 8 else 7, CAMGOBEGI, -1, cv2.LINE_AA)
             cv2.circle(kare, (x, y), 6 if i == 8 else 3, BEYAZ, -1, cv2.LINE_AA)
     izler[:] = yeni
-    parilti(kare, katman, guc=1.6, sigma=3.0)
+    if not az:
+        parilti(kare, katman, guc=1.6, sigma=3.0)
+    else:
+        cv2.addWeighted(kare, 1.0, katman, 0.7, 0, dst=kare)
 
 
 # ---------------------------------------------------------------- kart ikonları (prosedürel, emoji yok)
@@ -312,6 +323,7 @@ class AnaMenu:
         self.sayfa: int = 0
         self.sayfa_hedef: Optional[str] = None
         self.sayfa_sure: float = 0.0
+        self.sayfa_t: float = 0.0
 
     @property
     def sayfa_sayisi(self) -> int:
@@ -324,11 +336,12 @@ class AnaMenu:
         self.sure = 0.0
         self.sayfa_hedef = None
         self.sayfa_sure = 0.0
+        self.sayfa_t = 0.0
 
     def kartlar(self) -> List[Tuple[int, int, int, int]]:
-        w, h = 320, 170
-        ara_x, ara_y = 24, 18
-        top = 144
+        w, h = 320, 154
+        ara_x, ara_y = 24, 16
+        top = 134
         x0 = (G - (3 * w + 2 * ara_x)) // 2
         kutular = []
         for r in range(3):
@@ -339,12 +352,14 @@ class AnaMenu:
         return kutular
 
     def _nav_kutulari(self) -> Tuple[Tuple[int, int, int, int], Tuple[int, int, int, int]]:
-        y0, y1 = Y - 44, Y - 10
+        y0, y1 = Y - 48, Y - 12
         return (60, y0, 260, y1), (G - 260, y0, G - 60, y1)
 
     def isle(self, kare: np.ndarray, algi: Any, simdi: float, dt: float) -> Optional[int]:
         """Seçim tamamlanırsa global kart indeksini döndürür."""
         cv2.addWeighted(kare, 0.45, np.zeros_like(kare), 0.55, 0, dst=kare)
+        if self.sayfa_t <= 0.0:
+            self.sayfa_t = simdi
         self.imlecler = []
         for el in algi.eller or []:
             try:
@@ -388,37 +403,61 @@ class AnaMenu:
                 adim = -1 if self.sayfa_hedef == "geri" else 1
                 self.sayfa_degistir(adim)
 
-        yazi_koy(kare, "BİR OYUN SEÇ", G // 2, 44, 44, renk=SARI, hiza="orta",
-                 olcek=1.0 + 0.03 * math.sin(simdi * 3.0))
-        yazi_koy(kare, "1-9 ile seç veya elini kartın üstünde tut", G // 2, 102, 22, renk=BEYAZ, hiza="orta")
+        az = _az_hareket()
+        yazi_koy(kare, "BİR OYUN SEÇ", G // 2, 38, 42, renk=SARI, hiza="orta",
+                 olcek=1.0 if az else (1.0 + 0.03 * math.sin(simdi * 3.0)))
+        yazi_koy(kare, "1-9 ile seç veya elini kartın üstünde tut", G // 2, 92, 20, renk=BEYAZ, hiza="orta")
 
+        w_card = kartlar[0][2] - kartlar[0][0]
         for local_i, (x0, y0, x1, y1) in enumerate(kartlar):
             global_i = self.sayfa * 9 + local_i
+            if not az:
+                stagger = local_i * 0.025
+                dt_giris = max(0.0, simdi - self.sayfa_t - stagger)
+                t_giris = min(1.0, dt_giris / 0.22)
+                ease = 1.0 - (1.0 - t_giris) ** 3
+                giris_dy = int(10 * (1.0 - ease))
+                bob = 0 if global_i in self.kapali else int(6 * math.sin(simdi * 2.0 + local_i * 0.9))
+                yuk = bob + giris_dy
+            else:
+                yuk = 0
+
             if global_i < len(self.adlar):
                 secili = global_i == self.uzerinde
+                progress = min(1.0, self.sure / SECIM_SN) if secili else 0.0
                 renk = RENKLER[global_i % len(RENKLER)]
-                yuk = int(6 * math.sin(simdi * 2.0 + local_i * 0.9))
                 if global_i in self.kapali:
-                    renk, yuk = tuple(int(c * 0.3) for c in renk), 0
-                buyu = 6 if secili else 0
-                panel(kare, x0 - buyu, y0 + yuk - buyu, x1 + buyu, y1 + yuk + buyu, renk=(22, 18, 30), opak=0.82)
-                cv2.rectangle(kare, (x0 - buyu, y0 + yuk - buyu), (x1 + buyu, y1 + yuk + buyu), renk,
-                              4 if secili else 2, cv2.LINE_AA)
+                    renk = tuple(int(c * 0.3) for c in renk)
+                buyu = 0 if az else (int(3 + 3 * progress) if secili else 0)
+                panel(kare, x0 - buyu, y0 + yuk - buyu, x1 + buyu, y1 + yuk + buyu, renk=(22, 18, 30), opak=0.86 if secili else 0.82)
+                cv2.rectangle(kare, (x0 - buyu, y0 + yuk - buyu), (x1 + buyu, y1 + yuk + buyu),
+                              YESIL if secili else renk, 4 if secili else 2, cv2.LINE_AA)
                 cx = (x0 + x1) // 2
-                yazi_koy(kare, str(local_i + 1), cx, y0 + yuk + 6, 20, renk=renk, hiza="orta")
+                yazi_koy(kare, str(local_i + 1), cx, y0 + yuk + 5, 18, renk=renk, hiza="orta")
                 if global_i not in self.kapali:
-                    bindir_merkez(kare, self.ikonlar[global_i], cx, y0 + yuk + 76, boyut=72)
+                    bindir_merkez(kare, self.ikonlar[global_i], cx, y0 + yuk + 62, boyut=58)
                 satirlar = self.adlar[global_i].split(" ", 1)
-                for j, satir in enumerate(satirlar):
-                    yazi_koy(kare, satir, cx, y0 + yuk + 116 + j * 24, 22, renk=renk, hiza="orta")
+                if len(satirlar) > 1:
+                    yazi_koy(kare, satirlar[0], cx, y0 + yuk + 98, 20, renk=renk, hiza="orta")
+                    yazi_koy(kare, satirlar[1], cx, y0 + yuk + 122, 20, renk=renk, hiza="orta")
+                else:
+                    yazi_koy(kare, satirlar[0], cx, y0 + yuk + 108, 20, renk=renk, hiza="orta")
                 if secili:
-                    ck.halka(kare, cx, y0 + yuk + 76, min(1.0, self.sure / SECIM_SN), r=40, renk=YESIL, kalinlik=4)
+                    ck.halka(kare, cx, y0 + yuk + 62, progress, r=36, renk=YESIL, kalinlik=4)
+                    bar_w = int((w_card - 28) * progress)
+                    if bar_w > 0:
+                        cv2.line(kare, (x0 - buyu + 14, y1 + yuk + buyu - 5),
+                                 (x0 - buyu + 14 + bar_w, y1 + yuk + buyu - 5), YESIL, 3, cv2.LINE_AA)
+                    if not az:
+                        parlaklik = int(30 * (1.0 + math.sin(simdi * 8.0)))
+                        cv2.rectangle(kare, (x0 - buyu - 1, y0 + yuk - buyu - 1), (x1 + buyu + 1, y1 + yuk + buyu + 1),
+                                      (0, min(255, 200 + parlaklik), 0), 1, cv2.LINE_AA)
             else:
                 panel(kare, x0, y0, x1, y1, renk=(16, 14, 22), opak=0.4)
                 cv2.rectangle(kare, (x0, y0), (x1, y1), (45, 40, 55), 1, cv2.LINE_AA)
 
         if self.sayfa_sayisi > 1:
-            yazi_koy(kare, f"Sayfa {self.sayfa + 1}/{self.sayfa_sayisi}", G // 2, Y - 34, 22, renk=BEYAZ, hiza="orta")
+            yazi_koy(kare, f"Sayfa {self.sayfa + 1}/{self.sayfa_sayisi}", G // 2, Y - 42, 20, renk=BEYAZ, hiza="orta")
             kutu_geri, kutu_ileri = self._nav_kutulari()
             g_sec = self.sayfa_hedef == "geri"
             i_sec = self.sayfa_hedef == "ileri"
@@ -619,8 +658,9 @@ class StantUygulama:
         gecen = simdi - self.gecis_t
         if not 0.0 <= gecen < 1.7:
             return
+        az = _az_hareket()
         opak = min(1.0, (1.7 - gecen) / 0.4)
-        kayma = int(60 * max(0.0, 1.0 - gecen / 0.35) ** 2)
+        kayma = 0 if az else int(60 * max(0.0, 1.0 - gecen / 0.35) ** 2)
         y0 = Y // 2 - 80 + kayma
         panel(kare, 0, y0, G, y0 + 160, renk=(14, 12, 22), opak=0.8 * opak)
         renk = RENKLER[self.etkin % len(RENKLER)] if self.etkin is not None else SARI

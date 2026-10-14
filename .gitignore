@@ -1,9 +1,49 @@
+# Virtual environment
 app/.venv/
+.venv/
+env/
+venv/
+
+# Python bytecode & cache
 __pycache__/
+*.py[cod]
+*$py.class
 *.pyc
+
+# Pytest & test artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Logs, metrics and temporary runtime outputs
 *.log
 *.tsv
-.pytest_cache/
+hata.txt
+stand_hata.txt
+
+# Model & calibration runtime caches
 prototipler/modeller/quickdraw_cache/
 stand/duvar/
+
+# IDE & Editor artifacts
 .omc/
+.vscode/
+.idea/
+
+# Local personal recordings and test dumps (never commit visitor captures)
+kayitlar/
+recordings/
+captures/
+calismalar/
+*.mp4
+*.avi
+*.mkv
+*.mov
+*.webm
+*.wav
+/tmp_test/
