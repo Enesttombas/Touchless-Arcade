@@ -63,7 +63,7 @@ Uygulama doğrudan Python kaynak kodundan çalışır (derlenmiş EXE zorunlu de
   ```cmd
   app\.venv\Scripts\python.exe prototipler\stant_app.py
   ```
-- *(İsteğe bağlı)* Daha önce derlenmiş `Stant.exe` mevcutsa onunla da açılabilir.
+Bu sürümün güncel menüsünü ve efektlerini `BASLAT.bat` üzerinden çalıştırın.
 
 ### Kontroller
 
@@ -140,7 +140,7 @@ The application runs directly from Python source (standalone executable is optio
   ```cmd
   app\.venv\Scripts\python.exe prototipler\stant_app.py
   ```
-- *(Optional)* If pre-compiled `Stant.exe` is present, it can be launched directly.
+Use `BASLAT.bat` to run the current menu and effects from source.
 
 ### Controls
 

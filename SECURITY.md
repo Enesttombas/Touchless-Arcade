@@ -21,5 +21,5 @@ If you discover a security issue or privacy concern (such as unintended frame pe
 
 ## Privacy Architecture / Gizlilik Mimarisi
 
-- **Zero Cloud Footprint**: Perception inference (MediaPipe and ONNX) executes 100% locally on CPU without remote telemetry or cloud calls.
+- **Local Inference**: The application runs the bundled MediaPipe and ONNX models locally on CPU and does not implement visitor video uploads. See the README for the optional operator-configured LAN camera bridge.
 - **In-Memory Buffering**: Camera frames are processed on-the-fly and immediately overwritten or discarded. No visitor face biometric embeddings or video snippets are saved to disk in standard operation.

@@ -2,7 +2,7 @@
 
 This document outlines the intellectual property, model assets, open-source libraries, and licenses utilized in **Stant Kamera Oyunları**.
 
-The root [MIT License](LICENSE) applies to the original project source code only. Third-party bundled models, training datasets, and runtime packages are governed separately by their respective licenses as detailed below.
+The root [MIT License](LICENSE) applies to the original project source code and the locally trained sketch ONNX artifact. Third-party bundled models, training datasets, and runtime packages are governed separately by their respective licenses as detailed below.
 
 ---
 
@@ -16,11 +16,18 @@ The application bundles three binary perception task models under `app/modeller/
 | `app/modeller/gesture_recognizer.task` | `97952348cf6a6a4915c2ea1496b4b37ebabc50cbbf80571435643c455f2b0482` | 21 hand landmarks & gesture recognition |
 | `app/modeller/pose_landmarker_lite.task` | `59929e1d1ee95287735ddd833b19cf4ac46d29bc7afddbbf6753c459690d574a` | 33 full-body pose landmarks (lite model) |
 
-### Licensing & Provenance Status:
-- **MediaPipe Software Runtime**: Apache License 2.0 (verified via [github.com/google-ai-edge/mediapipe/blob/master/LICENSE](https://github.com/google-ai-edge/mediapipe/blob/master/LICENSE)). Copyright (c) Google LLC.
-- **Artifact-Specific Weight Verification**: *Pending Verification*.
-  > [!IMPORTANT]
-  > The Apache 2.0 license of the MediaPipe source code repository does not automatically certify the standalone redistribution license or training dataset terms of the compiled binary `.task` neural network weights. Because exact artifact-specific licensing records and dataset provenance are not documented locally within this checkout, artifact verification remains **pending** prior to any future public open-source redistribution.
+### Licensing & Provenance Status (verified 2026-10-15)
+- **Runtime and bundled task models**: Apache License 2.0; Copyright Google LLC. Full license: [`licenses/Apache-2.0.txt`](licenses/Apache-2.0.txt). The original project MIT license does not replace these terms.
+- **Publisher statement**: [MediaPipe maintainer response, 2026-10-05](https://github.com/google-ai-edge/mediapipe/issues/6355) confirms the source and models are Apache 2.0 unless otherwise noted. Official [Face Mesh V2 model card](https://storage.googleapis.com/mediapipe-assets/Model%20Card%20MediaPipe%20Face%20Mesh%20V2.pdf) and [BlazePose GHUM 3D model card](https://storage.googleapis.com/mediapipe-assets/Model%20Card%20BlazePose%20GHUM%203D.pdf) also identify Apache 2.0.
+- **Versioned publisher artifacts**: Each local file's MD5 matches the ETag supplied by the following official Google Cloud Storage object; local SHA256 pins are listed above. These are version `1`, not moving `latest` links.
+
+| Artifact | Official versioned download | Matching MD5 |
+|---|---|---|
+| Face Landmarker | [float16/1](https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task) | `b0e7274907a1644404fef66b28dd6d85` |
+| Gesture Recognizer | [float16/1](https://storage.googleapis.com/mediapipe-models/gesture_recognizer/gesture_recognizer/float16/1/gesture_recognizer.task) | `4dbf485c473207651100a1895343f35a` |
+| Pose Landmarker Lite | [float16/1](https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_lite/float16/1/pose_landmarker_lite.task) | `04a75ddf7c811ac7a1a4523266dd7d88` |
+
+The bundled task files are unmodified. Retain these attribution and license notices when redistributing them. Publisher training data and build attestations are separate from this license verification; this record does not claim a signed model SBOM.
 
 ---
 
@@ -31,6 +38,8 @@ The application bundles a local sketch recognition neural network under `prototi
 | Bundled Artifact Name | SHA256 Checksum | Purpose |
 |---|---|---|
 | `prototipler/modeller/ciz_tanima.onnx` | `e56db75539bd4a5a638f841cb298d0548f7ff9745d846a368f3de5116a738574` | 25-category air-drawing sketch classification |
+
+The locally trained `ciz_tanima.onnx` artifact is released under the project MIT license, with the following training-data attribution retained.
 
 ### Dataset Attribution:
 - **Upstream Source**: The Quick, Draw! Dataset by Google Creative Lab ([github.com/googlecreativelab/quickdraw-dataset](https://github.com/googlecreativelab/quickdraw-dataset)).
