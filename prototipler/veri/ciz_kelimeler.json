@@ -1,0 +1,15 @@
+[
+  {"en":"sun","tr":"güneş"}, {"en":"house","tr":"ev"},
+  {"en":"fish","tr":"balık"}, {"en":"key","tr":"anahtar"},
+  {"en":"star","tr":"yıldız"}, {"en":"tree","tr":"ağaç"},
+  {"en":"car","tr":"araba"}, {"en":"cat","tr":"kedi"},
+  {"en":"umbrella","tr":"şemsiye"}, {"en":"clock","tr":"saat"},
+  {"en":"eyeglasses","tr":"gözlük"}, {"en":"cloud","tr":"bulut"},
+  {"en":"apple","tr":"elma"}, {"en":"banana","tr":"muz"},
+  {"en":"bridge","tr":"köprü"}, {"en":"mountain","tr":"dağ"},
+  {"en":"flower","tr":"çiçek"}, {"en":"bicycle","tr":"bisiklet"},
+  {"en":"guitar","tr":"gitar"}, {"en":"airplane","tr":"uçak"},
+  {"en":"snake","tr":"yılan"}, {"en":"spider","tr":"örümcek"},
+  {"en":"ice cream","tr":"dondurma"}, {"en":"moon","tr":"ay"},
+  {"en":"lightning","tr":"şimşek"}
+]

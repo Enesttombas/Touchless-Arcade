@@ -1,0 +1,155 @@
+[
+  {
+    "kategori": "sun",
+    "url": "https://storage.googleapis.com/quickdraw_dataset/full/numpy_bitmap/sun.npy",
+    "cache": true,
+    "byte": 0,
+    "satir": 21200
+  },
+  {
+    "kategori": "house",
+    "url": "https://storage.googleapis.com/quickdraw_dataset/full/numpy_bitmap/house.npy",
+    "cache": true,
+    "byte": 0,
+    "satir": 21200
+  },
+  {
+    "kategori": "fish",
+    "url": "https://storage.googleapis.com/quickdraw_dataset/full/numpy_bitmap/fish.npy",
+    "cache": true,
+    "byte": 0,
+    "satir": 21200
+  },
+  {
+    "kategori": "key",
+    "url": "https://storage.googleapis.com/quickdraw_dataset/full/numpy_bitmap/key.npy",
+    "byte": 16621312,
+    "satir": 21200
+  },
+  {
+    "kategori": "star",
+    "url": "https://storage.googleapis.com/quickdraw_dataset/full/numpy_bitmap/star.npy",
+    "byte": 16621312,
+    "satir": 21200
+  },
+  {
+    "kategori": "tree",
+    "url": "https://storage.googleapis.com/quickdraw_dataset/full/numpy_bitmap/tree.npy",
+    "byte": 16621312,
+    "satir": 21200
+  },
+  {
+    "kategori": "car",
+    "url": "https://storage.googleapis.com/quickdraw_dataset/full/numpy_bitmap/car.npy",
+    "byte": 16621312,
+    "satir": 21200
+  },
+  {
+    "kategori": "cat",
+    "url": "https://storage.googleapis.com/quickdraw_dataset/full/numpy_bitmap/cat.npy",
+    "byte": 16621312,
+    "satir": 21200
+  },
+  {
+    "kategori": "umbrella",
+    "url": "https://storage.googleapis.com/quickdraw_dataset/full/numpy_bitmap/umbrella.npy",
+    "byte": 16621312,
+    "satir": 21200
+  },
+  {
+    "kategori": "clock",
+    "url": "https://storage.googleapis.com/quickdraw_dataset/full/numpy_bitmap/clock.npy",
+    "byte": 16621312,
+    "satir": 21200
+  },
+  {
+    "kategori": "eyeglasses",
+    "url": "https://storage.googleapis.com/quickdraw_dataset/full/numpy_bitmap/eyeglasses.npy",
+    "byte": 16621312,
+    "satir": 21200
+  },
+  {
+    "kategori": "cloud",
+    "url": "https://storage.googleapis.com/quickdraw_dataset/full/numpy_bitmap/cloud.npy",
+    "byte": 16621312,
+    "satir": 21200
+  },
+  {
+    "kategori": "apple",
+    "url": "https://storage.googleapis.com/quickdraw_dataset/full/numpy_bitmap/apple.npy",
+    "byte": 16621312,
+    "satir": 21200
+  },
+  {
+    "kategori": "banana",
+    "url": "https://storage.googleapis.com/quickdraw_dataset/full/numpy_bitmap/banana.npy",
+    "byte": 16621312,
+    "satir": 21200
+  },
+  {
+    "kategori": "bridge",
+    "url": "https://storage.googleapis.com/quickdraw_dataset/full/numpy_bitmap/bridge.npy",
+    "byte": 16621312,
+    "satir": 21200
+  },
+  {
+    "kategori": "mountain",
+    "url": "https://storage.googleapis.com/quickdraw_dataset/full/numpy_bitmap/mountain.npy",
+    "byte": 16621312,
+    "satir": 21200
+  },
+  {
+    "kategori": "flower",
+    "url": "https://storage.googleapis.com/quickdraw_dataset/full/numpy_bitmap/flower.npy",
+    "byte": 16621312,
+    "satir": 21200
+  },
+  {
+    "kategori": "bicycle",
+    "url": "https://storage.googleapis.com/quickdraw_dataset/full/numpy_bitmap/bicycle.npy",
+    "byte": 16621312,
+    "satir": 21200
+  },
+  {
+    "kategori": "guitar",
+    "url": "https://storage.googleapis.com/quickdraw_dataset/full/numpy_bitmap/guitar.npy",
+    "byte": 16621312,
+    "satir": 21200
+  },
+  {
+    "kategori": "airplane",
+    "url": "https://storage.googleapis.com/quickdraw_dataset/full/numpy_bitmap/airplane.npy",
+    "byte": 16621312,
+    "satir": 21200
+  },
+  {
+    "kategori": "snake",
+    "url": "https://storage.googleapis.com/quickdraw_dataset/full/numpy_bitmap/snake.npy",
+    "byte": 16621312,
+    "satir": 21200
+  },
+  {
+    "kategori": "spider",
+    "url": "https://storage.googleapis.com/quickdraw_dataset/full/numpy_bitmap/spider.npy",
+    "byte": 16621312,
+    "satir": 21200
+  },
+  {
+    "kategori": "ice cream",
+    "url": "https://storage.googleapis.com/quickdraw_dataset/full/numpy_bitmap/ice%20cream.npy",
+    "byte": 16621312,
+    "satir": 21200
+  },
+  {
+    "kategori": "moon",
+    "url": "https://storage.googleapis.com/quickdraw_dataset/full/numpy_bitmap/moon.npy",
+    "byte": 16621312,
+    "satir": 21200
+  },
+  {
+    "kategori": "lightning",
+    "url": "https://storage.googleapis.com/quickdraw_dataset/full/numpy_bitmap/lightning.npy",
+    "byte": 16621312,
+    "satir": 21200
+  }
+]

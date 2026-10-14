@@ -1,0 +1,9 @@
+app/.venv/
+__pycache__/
+*.pyc
+*.log
+*.tsv
+.pytest_cache/
+prototipler/modeller/quickdraw_cache/
+stand/duvar/
+.omc/

@@ -1,0 +1,2239 @@
+{
+  "surum": 1,
+  "durum": "onayli",
+  "cumleler": [
+    {
+      "id": "c3-001",
+      "kelimeler": [
+        "Robot",
+        "çay",
+        "demledi."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "konu": "teknoloji"
+    },
+    {
+      "id": "c3-002",
+      "kelimeler": [
+        "Öğrenci",
+        "derse",
+        "yetişti."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "konu": "kampus"
+    },
+    {
+      "id": "c3-003",
+      "kelimeler": [
+        "Vapur",
+        "kıyıya",
+        "yanaştı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "konu": "istanbul"
+    },
+    {
+      "id": "c3-004",
+      "kelimeler": [
+        "Usta",
+        "çorbayı",
+        "karıştırdı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "konu": "yemek"
+    },
+    {
+      "id": "c3-005",
+      "kelimeler": [
+        "Hakem",
+        "düdüğü",
+        "çaldı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "konu": "spor"
+    },
+    {
+      "id": "c3-006",
+      "kelimeler": [
+        "Kedi",
+        "halıda",
+        "uyudu."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "konu": "gunluk"
+    },
+    {
+      "id": "c3-007",
+      "kelimeler": [
+        "Sunucu",
+        "veriyi",
+        "işledi."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "konu": "teknoloji"
+    },
+    {
+      "id": "c3-008",
+      "kelimeler": [
+        "Kütüphane",
+        "sabah",
+        "açıldı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "konu": "kampus"
+    },
+    {
+      "id": "c3-009",
+      "kelimeler": [
+        "Martı",
+        "simiti",
+        "yakaladı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "konu": "istanbul"
+    },
+    {
+      "id": "c3-010",
+      "kelimeler": [
+        "Aşçı",
+        "pilavı",
+        "pişirdi."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "konu": "yemek"
+    },
+    {
+      "id": "c3-011",
+      "kelimeler": [
+        "Koşucu",
+        "yarışı",
+        "bitirdi."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "konu": "spor"
+    },
+    {
+      "id": "c3-012",
+      "kelimeler": [
+        "Güneş",
+        "erkenden",
+        "doğdu."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "konu": "gunluk"
+    },
+    {
+      "id": "c3-013",
+      "kelimeler": [
+        "Yazılım",
+        "hatayı",
+        "ayıkladı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "konu": "teknoloji"
+    },
+    {
+      "id": "c3-014",
+      "kelimeler": [
+        "Profesör",
+        "notları",
+        "okudu."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "konu": "kampus"
+    },
+    {
+      "id": "c3-015",
+      "kelimeler": [
+        "Tramvay",
+        "durakta",
+        "bekledi."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "konu": "istanbul"
+    },
+    {
+      "id": "c3-016",
+      "kelimeler": [
+        "Garson",
+        "tatlıyı",
+        "getirdi."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "konu": "yemek"
+    },
+    {
+      "id": "c3-017",
+      "kelimeler": [
+        "Kaleci",
+        "şutu",
+        "kurtardı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "konu": "spor"
+    },
+    {
+      "id": "c3-018",
+      "kelimeler": [
+        "Çocuk",
+        "oyuncağını",
+        "aradı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "konu": "gunluk"
+    },
+    {
+      "id": "c3-019",
+      "kelimeler": [
+        "Sensör",
+        "hareketi",
+        "algıladı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "konu": "teknoloji"
+    },
+    {
+      "id": "c3-020",
+      "kelimeler": [
+        "Müdür",
+        "dilekçeyi",
+        "onayladı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "konu": "kampus"
+    },
+    {
+      "id": "c3-021",
+      "kelimeler": [
+        "Boğaz",
+        "akşam",
+        "ışıldadı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "konu": "istanbul"
+    },
+    {
+      "id": "c3-022",
+      "kelimeler": [
+        "Fırıncı",
+        "ekmeği",
+        "çıkardı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "konu": "yemek"
+    },
+    {
+      "id": "c3-023",
+      "kelimeler": [
+        "Yüzücü",
+        "havuza",
+        "atladı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "konu": "spor"
+    },
+    {
+      "id": "c3-024",
+      "kelimeler": [
+        "Kurye",
+        "paketi",
+        "ulaştırdı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "konu": "gunluk"
+    },
+    {
+      "id": "c3-025",
+      "kelimeler": [
+        "Ekran",
+        "aniden",
+        "karardı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "konu": "teknoloji"
+    },
+    {
+      "id": "c4-001",
+      "kelimeler": [
+        "Kedi",
+        "masadan",
+        "bardağı",
+        "düşürdü."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          1,
+          3
+        ]
+      ],
+      "konu": "gunluk"
+    },
+    {
+      "id": "c4-002",
+      "kelimeler": [
+        "Robot",
+        "taze",
+        "çay",
+        "demledi."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "konu": "teknoloji"
+    },
+    {
+      "id": "c4-003",
+      "kelimeler": [
+        "Öğrenci",
+        "bahçede",
+        "simit",
+        "yedi."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "konu": "kampus"
+    },
+    {
+      "id": "c4-004",
+      "kelimeler": [
+        "Vapur",
+        "boğazda",
+        "yavaşça",
+        "ilerledi."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          1,
+          3
+        ]
+      ],
+      "konu": "istanbul"
+    },
+    {
+      "id": "c4-005",
+      "kelimeler": [
+        "Usta",
+        "mutfakta",
+        "köfte",
+        "yaptı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "konu": "yemek"
+    },
+    {
+      "id": "c4-006",
+      "kelimeler": [
+        "Kaptan",
+        "sahada",
+        "topu",
+        "kazandı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          1,
+          3
+        ]
+      ],
+      "konu": "spor"
+    },
+    {
+      "id": "c4-007",
+      "kelimeler": [
+        "Komşu",
+        "sabah",
+        "kapıyı",
+        "tıkladı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          1,
+          3
+        ]
+      ],
+      "konu": "gunluk"
+    },
+    {
+      "id": "c4-008",
+      "kelimeler": [
+        "Mühendis",
+        "sisteme",
+        "kod",
+        "yazdı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "konu": "teknoloji"
+    },
+    {
+      "id": "c4-009",
+      "kelimeler": [
+        "Gençler",
+        "çimenlerde",
+        "birlikte",
+        "oturdu."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          1,
+          3
+        ]
+      ],
+      "konu": "kampus"
+    },
+    {
+      "id": "c4-010",
+      "kelimeler": [
+        "Martılar",
+        "gökyüzünde",
+        "neşeyle",
+        "uçuştu."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          1,
+          3
+        ]
+      ],
+      "konu": "istanbul"
+    },
+    {
+      "id": "c4-011",
+      "kelimeler": [
+        "Garson",
+        "masaya",
+        "su",
+        "getirdi."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "konu": "yemek"
+    },
+    {
+      "id": "c4-012",
+      "kelimeler": [
+        "Antrenör",
+        "kenardan",
+        "oyuncuyu",
+        "uyardı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          1,
+          3
+        ]
+      ],
+      "konu": "spor"
+    },
+    {
+      "id": "c4-013",
+      "kelimeler": [
+        "Bebek",
+        "odada",
+        "sessizce",
+        "uyudu."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          1,
+          3
+        ]
+      ],
+      "konu": "gunluk"
+    },
+    {
+      "id": "c4-014",
+      "kelimeler": [
+        "Sunucu",
+        "gece",
+        "veriyi",
+        "yedekledi."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          1,
+          3
+        ]
+      ],
+      "konu": "teknoloji"
+    },
+    {
+      "id": "c4-015",
+      "kelimeler": [
+        "Hoca",
+        "tahtaya",
+        "kuralı",
+        "yazdı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          1,
+          3
+        ]
+      ],
+      "konu": "kampus"
+    },
+    {
+      "id": "c4-016",
+      "kelimeler": [
+        "Turistler",
+        "meydanda",
+        "fotoğraf",
+        "çekti."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "konu": "istanbul"
+    },
+    {
+      "id": "c4-017",
+      "kelimeler": [
+        "Çocuk",
+        "tabaktaki",
+        "elmayı",
+        "yedi."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "konu": "yemek"
+    },
+    {
+      "id": "c4-018",
+      "kelimeler": [
+        "Hakem",
+        "sarı",
+        "kartı",
+        "gösterdi."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "konu": "spor"
+    },
+    {
+      "id": "c4-019",
+      "kelimeler": [
+        "Teyze",
+        "balkondan",
+        "halıyı",
+        "silkeledi."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          1,
+          3
+        ]
+      ],
+      "konu": "gunluk"
+    },
+    {
+      "id": "c4-020",
+      "kelimeler": [
+        "Kamera",
+        "salonda",
+        "yüzü",
+        "tanıdı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          1,
+          3
+        ]
+      ],
+      "konu": "teknoloji"
+    },
+    {
+      "id": "c4-021",
+      "kelimeler": [
+        "Kulüp",
+        "amfide",
+        "etkinlik",
+        "yaptı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "konu": "kampus"
+    },
+    {
+      "id": "c4-022",
+      "kelimeler": [
+        "Yolcular",
+        "iskelede",
+        "sabırla",
+        "bekledi."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          1,
+          3
+        ]
+      ],
+      "konu": "istanbul"
+    },
+    {
+      "id": "c4-023",
+      "kelimeler": [
+        "Aşçı",
+        "kazana",
+        "tuz",
+        "attı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "konu": "yemek"
+    },
+    {
+      "id": "c4-024",
+      "kelimeler": [
+        "Forvet",
+        "ceza",
+        "sahasında",
+        "düştü."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "konu": "spor"
+    },
+    {
+      "id": "c4-025",
+      "kelimeler": [
+        "Radyo",
+        "masada",
+        "şarkı",
+        "çaldı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "konu": "gunluk"
+    },
+    {
+      "id": "c4-026",
+      "kelimeler": [
+        "Yapay",
+        "zeka",
+        "soruyu",
+        "çözdü."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "konu": "teknoloji"
+    },
+    {
+      "id": "c4-027",
+      "kelimeler": [
+        "Arkadaşım",
+        "yüksek",
+        "not",
+        "aldı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "konu": "kampus"
+    },
+    {
+      "id": "c4-028",
+      "kelimeler": [
+        "Balıkçı",
+        "köprüde",
+        "balık",
+        "tuttu."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "konu": "istanbul"
+    },
+    {
+      "id": "c4-029",
+      "kelimeler": [
+        "Fırın",
+        "öğleden",
+        "sonra",
+        "kapandı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "konu": "yemek"
+    },
+    {
+      "id": "c4-030",
+      "kelimeler": [
+        "Takım",
+        "sahada",
+        "hücum",
+        "yaptı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "konu": "spor"
+    },
+    {
+      "id": "c4-031",
+      "kelimeler": [
+        "Kuşlar",
+        "balkona",
+        "sessizce",
+        "kondu."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          1,
+          3
+        ]
+      ],
+      "konu": "gunluk"
+    },
+    {
+      "id": "c4-032",
+      "kelimeler": [
+        "Telefon",
+        "yüksek",
+        "sesle",
+        "çaldı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "konu": "teknoloji"
+    },
+    {
+      "id": "c4-033",
+      "kelimeler": [
+        "Dekan",
+        "törende",
+        "konuşma",
+        "yaptı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "konu": "kampus"
+    },
+    {
+      "id": "c4-034",
+      "kelimeler": [
+        "Sokak",
+        "kedisi",
+        "duvarda",
+        "esnedi."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "konu": "istanbul"
+    },
+    {
+      "id": "c4-035",
+      "kelimeler": [
+        "Misafir",
+        "masadaki",
+        "böreği",
+        "övdü."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          1,
+          3
+        ]
+      ],
+      "konu": "yemek"
+    },
+    {
+      "id": "c4-036",
+      "kelimeler": [
+        "Taraftar",
+        "tribünde",
+        "coşkuyla",
+        "bağırdı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          1,
+          3
+        ]
+      ],
+      "konu": "spor"
+    },
+    {
+      "id": "c4-037",
+      "kelimeler": [
+        "Annem",
+        "pazardan",
+        "meyve",
+        "aldı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "konu": "gunluk"
+    },
+    {
+      "id": "c4-038",
+      "kelimeler": [
+        "Batarya",
+        "akşam",
+        "tamamen",
+        "bitti."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          1,
+          3
+        ]
+      ],
+      "konu": "teknoloji"
+    },
+    {
+      "id": "c4-039",
+      "kelimeler": [
+        "Görevli",
+        "kapıyı",
+        "erkenden",
+        "açtı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          1,
+          3
+        ]
+      ],
+      "konu": "kampus"
+    },
+    {
+      "id": "c4-040",
+      "kelimeler": [
+        "Trafik",
+        "köprüde",
+        "aniden",
+        "tıkandı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          1,
+          3
+        ]
+      ],
+      "konu": "istanbul"
+    },
+    {
+      "id": "c4-041",
+      "kelimeler": [
+        "Garson",
+        "boş",
+        "tabağı",
+        "kaldırdı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "konu": "yemek"
+    },
+    {
+      "id": "c4-042",
+      "kelimeler": [
+        "Genç",
+        "sporcu",
+        "madalya",
+        "kazandı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "konu": "spor"
+    },
+    {
+      "id": "c4-043",
+      "kelimeler": [
+        "Yağmur",
+        "şehre",
+        "akşamüstü",
+        "yağdı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          1,
+          3
+        ]
+      ],
+      "konu": "gunluk"
+    },
+    {
+      "id": "c4-044",
+      "kelimeler": [
+        "Model",
+        "görüntüyü",
+        "kolayca",
+        "tanıdı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          1,
+          3
+        ]
+      ],
+      "konu": "teknoloji"
+    },
+    {
+      "id": "c4-045",
+      "kelimeler": [
+        "Yurt",
+        "müdürü",
+        "duyuru",
+        "yaptı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "konu": "kampus"
+    },
+    {
+      "id": "c4-046",
+      "kelimeler": [
+        "Halıcı",
+        "çarşıda",
+        "kilimleri",
+        "sergiledi."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          1,
+          3
+        ]
+      ],
+      "konu": "istanbul"
+    },
+    {
+      "id": "c4-047",
+      "kelimeler": [
+        "Çırak",
+        "tepsideki",
+        "çayları",
+        "dağıttı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          1,
+          3
+        ]
+      ],
+      "konu": "yemek"
+    },
+    {
+      "id": "c4-048",
+      "kelimeler": [
+        "Savunma",
+        "rakip",
+        "forveti",
+        "durdurdu."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "konu": "spor"
+    },
+    {
+      "id": "c4-049",
+      "kelimeler": [
+        "Rüzgar",
+        "perdeyi",
+        "odada",
+        "havalandırdı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          2,
+          1,
+          3
+        ]
+      ],
+      "konu": "gunluk"
+    },
+    {
+      "id": "c4-050",
+      "kelimeler": [
+        "İşlemci",
+        "yüksek",
+        "hızla",
+        "çalıştı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "konu": "teknoloji"
+    },
+    {
+      "id": "c5-001",
+      "kelimeler": [
+        "Öğrenciler",
+        "kantinde",
+        "sıcak",
+        "simit",
+        "yedi."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "konu": "kampus"
+    },
+    {
+      "id": "c5-002",
+      "kelimeler": [
+        "Robot",
+        "atölyede",
+        "küçük",
+        "kutuyu",
+        "taşıdı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          3,
+          1,
+          4
+        ]
+      ],
+      "konu": "teknoloji"
+    },
+    {
+      "id": "c5-003",
+      "kelimeler": [
+        "Vapur",
+        "boğazda",
+        "beyaz",
+        "köpükler",
+        "bıraktı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "konu": "istanbul"
+    },
+    {
+      "id": "c5-004",
+      "kelimeler": [
+        "Aşçı",
+        "fırında",
+        "leziz",
+        "ekmek",
+        "pişirdi."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "konu": "yemek"
+    },
+    {
+      "id": "c5-005",
+      "kelimeler": [
+        "Kaptan",
+        "sahada",
+        "tüm",
+        "takımı",
+        "topladı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          3,
+          1,
+          4
+        ]
+      ],
+      "konu": "spor"
+    },
+    {
+      "id": "c5-006",
+      "kelimeler": [
+        "Kedi",
+        "koltukta",
+        "sessizce",
+        "yumakla",
+        "oynadı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          0,
+          1,
+          3,
+          2,
+          4
+        ],
+        [
+          0,
+          2,
+          1,
+          3,
+          4
+        ],
+        [
+          0,
+          3,
+          1,
+          2,
+          4
+        ]
+      ],
+      "konu": "gunluk"
+    },
+    {
+      "id": "c5-007",
+      "kelimeler": [
+        "Mühendis",
+        "masada",
+        "eski",
+        "kartı",
+        "inceledi."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          3,
+          1,
+          4
+        ]
+      ],
+      "konu": "teknoloji"
+    },
+    {
+      "id": "c5-008",
+      "kelimeler": [
+        "Hoca",
+        "derste",
+        "önemli",
+        "konuyu",
+        "anlattı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          3,
+          1,
+          4
+        ]
+      ],
+      "konu": "kampus"
+    },
+    {
+      "id": "c5-009",
+      "kelimeler": [
+        "Martı",
+        "havada",
+        "atılan",
+        "simiti",
+        "kaptı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "konu": "istanbul"
+    },
+    {
+      "id": "c5-010",
+      "kelimeler": [
+        "Usta",
+        "mutfakta",
+        "taze",
+        "sebzeleri",
+        "doğradı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          3,
+          1,
+          4
+        ]
+      ],
+      "konu": "yemek"
+    },
+    {
+      "id": "c5-011",
+      "kelimeler": [
+        "Koşucu",
+        "pistte",
+        "büyük",
+        "farkla",
+        "kazandı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          3,
+          1,
+          4
+        ]
+      ],
+      "konu": "spor"
+    },
+    {
+      "id": "c5-012",
+      "kelimeler": [
+        "Çocuk",
+        "bahçede",
+        "kırmızı",
+        "topu",
+        "kovaladı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          3,
+          1,
+          4
+        ]
+      ],
+      "konu": "gunluk"
+    },
+    {
+      "id": "c5-013",
+      "kelimeler": [
+        "Yazılımcı",
+        "ekranda",
+        "yeni",
+        "arayüzü",
+        "tasarladı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          3,
+          1,
+          4
+        ]
+      ],
+      "konu": "teknoloji"
+    },
+    {
+      "id": "c5-014",
+      "kelimeler": [
+        "Kulüp",
+        "bahçede",
+        "renkli",
+        "stant",
+        "açtı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "konu": "kampus"
+    },
+    {
+      "id": "c5-015",
+      "kelimeler": [
+        "Yolcu",
+        "durakta",
+        "gelen",
+        "otobüsü",
+        "bekledi."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          3,
+          1,
+          4
+        ]
+      ],
+      "konu": "istanbul"
+    },
+    {
+      "id": "c5-016",
+      "kelimeler": [
+        "Garson",
+        "siparişi",
+        "masaya",
+        "özenle",
+        "bıraktı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          1,
+          3,
+          4
+        ],
+        [
+          0,
+          3,
+          1,
+          2,
+          4
+        ],
+        [
+          0,
+          1,
+          3,
+          2,
+          4
+        ]
+      ],
+      "konu": "yemek"
+    },
+    {
+      "id": "c5-017",
+      "kelimeler": [
+        "Kaleci",
+        "köşeden",
+        "gelen",
+        "şutu",
+        "çeldi."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "konu": "spor"
+    },
+    {
+      "id": "c5-018",
+      "kelimeler": [
+        "Anne",
+        "balkonda",
+        "ıslak",
+        "çamaşırı",
+        "kuruttu."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          3,
+          1,
+          4
+        ]
+      ],
+      "konu": "gunluk"
+    },
+    {
+      "id": "c5-019",
+      "kelimeler": [
+        "Kamera",
+        "odada",
+        "parlak",
+        "ışığı",
+        "ölçtü."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          3,
+          1,
+          4
+        ]
+      ],
+      "konu": "teknoloji"
+    },
+    {
+      "id": "c5-020",
+      "kelimeler": [
+        "Grup",
+        "amfide",
+        "ortak",
+        "projeyi",
+        "sundu."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          3,
+          1,
+          4
+        ]
+      ],
+      "konu": "kampus"
+    },
+    {
+      "id": "c5-021",
+      "kelimeler": [
+        "Balıkçılar",
+        "sahilde",
+        "taze",
+        "ağları",
+        "onardı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          3,
+          1,
+          4
+        ]
+      ],
+      "konu": "istanbul"
+    },
+    {
+      "id": "c5-022",
+      "kelimeler": [
+        "Müşteri",
+        "dükkanda",
+        "sıcak",
+        "çorbayı",
+        "içti."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          3,
+          1,
+          4
+        ]
+      ],
+      "konu": "yemek"
+    },
+    {
+      "id": "c5-023",
+      "kelimeler": [
+        "Hakem",
+        "maçta",
+        "tartışmalı",
+        "pozisyonu",
+        "inceledi."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          3,
+          1,
+          4
+        ]
+      ],
+      "konu": "spor"
+    },
+    {
+      "id": "c5-024",
+      "kelimeler": [
+        "Bebek",
+        "beşikte",
+        "küçük",
+        "çıngırağı",
+        "salladı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          3,
+          1,
+          4
+        ]
+      ],
+      "konu": "gunluk"
+    },
+    {
+      "id": "c5-025",
+      "kelimeler": [
+        "Sistem",
+        "sunucuda",
+        "zararlı",
+        "yazılımı",
+        "sildi."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          3,
+          1,
+          4
+        ]
+      ],
+      "konu": "teknoloji"
+    },
+    {
+      "id": "c5-026",
+      "kelimeler": [
+        "Genç",
+        "kütüphanede",
+        "kalın",
+        "kitabı",
+        "bitirdi."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          3,
+          1,
+          4
+        ]
+      ],
+      "konu": "kampus"
+    },
+    {
+      "id": "c5-027",
+      "kelimeler": [
+        "Turist",
+        "çarşıda",
+        "antika",
+        "vazoyu",
+        "beğendi."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          3,
+          1,
+          4
+        ]
+      ],
+      "konu": "istanbul"
+    },
+    {
+      "id": "c5-028",
+      "kelimeler": [
+        "Şef",
+        "tatlıya",
+        "bol",
+        "fıstık",
+        "serpti."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "konu": "yemek"
+    },
+    {
+      "id": "c5-029",
+      "kelimeler": [
+        "Yüzücü",
+        "havuzda",
+        "zorlu",
+        "rekoru",
+        "kırdı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          3,
+          1,
+          4
+        ]
+      ],
+      "konu": "spor"
+    },
+    {
+      "id": "c5-030",
+      "kelimeler": [
+        "Kurye",
+        "kapıya",
+        "ağır",
+        "koliyi",
+        "bıraktı."
+      ],
+      "kabul": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          3,
+          1,
+          4
+        ]
+      ],
+      "konu": "gunluk"
+    }
+  ]
+}

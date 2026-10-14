@@ -1,0 +1,9 @@
+# Stant çalışma bağımlılıkları (Python 3.11, Windows). Sürümler laptopta çalışan venv'den sabitlendi.
+mediapipe==1.0.1
+numpy==2.4.6
+opencv-contrib-python==5.0.0.93
+onnxruntime==1.30.0
+pillow==12.3.0
+pygame-ce==2.5.8
+sounddevice==0.5.6
+pytest

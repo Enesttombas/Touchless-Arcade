@@ -1,0 +1,782 @@
+[
+  {
+    "id": "g-1",
+    "kategori": "genel",
+    "tip": "dy",
+    "soru": "Türkiye’nin başkenti: Ankara. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 0,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-2",
+    "kategori": "genel",
+    "tip": "dy",
+    "soru": "Türkiye’nin başkenti: İstanbul. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 1,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-3",
+    "kategori": "genel",
+    "tip": "dy",
+    "soru": "Fransa’nın başkenti: Paris. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 0,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-4",
+    "kategori": "genel",
+    "tip": "dy",
+    "soru": "Fransa’nın başkenti: Roma. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 1,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-5",
+    "kategori": "genel",
+    "tip": "dy",
+    "soru": "İtalya’nın başkenti: Roma. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 0,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-6",
+    "kategori": "genel",
+    "tip": "dy",
+    "soru": "İtalya’nın başkenti: Paris. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 1,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-7",
+    "kategori": "genel",
+    "tip": "dy",
+    "soru": "Almanya’nın başkenti: Berlin. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 0,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-8",
+    "kategori": "genel",
+    "tip": "dy",
+    "soru": "Almanya’nın başkenti: Madrid. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 1,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-9",
+    "kategori": "genel",
+    "tip": "dy",
+    "soru": "İspanya’nın başkenti: Madrid. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 0,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-10",
+    "kategori": "genel",
+    "tip": "dy",
+    "soru": "İspanya’nın başkenti: Lizbon. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 1,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-11",
+    "kategori": "genel",
+    "tip": "dy",
+    "soru": "Portekiz’in başkenti: Lizbon. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 0,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-12",
+    "kategori": "genel",
+    "tip": "dy",
+    "soru": "Portekiz’in başkenti: Madrid. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 1,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-13",
+    "kategori": "genel",
+    "tip": "dy",
+    "soru": "Yunanistan’ın başkenti: Atina. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 0,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-14",
+    "kategori": "genel",
+    "tip": "dy",
+    "soru": "Yunanistan’ın başkenti: Sofya. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 1,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-15",
+    "kategori": "genel",
+    "tip": "dy",
+    "soru": "Japonya’nın başkenti: Tokyo. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 0,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-16",
+    "kategori": "genel",
+    "tip": "dy",
+    "soru": "Japonya’nın başkenti: Pekin. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 1,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-17",
+    "kategori": "genel",
+    "tip": "dy",
+    "soru": "Çin’in başkenti: Pekin. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 0,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-18",
+    "kategori": "genel",
+    "tip": "dy",
+    "soru": "Çin’in başkenti: Tokyo. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 1,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-19",
+    "kategori": "genel",
+    "tip": "dy",
+    "soru": "Güney Kore’nin başkenti: Seul. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 0,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-20",
+    "kategori": "genel",
+    "tip": "dy",
+    "soru": "Güney Kore’nin başkenti: Tokyo. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 1,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-21",
+    "kategori": "genel",
+    "tip": "dy",
+    "soru": "Kanada’nın başkenti: Ottawa. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 0,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-22",
+    "kategori": "genel",
+    "tip": "dy",
+    "soru": "Kanada’nın başkenti: Toronto. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 1,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-23",
+    "kategori": "genel",
+    "tip": "dy",
+    "soru": "Avustralya’nın başkenti: Canberra. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 0,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-24",
+    "kategori": "genel",
+    "tip": "dy",
+    "soru": "Avustralya’nın başkenti: Sidney. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 1,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-25",
+    "kategori": "genel",
+    "tip": "dy",
+    "soru": "Brezilya’nın başkenti: Brasília. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 0,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-26",
+    "kategori": "genel",
+    "tip": "dy",
+    "soru": "Brezilya’nın başkenti: Rio de Janeiro. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 1,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-27",
+    "kategori": "genel",
+    "tip": "dy",
+    "soru": "Arjantin’in başkenti: Buenos Aires. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 0,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-28",
+    "kategori": "genel",
+    "tip": "dy",
+    "soru": "Arjantin’in başkenti: Lima. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 1,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-29",
+    "kategori": "genel",
+    "tip": "dy",
+    "soru": "Mısır’ın başkenti: Kahire. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 0,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-30",
+    "kategori": "genel",
+    "tip": "dy",
+    "soru": "Mısır’ın başkenti: Ankara. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 1,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-31",
+    "kategori": "bilim",
+    "tip": "dy",
+    "soru": "Bir saatin dakika sayısı: 60. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 0,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-32",
+    "kategori": "bilim",
+    "tip": "dy",
+    "soru": "Bir saatin dakika sayısı: 100. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 1,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-33",
+    "kategori": "bilim",
+    "tip": "dy",
+    "soru": "Bir dakikanın saniye sayısı: 60. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 0,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-34",
+    "kategori": "bilim",
+    "tip": "dy",
+    "soru": "Bir dakikanın saniye sayısı: 10. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 1,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-35",
+    "kategori": "bilim",
+    "tip": "dy",
+    "soru": "Bir metrenin santimetre sayısı: 100. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 0,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-36",
+    "kategori": "bilim",
+    "tip": "dy",
+    "soru": "Bir metrenin santimetre sayısı: 10. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 1,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-37",
+    "kategori": "bilim",
+    "tip": "dy",
+    "soru": "Bir kilogramın gram sayısı: 1000. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 0,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-38",
+    "kategori": "bilim",
+    "tip": "dy",
+    "soru": "Bir kilogramın gram sayısı: 100. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 1,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-39",
+    "kategori": "bilim",
+    "tip": "dy",
+    "soru": "Bir baytın bit sayısı: 8. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 0,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-40",
+    "kategori": "bilim",
+    "tip": "dy",
+    "soru": "Bir baytın bit sayısı: 16. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 1,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-41",
+    "kategori": "bilim",
+    "tip": "dy",
+    "soru": "Onluk sistemin rakam sayısı: 10. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 0,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-42",
+    "kategori": "bilim",
+    "tip": "dy",
+    "soru": "Onluk sistemin rakam sayısı: 2. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 1,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-43",
+    "kategori": "bilim",
+    "tip": "dy",
+    "soru": "İkilik sistemin rakam sayısı: 2. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 0,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-44",
+    "kategori": "bilim",
+    "tip": "dy",
+    "soru": "İkilik sistemin rakam sayısı: 10. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 1,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-45",
+    "kategori": "bilim",
+    "tip": "dy",
+    "soru": "Üçgenin kenar sayısı: 3. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 0,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-46",
+    "kategori": "bilim",
+    "tip": "dy",
+    "soru": "Üçgenin kenar sayısı: 4. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 1,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-47",
+    "kategori": "bilim",
+    "tip": "dy",
+    "soru": "Karenin kenar sayısı: 4. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 0,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-48",
+    "kategori": "bilim",
+    "tip": "dy",
+    "soru": "Karenin kenar sayısı: 5. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 1,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-49",
+    "kategori": "bilim",
+    "tip": "dy",
+    "soru": "Türk alfabesinin harf sayısı: 29. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 0,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-50",
+    "kategori": "bilim",
+    "tip": "dy",
+    "soru": "Türk alfabesinin harf sayısı: 26. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 1,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-51",
+    "kategori": "bilim",
+    "tip": "dy",
+    "soru": "Bir haftanın gün sayısı: 7. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 0,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-52",
+    "kategori": "bilim",
+    "tip": "dy",
+    "soru": "Bir haftanın gün sayısı: 8. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 1,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-53",
+    "kategori": "bilim",
+    "tip": "dy",
+    "soru": "Bir yılın ay sayısı: 12. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 0,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-54",
+    "kategori": "bilim",
+    "tip": "dy",
+    "soru": "Bir yılın ay sayısı: 10. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 1,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-55",
+    "kategori": "bilim",
+    "tip": "dy",
+    "soru": "Suyun kimyasal formülü: H2O. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 0,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-56",
+    "kategori": "bilim",
+    "tip": "dy",
+    "soru": "Suyun kimyasal formülü: CO2. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 1,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-57",
+    "kategori": "bilim",
+    "tip": "dy",
+    "soru": "Oksijenin element simgesi: O. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 0,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-58",
+    "kategori": "bilim",
+    "tip": "dy",
+    "soru": "Oksijenin element simgesi: N. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 1,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-59",
+    "kategori": "bilim",
+    "tip": "dy",
+    "soru": "Karbonun element simgesi: C. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 0,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  },
+  {
+    "id": "g-60",
+    "kategori": "bilim",
+    "tip": "dy",
+    "soru": "Karbonun element simgesi: K. Doğru mu?",
+    "secenekler": [
+      "Doğru",
+      "Yanlış"
+    ],
+    "dogru_indeks": 1,
+    "zorluk": 1,
+    "kaynak": "Coğrafya / SI birimleri / temel fen ve Türkçe ders bilgisi; insan incelemesi bekliyor"
+  }
+]

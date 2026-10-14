@@ -1,0 +1,2984 @@
+[
+{
+"id": "g1-001",
+"kategori": "bilim",
+"tip": "coktan",
+"soru": "Su kaç santigrat derecede donar?",
+"secenekler": [
+"0 °C",
+"10 °C",
+"100 °C"
+],
+"dogru_indeks": 0,
+"zorluk": 1,
+"kaynak": "Temel bilim"
+},
+{
+"id": "g1-002",
+"kategori": "bilim",
+"tip": "coktan",
+"soru": "Güneş sistemindeki en büyük gezegen hangisidir?",
+"secenekler": [
+"Mars",
+"Jüpiter",
+"Venüs"
+],
+"dogru_indeks": 1,
+"zorluk": 1,
+"kaynak": "Temel bilim"
+},
+{
+"id": "g1-003",
+"kategori": "bilim",
+"tip": "coktan",
+"soru": "Bitkilerin besin ürettiği olayın adı nedir?",
+"secenekler": [
+"Sindirim",
+"Solunum",
+"Fotosentez"
+],
+"dogru_indeks": 2,
+"zorluk": 1,
+"kaynak": "Temel bilim"
+},
+{
+"id": "g1-004",
+"kategori": "bilim",
+"tip": "coktan",
+"soru": "Dünya'ya en yakın yıldız hangisidir?",
+"secenekler": [
+"Güneş",
+"Kutup Yıldızı",
+"Sirius"
+],
+"dogru_indeks": 0,
+"zorluk": 1,
+"kaynak": "Temel bilim"
+},
+{
+"id": "g1-005",
+"kategori": "bilim",
+"tip": "coktan",
+"soru": "Vücudumuzda kanı pompalayan organ hangisidir?",
+"secenekler": [
+"Akciğer",
+"Kalp",
+"Böbrek"
+],
+"dogru_indeks": 1,
+"zorluk": 1,
+"kaynak": "Temel bilim"
+},
+{
+"id": "g1-006",
+"kategori": "bilim",
+"tip": "coktan",
+"soru": "Mıknatıs hangi metali çeker?",
+"secenekler": [
+"Altın",
+"Bakır",
+"Demir"
+],
+"dogru_indeks": 2,
+"zorluk": 1,
+"kaynak": "Temel bilim"
+},
+{
+"id": "g1-007",
+"kategori": "coğrafya",
+"tip": "coktan",
+"soru": "Türkiye'nin başkenti hangi şehirdir?",
+"secenekler": [
+"Ankara",
+"İstanbul",
+"İzmir"
+],
+"dogru_indeks": 0,
+"zorluk": 1,
+"kaynak": "Dünya coğrafyası"
+},
+{
+"id": "g1-008",
+"kategori": "coğrafya",
+"tip": "coktan",
+"soru": "Dünyanın en büyük okyanusu hangisidir?",
+"secenekler": [
+"Atlas Okyanusu",
+"Büyük Okyanus",
+"Hint Okyanusu"
+],
+"dogru_indeks": 1,
+"zorluk": 1,
+"kaynak": "Dünya coğrafyası"
+},
+{
+"id": "g1-009",
+"kategori": "coğrafya",
+"tip": "coktan",
+"soru": "Gize piramitleri hangi ülkededir?",
+"secenekler": [
+"Meksika",
+"Hindistan",
+"Mısır"
+],
+"dogru_indeks": 2,
+"zorluk": 1,
+"kaynak": "Dünya coğrafyası"
+},
+{
+"id": "g1-010",
+"kategori": "coğrafya",
+"tip": "coktan",
+"soru": "Japonya'nın başkenti hangi şehirdir?",
+"secenekler": [
+"Tokyo",
+"Pekin",
+"Seul"
+],
+"dogru_indeks": 0,
+"zorluk": 1,
+"kaynak": "Dünya coğrafyası"
+},
+{
+"id": "g1-011",
+"kategori": "coğrafya",
+"tip": "coktan",
+"soru": "Ekvator Dünya'yı hangi iki yarım küreye ayırır?",
+"secenekler": [
+"Doğu ve Batı",
+"Kuzey ve Güney",
+"Üst ve Alt"
+],
+"dogru_indeks": 1,
+"zorluk": 1,
+"kaynak": "Dünya coğrafyası"
+},
+{
+"id": "g1-012",
+"kategori": "doğa",
+"tip": "coktan",
+"soru": "Örümceklerin kaç bacağı vardır?",
+"secenekler": [
+"6",
+"10",
+"8"
+],
+"dogru_indeks": 2,
+"zorluk": 1,
+"kaynak": "Canlılar bilgisi"
+},
+{
+"id": "g1-013",
+"kategori": "doğa",
+"tip": "coktan",
+"soru": "Hangisi bir memelidir?",
+"secenekler": [
+"Yunus",
+"Köpek balığı",
+"Ahtapot"
+],
+"dogru_indeks": 0,
+"zorluk": 1,
+"kaynak": "Canlılar bilgisi"
+},
+{
+"id": "g1-014",
+"kategori": "doğa",
+"tip": "coktan",
+"soru": "Arıların ürettiği tatlı besin hangisidir?",
+"secenekler": [
+"Pekmez",
+"Bal",
+"Reçel"
+],
+"dogru_indeks": 1,
+"zorluk": 1,
+"kaynak": "Canlılar bilgisi"
+},
+{
+"id": "g1-015",
+"kategori": "doğa",
+"tip": "coktan",
+"soru": "Kurbağa yavrusuna ne ad verilir?",
+"secenekler": [
+"Tırtıl",
+"Kuzu",
+"İribaş"
+],
+"dogru_indeks": 2,
+"zorluk": 1,
+"kaynak": "Canlılar bilgisi"
+},
+{
+"id": "g1-016",
+"kategori": "doğa",
+"tip": "coktan",
+"soru": "Gökkuşağında geleneksel olarak kaç renk sayılır?",
+"secenekler": [
+"7",
+"5",
+"9"
+],
+"dogru_indeks": 0,
+"zorluk": 1,
+"kaynak": "Canlılar bilgisi"
+},
+{
+"id": "g1-017",
+"kategori": "doğa",
+"tip": "coktan",
+"soru": "Kelebek hangi canlının dönüşümüyle oluşur?",
+"secenekler": [
+"Solucan",
+"Tırtıl",
+"Salyangoz"
+],
+"dogru_indeks": 1,
+"zorluk": 1,
+"kaynak": "Canlılar bilgisi"
+},
+{
+"id": "g1-018",
+"kategori": "spor",
+"tip": "coktan",
+"soru": "Bir futbol takımı sahaya kaç oyuncuyla çıkar?",
+"secenekler": [
+"9",
+"12",
+"11"
+],
+"dogru_indeks": 2,
+"zorluk": 1,
+"kaynak": "Spor kuralları"
+},
+{
+"id": "g1-019",
+"kategori": "spor",
+"tip": "coktan",
+"soru": "Basketbolda serbest atış kaç sayıdır?",
+"secenekler": [
+"1",
+"2",
+"3"
+],
+"dogru_indeks": 0,
+"zorluk": 1,
+"kaynak": "Spor kuralları"
+},
+{
+"id": "g1-020",
+"kategori": "spor",
+"tip": "coktan",
+"soru": "Olimpiyat bayrağında kaç halka vardır?",
+"secenekler": [
+"4",
+"5",
+"6"
+],
+"dogru_indeks": 1,
+"zorluk": 1,
+"kaynak": "Spor kuralları"
+},
+{
+"id": "g1-021",
+"kategori": "spor",
+"tip": "coktan",
+"soru": "Teniste topa vurmak için ne kullanılır?",
+"secenekler": [
+"Sopa",
+"Eldiven",
+"Raket"
+],
+"dogru_indeks": 2,
+"zorluk": 1,
+"kaynak": "Spor kuralları"
+},
+{
+"id": "g1-022",
+"kategori": "spor",
+"tip": "coktan",
+"soru": "Voleybolda bir takım sahada kaç kişidir?",
+"secenekler": [
+"6",
+"5",
+"7"
+],
+"dogru_indeks": 0,
+"zorluk": 1,
+"kaynak": "Spor kuralları"
+},
+{
+"id": "g1-023",
+"kategori": "sanat-edebiyat",
+"tip": "coktan",
+"soru": "Nasreddin Hoca hangi hayvana ters biner?",
+"secenekler": [
+"At",
+"Eşek",
+"Deve"
+],
+"dogru_indeks": 1,
+"zorluk": 1,
+"kaynak": "Sanat ve edebiyat"
+},
+{
+"id": "g1-024",
+"kategori": "sanat-edebiyat",
+"tip": "coktan",
+"soru": "Ressamın boyalarını karıştırdığı tahtaya ne denir?",
+"secenekler": [
+"Tuval",
+"Şövale",
+"Palet"
+],
+"dogru_indeks": 2,
+"zorluk": 1,
+"kaynak": "Sanat ve edebiyat"
+},
+{
+"id": "g1-025",
+"kategori": "sanat-edebiyat",
+"tip": "coktan",
+"soru": "Kırmızı ile sarı karışınca hangi renk oluşur?",
+"secenekler": [
+"Turuncu",
+"Mor",
+"Yeşil"
+],
+"dogru_indeks": 0,
+"zorluk": 1,
+"kaynak": "Sanat ve edebiyat"
+},
+{
+"id": "g1-026",
+"kategori": "sanat-edebiyat",
+"tip": "coktan",
+"soru": "Hangisi telli bir çalgıdır?",
+"secenekler": [
+"Davul",
+"Bağlama",
+"Flüt"
+],
+"dogru_indeks": 1,
+"zorluk": 1,
+"kaynak": "Sanat ve edebiyat"
+},
+{
+"id": "g1-027",
+"kategori": "sanat-edebiyat",
+"tip": "coktan",
+"soru": "Mavi ile sarı karışınca hangi renk oluşur?",
+"secenekler": [
+"Mor",
+"Turuncu",
+"Yeşil"
+],
+"dogru_indeks": 2,
+"zorluk": 1,
+"kaynak": "Sanat ve edebiyat"
+},
+{
+"id": "g1-028",
+"kategori": "teknoloji",
+"tip": "coktan",
+"soru": "Bilgisayarda yazı yazmak için hangisi kullanılır?",
+"secenekler": [
+"Klavye",
+"Hoparlör",
+"Ekran"
+],
+"dogru_indeks": 0,
+"zorluk": 1,
+"kaynak": "Teknoloji tarihi"
+},
+{
+"id": "g1-029",
+"kategori": "teknoloji",
+"tip": "coktan",
+"soru": "Telefonun mucidi olarak bilinen kişi kimdir?",
+"secenekler": [
+"Edison",
+"Graham Bell",
+"Newton"
+],
+"dogru_indeks": 1,
+"zorluk": 1,
+"kaynak": "Teknoloji tarihi"
+},
+{
+"id": "g1-030",
+"kategori": "teknoloji",
+"tip": "coktan",
+"soru": "Ampulü geliştiren ünlü mucit kimdir?",
+"secenekler": [
+"Einstein",
+"Darwin",
+"Edison"
+],
+"dogru_indeks": 2,
+"zorluk": 1,
+"kaynak": "Teknoloji tarihi"
+},
+{
+"id": "g1-031",
+"kategori": "teknoloji",
+"tip": "coktan",
+"soru": "İlk motorlu uçağı uçuran kardeşlerin soyadı nedir?",
+"secenekler": [
+"Wright",
+"Lumière",
+"Grimm"
+],
+"dogru_indeks": 0,
+"zorluk": 1,
+"kaynak": "Teknoloji tarihi"
+},
+{
+"id": "g1-032",
+"kategori": "teknoloji",
+"tip": "coktan",
+"soru": "Fotoğraf çekmeye yarayan cihaz hangisidir?",
+"secenekler": [
+"Mikrofon",
+"Kamera",
+"Hoparlör"
+],
+"dogru_indeks": 1,
+"zorluk": 1,
+"kaynak": "Teknoloji tarihi"
+},
+{
+"id": "g1-033",
+"kategori": "türkiye",
+"tip": "coktan",
+"soru": "Türkiye Cumhuriyeti hangi yıl ilan edildi?",
+"secenekler": [
+"1920",
+"1938",
+"1923"
+],
+"dogru_indeks": 2,
+"zorluk": 1,
+"kaynak": "Türkiye coğrafyası/kültürü"
+},
+{
+"id": "g1-034",
+"kategori": "türkiye",
+"tip": "coktan",
+"soru": "Türk bayrağında hangi şekiller vardır?",
+"secenekler": [
+"Ay ve yıldız",
+"Güneş ve ay",
+"İki yıldız"
+],
+"dogru_indeks": 0,
+"zorluk": 1,
+"kaynak": "Türkiye coğrafyası/kültürü"
+},
+{
+"id": "g1-035",
+"kategori": "türkiye",
+"tip": "coktan",
+"soru": "İstanbul Boğazı Karadeniz'i hangi denize bağlar?",
+"secenekler": [
+"Ege",
+"Marmara",
+"Akdeniz"
+],
+"dogru_indeks": 1,
+"zorluk": 1,
+"kaynak": "Türkiye coğrafyası/kültürü"
+},
+{
+"id": "g1-036",
+"kategori": "türkiye",
+"tip": "coktan",
+"soru": "Türkiye'nin en yüksek dağı hangisidir?",
+"secenekler": [
+"Erciyes",
+"Uludağ",
+"Ağrı Dağı"
+],
+"dogru_indeks": 2,
+"zorluk": 1,
+"kaynak": "Türkiye coğrafyası/kültürü"
+},
+{
+"id": "g1-037",
+"kategori": "türkiye",
+"tip": "coktan",
+"soru": "Kapadokya'nın ünlü kaya oluşumlarına ne denir?",
+"secenekler": [
+"Peri bacası",
+"Traverten",
+"Mağara"
+],
+"dogru_indeks": 0,
+"zorluk": 1,
+"kaynak": "Türkiye coğrafyası/kültürü"
+},
+{
+"id": "g1-038",
+"kategori": "tarih",
+"tip": "coktan",
+"soru": "Türkiye Cumhuriyeti'nin kurucusu kimdir?",
+"secenekler": [
+"İsmet İnönü",
+"Atatürk",
+"Kanuni"
+],
+"dogru_indeks": 1,
+"zorluk": 1,
+"kaynak": "Genel tarih"
+},
+{
+"id": "g1-039",
+"kategori": "tarih",
+"tip": "coktan",
+"soru": "İstanbul'u fetheden padişah kimdir?",
+"secenekler": [
+"Yavuz",
+"Kanuni",
+"Fatih"
+],
+"dogru_indeks": 2,
+"zorluk": 1,
+"kaynak": "Genel tarih"
+},
+{
+"id": "g1-040",
+"kategori": "tarih",
+"tip": "coktan",
+"soru": "Truva destanında askerler neyin içine saklandı?",
+"secenekler": [
+"Tahta at",
+"Dev fıçı",
+"Gemi direği"
+],
+"dogru_indeks": 0,
+"zorluk": 1,
+"kaynak": "Genel tarih"
+},
+{
+"id": "g1-041",
+"kategori": "tarih",
+"tip": "coktan",
+"soru": "23 Nisan hangi bayram olarak kutlanır?",
+"secenekler": [
+"Gençlik Bayramı",
+"Çocuk Bayramı",
+"Zafer Bayramı"
+],
+"dogru_indeks": 1,
+"zorluk": 1,
+"kaynak": "Genel tarih"
+},
+{
+"id": "g1-042",
+"kategori": "tarih",
+"tip": "coktan",
+"soru": "Atatürk hangi şehirde doğdu?",
+"secenekler": [
+"Bursa",
+"Ankara",
+"Selanik"
+],
+"dogru_indeks": 2,
+"zorluk": 1,
+"kaynak": "Genel tarih"
+},
+{
+"id": "g2-001",
+"kategori": "bilim",
+"tip": "coktan",
+"soru": "Suyun kimyasal formülü nedir?",
+"secenekler": [
+"H2O",
+"CO2",
+"O2"
+],
+"dogru_indeks": 0,
+"zorluk": 2,
+"kaynak": "Temel bilim"
+},
+{
+"id": "g2-002",
+"kategori": "bilim",
+"tip": "coktan",
+"soru": "Işık en hızlı hangi ortamda yayılır?",
+"secenekler": [
+"Su",
+"Boşluk",
+"Cam"
+],
+"dogru_indeks": 1,
+"zorluk": 2,
+"kaynak": "Temel bilim"
+},
+{
+"id": "g2-003",
+"kategori": "bilim",
+"tip": "coktan",
+"soru": "Ses hangi ortamda yayılamaz?",
+"secenekler": [
+"Su",
+"Hava",
+"Boşluk"
+],
+"dogru_indeks": 2,
+"zorluk": 2,
+"kaynak": "Temel bilim"
+},
+{
+"id": "g2-004",
+"kategori": "bilim",
+"tip": "coktan",
+"soru": "İnsan vücudunun en büyük organı hangisidir?",
+"secenekler": [
+"Deri",
+"Karaciğer",
+"Akciğer"
+],
+"dogru_indeks": 0,
+"zorluk": 2,
+"kaynak": "Temel bilim"
+},
+{
+"id": "g2-005",
+"kategori": "bilim",
+"tip": "coktan",
+"soru": "Güneş'e en yakın gezegen hangisidir?",
+"secenekler": [
+"Venüs",
+"Merkür",
+"Mars"
+],
+"dogru_indeks": 1,
+"zorluk": 2,
+"kaynak": "Temel bilim"
+},
+{
+"id": "g2-006",
+"kategori": "bilim",
+"tip": "coktan",
+"soru": "Ay, Dünya'nın çevresini yaklaşık ne kadarda dolanır?",
+"secenekler": [
+"Bir günde",
+"Bir yılda",
+"Bir ayda"
+],
+"dogru_indeks": 2,
+"zorluk": 2,
+"kaynak": "Temel bilim"
+},
+{
+"id": "g2-007",
+"kategori": "coğrafya",
+"tip": "coktan",
+"soru": "Avustralya'nın başkenti hangi şehirdir?",
+"secenekler": [
+"Kanberra",
+"Sidney",
+"Melbourne"
+],
+"dogru_indeks": 0,
+"zorluk": 2,
+"kaynak": "Dünya coğrafyası"
+},
+{
+"id": "g2-008",
+"kategori": "coğrafya",
+"tip": "coktan",
+"soru": "Everest Dağı hangi sıradağlardadır?",
+"secenekler": [
+"Alpler",
+"Himalayalar",
+"And Dağları"
+],
+"dogru_indeks": 1,
+"zorluk": 2,
+"kaynak": "Dünya coğrafyası"
+},
+{
+"id": "g2-009",
+"kategori": "coğrafya",
+"tip": "coktan",
+"soru": "Sahra Çölü hangi kıtadadır?",
+"secenekler": [
+"Asya",
+"Avustralya",
+"Afrika"
+],
+"dogru_indeks": 2,
+"zorluk": 2,
+"kaynak": "Dünya coğrafyası"
+},
+{
+"id": "g2-010",
+"kategori": "coğrafya",
+"tip": "coktan",
+"soru": "İtalya'nın başkenti hangi şehirdir?",
+"secenekler": [
+"Roma",
+"Milano",
+"Venedik"
+],
+"dogru_indeks": 0,
+"zorluk": 2,
+"kaynak": "Dünya coğrafyası"
+},
+{
+"id": "g2-011",
+"kategori": "coğrafya",
+"tip": "coktan",
+"soru": "Nil Nehri hangi denize dökülür?",
+"secenekler": [
+"Kızıldeniz",
+"Akdeniz",
+"Karadeniz"
+],
+"dogru_indeks": 1,
+"zorluk": 2,
+"kaynak": "Dünya coğrafyası"
+},
+{
+"id": "g2-012",
+"kategori": "doğa",
+"tip": "coktan",
+"soru": "Dünyadaki en büyük hayvan hangisidir?",
+"secenekler": [
+"Fil",
+"Zürafa",
+"Mavi balina"
+],
+"dogru_indeks": 2,
+"zorluk": 2,
+"kaynak": "Canlılar bilgisi"
+},
+{
+"id": "g2-013",
+"kategori": "doğa",
+"tip": "coktan",
+"soru": "Bukalemunun en bilinen özelliği nedir?",
+"secenekler": [
+"Renk değiştirme",
+"Uçabilme",
+"Zehir tükürme"
+],
+"dogru_indeks": 0,
+"zorluk": 2,
+"kaynak": "Canlılar bilgisi"
+},
+{
+"id": "g2-014",
+"kategori": "doğa",
+"tip": "coktan",
+"soru": "Yarasalar karanlıkta yönlerini nasıl bulur?",
+"secenekler": [
+"Kokuyla",
+"Yankıyla",
+"Renkle"
+],
+"dogru_indeks": 1,
+"zorluk": 2,
+"kaynak": "Canlılar bilgisi"
+},
+{
+"id": "g2-015",
+"kategori": "doğa",
+"tip": "coktan",
+"soru": "Kaplumbağa hangi hayvan grubundadır?",
+"secenekler": [
+"Memeli",
+"Kuş",
+"Sürüngen"
+],
+"dogru_indeks": 2,
+"zorluk": 2,
+"kaynak": "Canlılar bilgisi"
+},
+{
+"id": "g2-016",
+"kategori": "doğa",
+"tip": "coktan",
+"soru": "Bir ağacın yaşı neye bakılarak anlaşılır?",
+"secenekler": [
+"Gövde halkaları",
+"Yaprak sayısı",
+"Kök boyu"
+],
+"dogru_indeks": 0,
+"zorluk": 2,
+"kaynak": "Canlılar bilgisi"
+},
+{
+"id": "g2-017",
+"kategori": "spor",
+"tip": "coktan",
+"soru": "Satrançta oyunu bitiren hamleye ne denir?",
+"secenekler": [
+"Rok",
+"Şah mat",
+"Pat"
+],
+"dogru_indeks": 1,
+"zorluk": 2,
+"kaynak": "Spor kuralları"
+},
+{
+"id": "g2-018",
+"kategori": "spor",
+"tip": "coktan",
+"soru": "Maraton koşusu yaklaşık kaç kilometredir?",
+"secenekler": [
+"21 km",
+"50 km",
+"42 km"
+],
+"dogru_indeks": 2,
+"zorluk": 2,
+"kaynak": "Spor kuralları"
+},
+{
+"id": "g2-019",
+"kategori": "spor",
+"tip": "coktan",
+"soru": "Basketbolda bir takım sahada kaç oyuncuyla oynar?",
+"secenekler": [
+"5",
+"6",
+"7"
+],
+"dogru_indeks": 0,
+"zorluk": 2,
+"kaynak": "Spor kuralları"
+},
+{
+"id": "g2-020",
+"kategori": "spor",
+"tip": "coktan",
+"soru": "Hangi sporda 'smaç' terimi kullanılır?",
+"secenekler": [
+"Golf",
+"Voleybol",
+"Yüzme"
+],
+"dogru_indeks": 1,
+"zorluk": 2,
+"kaynak": "Spor kuralları"
+},
+{
+"id": "g2-021",
+"kategori": "spor",
+"tip": "coktan",
+"soru": "Yaz Olimpiyat Oyunları kaç yılda bir düzenlenir?",
+"secenekler": [
+"2",
+"5",
+"4"
+],
+"dogru_indeks": 2,
+"zorluk": 2,
+"kaynak": "Spor kuralları"
+},
+{
+"id": "g2-022",
+"kategori": "sanat-edebiyat",
+"tip": "coktan",
+"soru": "Mona Lisa tablosunu kim yaptı?",
+"secenekler": [
+"Da Vinci",
+"Picasso",
+"Van Gogh"
+],
+"dogru_indeks": 0,
+"zorluk": 2,
+"kaynak": "Sanat ve edebiyat"
+},
+{
+"id": "g2-023",
+"kategori": "sanat-edebiyat",
+"tip": "coktan",
+"soru": "Romeo ve Juliet'i kim yazdı?",
+"secenekler": [
+"Cervantes",
+"Shakespeare",
+"Tolstoy"
+],
+"dogru_indeks": 1,
+"zorluk": 2,
+"kaynak": "Sanat ve edebiyat"
+},
+{
+"id": "g2-024",
+"kategori": "sanat-edebiyat",
+"tip": "coktan",
+"soru": "Beethoven hangi alanda ünlüdür?",
+"secenekler": [
+"Resim",
+"Heykel",
+"Müzik"
+],
+"dogru_indeks": 2,
+"zorluk": 2,
+"kaynak": "Sanat ve edebiyat"
+},
+{
+"id": "g2-025",
+"kategori": "sanat-edebiyat",
+"tip": "coktan",
+"soru": "İstiklal Marşı'nın şairi kimdir?",
+"secenekler": [
+"Mehmet Akif",
+"Namık Kemal",
+"Yunus Emre"
+],
+"dogru_indeks": 0,
+"zorluk": 2,
+"kaynak": "Sanat ve edebiyat"
+},
+{
+"id": "g2-026",
+"kategori": "sanat-edebiyat",
+"tip": "coktan",
+"soru": "Bir orkestrayı yöneten kişiye ne denir?",
+"secenekler": [
+"Solist",
+"Şef",
+"Besteci"
+],
+"dogru_indeks": 1,
+"zorluk": 2,
+"kaynak": "Sanat ve edebiyat"
+},
+{
+"id": "g2-027",
+"kategori": "teknoloji",
+"tip": "coktan",
+"soru": "Bilgisayarın 'beyni' sayılan parça hangisidir?",
+"secenekler": [
+"Klavye",
+"Fare",
+"İşlemci"
+],
+"dogru_indeks": 2,
+"zorluk": 2,
+"kaynak": "Teknoloji tarihi"
+},
+{
+"id": "g2-028",
+"kategori": "teknoloji",
+"tip": "coktan",
+"soru": "Bir bayt kaç bitten oluşur?",
+"secenekler": [
+"8",
+"4",
+"16"
+],
+"dogru_indeks": 0,
+"zorluk": 2,
+"kaynak": "Teknoloji tarihi"
+},
+{
+"id": "g2-029",
+"kategori": "teknoloji",
+"tip": "coktan",
+"soru": "Güneş ışığını elektriğe çeviren araç hangisidir?",
+"secenekler": [
+"Rüzgâr türbini",
+"Güneş paneli",
+"Jeneratör"
+],
+"dogru_indeks": 1,
+"zorluk": 2,
+"kaynak": "Teknoloji tarihi"
+},
+{
+"id": "g2-030",
+"kategori": "teknoloji",
+"tip": "coktan",
+"soru": "GPS en çok ne için kullanılır?",
+"secenekler": [
+"Ses kaydı",
+"Isıtma",
+"Konum bulma"
+],
+"dogru_indeks": 2,
+"zorluk": 2,
+"kaynak": "Teknoloji tarihi"
+},
+{
+"id": "g2-031",
+"kategori": "teknoloji",
+"tip": "coktan",
+"soru": "Hangisi bilgisayarın bir giriş birimidir?",
+"secenekler": [
+"Fare",
+"Hoparlör",
+"Yazıcı"
+],
+"dogru_indeks": 0,
+"zorluk": 2,
+"kaynak": "Teknoloji tarihi"
+},
+{
+"id": "g2-032",
+"kategori": "türkiye",
+"tip": "coktan",
+"soru": "Türkiye kaç coğrafi bölgeye ayrılır?",
+"secenekler": [
+"5",
+"7",
+"9"
+],
+"dogru_indeks": 1,
+"zorluk": 2,
+"kaynak": "Türkiye coğrafyası/kültürü"
+},
+{
+"id": "g2-033",
+"kategori": "türkiye",
+"tip": "coktan",
+"soru": "Türkiye'nin en büyük gölü hangisidir?",
+"secenekler": [
+"Tuz Gölü",
+"Eğirdir Gölü",
+"Van Gölü"
+],
+"dogru_indeks": 2,
+"zorluk": 2,
+"kaynak": "Türkiye coğrafyası/kültürü"
+},
+{
+"id": "g2-034",
+"kategori": "türkiye",
+"tip": "coktan",
+"soru": "Pamukkale travertenleri hangi ildedir?",
+"secenekler": [
+"Denizli",
+"Antalya",
+"Muğla"
+],
+"dogru_indeks": 0,
+"zorluk": 2,
+"kaynak": "Türkiye coğrafyası/kültürü"
+},
+{
+"id": "g2-035",
+"kategori": "türkiye",
+"tip": "coktan",
+"soru": "Anıtkabir hangi şehirdedir?",
+"secenekler": [
+"İstanbul",
+"Ankara",
+"İzmir"
+],
+"dogru_indeks": 1,
+"zorluk": 2,
+"kaynak": "Türkiye coğrafyası/kültürü"
+},
+{
+"id": "g2-036",
+"kategori": "türkiye",
+"tip": "coktan",
+"soru": "Kız Kulesi hangi şehirdedir?",
+"secenekler": [
+"Çanakkale",
+"İzmir",
+"İstanbul"
+],
+"dogru_indeks": 2,
+"zorluk": 2,
+"kaynak": "Türkiye coğrafyası/kültürü"
+},
+{
+"id": "g2-037",
+"kategori": "tarih",
+"tip": "coktan",
+"soru": "Çanakkale Deniz Zaferi hangi yıl kazanıldı?",
+"secenekler": [
+"1915",
+"1919",
+"1922"
+],
+"dogru_indeks": 0,
+"zorluk": 2,
+"kaynak": "Genel tarih"
+},
+{
+"id": "g2-038",
+"kategori": "tarih",
+"tip": "coktan",
+"soru": "Malazgirt Meydan Muharebesi hangi yıl yapıldı?",
+"secenekler": [
+"1453",
+"1071",
+"1299"
+],
+"dogru_indeks": 1,
+"zorluk": 2,
+"kaynak": "Genel tarih"
+},
+{
+"id": "g2-039",
+"kategori": "tarih",
+"tip": "coktan",
+"soru": "İstanbul hangi yıl fethedildi?",
+"secenekler": [
+"1071",
+"1517",
+"1453"
+],
+"dogru_indeks": 2,
+"zorluk": 2,
+"kaynak": "Genel tarih"
+},
+{
+"id": "g2-040",
+"kategori": "tarih",
+"tip": "coktan",
+"soru": "Atatürk 19 Mayıs 1919'da hangi şehre çıktı?",
+"secenekler": [
+"Samsun",
+"Trabzon",
+"İzmir"
+],
+"dogru_indeks": 0,
+"zorluk": 2,
+"kaynak": "Genel tarih"
+},
+{
+"id": "g2-041",
+"kategori": "tarih",
+"tip": "coktan",
+"soru": "Yazıyı ilk kullanan uygarlıklardan biri hangisidir?",
+"secenekler": [
+"Vikingler",
+"Sümerler",
+"Aztekler"
+],
+"dogru_indeks": 1,
+"zorluk": 2,
+"kaynak": "Genel tarih"
+},
+{
+"id": "g2-042",
+"kategori": "tarih",
+"tip": "coktan",
+"soru": "TBMM hangi yıl açıldı?",
+"secenekler": [
+"1919",
+"1923",
+"1920"
+],
+"dogru_indeks": 2,
+"zorluk": 2,
+"kaynak": "Genel tarih"
+},
+{
+"id": "g3-001",
+"kategori": "bilim",
+"tip": "coktan",
+"soru": "Periyodik tabloda 'Fe' hangi elementtir?",
+"secenekler": [
+"Demir",
+"Flor",
+"Fosfor"
+],
+"dogru_indeks": 0,
+"zorluk": 3,
+"kaynak": "Temel bilim"
+},
+{
+"id": "g3-002",
+"kategori": "bilim",
+"tip": "coktan",
+"soru": "Hücrede DNA esas olarak nerede bulunur?",
+"secenekler": [
+"Koful",
+"Çekirdek",
+"Hücre zarı"
+],
+"dogru_indeks": 1,
+"zorluk": 3,
+"kaynak": "Temel bilim"
+},
+{
+"id": "g3-003",
+"kategori": "bilim",
+"tip": "coktan",
+"soru": "Evrensel çekim yasasıyla ünlü bilim insanı kimdir?",
+"secenekler": [
+"Pasteur",
+"Mendel",
+"Newton"
+],
+"dogru_indeks": 2,
+"zorluk": 3,
+"kaynak": "Temel bilim"
+},
+{
+"id": "g3-004",
+"kategori": "bilim",
+"tip": "coktan",
+"soru": "Işık saniyede yaklaşık ne kadar yol alır?",
+"secenekler": [
+"300 bin km",
+"30 bin km",
+"3 milyon km"
+],
+"dogru_indeks": 0,
+"zorluk": 3,
+"kaynak": "Temel bilim"
+},
+{
+"id": "g3-005",
+"kategori": "bilim",
+"tip": "coktan",
+"soru": "Penisilini kim keşfetti?",
+"secenekler": [
+"Pasteur",
+"Fleming",
+"Koch"
+],
+"dogru_indeks": 1,
+"zorluk": 3,
+"kaynak": "Temel bilim"
+},
+{
+"id": "g3-006",
+"kategori": "bilim",
+"tip": "coktan",
+"soru": "'Kızıl Gezegen' olarak bilinen gezegen hangisidir?",
+"secenekler": [
+"Jüpiter",
+"Satürn",
+"Mars"
+],
+"dogru_indeks": 2,
+"zorluk": 3,
+"kaynak": "Temel bilim"
+},
+{
+"id": "g3-007",
+"kategori": "coğrafya",
+"tip": "coktan",
+"soru": "Kanada'nın başkenti hangi şehirdir?",
+"secenekler": [
+"Ottawa",
+"Toronto",
+"Vancouver"
+],
+"dogru_indeks": 0,
+"zorluk": 3,
+"kaynak": "Dünya coğrafyası"
+},
+{
+"id": "g3-008",
+"kategori": "coğrafya",
+"tip": "coktan",
+"soru": "Hangisinin hem Avrupa'da hem Asya'da toprağı vardır?",
+"secenekler": [
+"İspanya",
+"Rusya",
+"Norveç"
+],
+"dogru_indeks": 1,
+"zorluk": 3,
+"kaynak": "Dünya coğrafyası"
+},
+{
+"id": "g3-009",
+"kategori": "coğrafya",
+"tip": "coktan",
+"soru": "Amazon Ormanları'nın büyük kısmı hangi ülkededir?",
+"secenekler": [
+"Peru",
+"Meksika",
+"Brezilya"
+],
+"dogru_indeks": 2,
+"zorluk": 3,
+"kaynak": "Dünya coğrafyası"
+},
+{
+"id": "g3-010",
+"kategori": "coğrafya",
+"tip": "coktan",
+"soru": "Mısır'ın başkenti hangi şehirdir?",
+"secenekler": [
+"Kahire",
+"İskenderiye",
+"Luksor"
+],
+"dogru_indeks": 0,
+"zorluk": 3,
+"kaynak": "Dünya coğrafyası"
+},
+{
+"id": "g3-011",
+"kategori": "coğrafya",
+"tip": "coktan",
+"soru": "Afrika ile Avustralya arasında hangi okyanus vardır?",
+"secenekler": [
+"Atlas Okyanusu",
+"Hint Okyanusu",
+"Arktik Okyanus"
+],
+"dogru_indeks": 1,
+"zorluk": 3,
+"kaynak": "Dünya coğrafyası"
+},
+{
+"id": "g3-012",
+"kategori": "coğrafya",
+"tip": "coktan",
+"soru": "Alp Dağları hangi kıtadadır?",
+"secenekler": [
+"Asya",
+"Güney Amerika",
+"Avrupa"
+],
+"dogru_indeks": 2,
+"zorluk": 3,
+"kaynak": "Dünya coğrafyası"
+},
+{
+"id": "g3-013",
+"kategori": "türkiye",
+"tip": "coktan",
+"soru": "Tamamı Türkiye'de olan en uzun nehir hangisidir?",
+"secenekler": [
+"Kızılırmak",
+"Sakarya",
+"Yeşilırmak"
+],
+"dogru_indeks": 0,
+"zorluk": 3,
+"kaynak": "Türkiye coğrafyası/kültürü"
+},
+{
+"id": "g3-014",
+"kategori": "türkiye",
+"tip": "coktan",
+"soru": "Nemrut Dağı'ndaki dev heykeller hangi ildedir?",
+"secenekler": [
+"Mardin",
+"Adıyaman",
+"Van"
+],
+"dogru_indeks": 1,
+"zorluk": 3,
+"kaynak": "Türkiye coğrafyası/kültürü"
+},
+{
+"id": "g3-015",
+"kategori": "türkiye",
+"tip": "coktan",
+"soru": "Göbeklitepe hangi ildedir?",
+"secenekler": [
+"Diyarbakır",
+"Gaziantep",
+"Şanlıurfa"
+],
+"dogru_indeks": 2,
+"zorluk": 3,
+"kaynak": "Türkiye coğrafyası/kültürü"
+},
+{
+"id": "g3-016",
+"kategori": "türkiye",
+"tip": "coktan",
+"soru": "Efes Antik Kenti hangi ildedir?",
+"secenekler": [
+"İzmir",
+"Aydın",
+"Muğla"
+],
+"dogru_indeks": 0,
+"zorluk": 3,
+"kaynak": "Türkiye coğrafyası/kültürü"
+},
+{
+"id": "g3-017",
+"kategori": "türkiye",
+"tip": "coktan",
+"soru": "Uludağ hangi ildedir?",
+"secenekler": [
+"Bolu",
+"Bursa",
+"Kocaeli"
+],
+"dogru_indeks": 1,
+"zorluk": 3,
+"kaynak": "Türkiye coğrafyası/kültürü"
+},
+{
+"id": "g3-018",
+"kategori": "sanat-edebiyat",
+"tip": "coktan",
+"soru": "Nasreddin Hoca'nın türbesi hangi ilçededir?",
+"secenekler": [
+"Sivrihisar",
+"Ürgüp",
+"Akşehir"
+],
+"dogru_indeks": 2,
+"zorluk": 3,
+"kaynak": "Sanat ve edebiyat"
+},
+{
+"id": "g3-019",
+"kategori": "sanat-edebiyat",
+"tip": "coktan",
+"soru": "Suç ve Ceza romanının yazarı kimdir?",
+"secenekler": [
+"Dostoyevski",
+"Tolstoy",
+"Çehov"
+],
+"dogru_indeks": 0,
+"zorluk": 3,
+"kaynak": "Sanat ve edebiyat"
+},
+{
+"id": "g3-020",
+"kategori": "sanat-edebiyat",
+"tip": "coktan",
+"soru": "Yıldızlı Gece tablosunun ressamı kimdir?",
+"secenekler": [
+"Monet",
+"Van Gogh",
+"Dalí"
+],
+"dogru_indeks": 1,
+"zorluk": 3,
+"kaynak": "Sanat ve edebiyat"
+},
+{
+"id": "g3-021",
+"kategori": "sanat-edebiyat",
+"tip": "coktan",
+"soru": "Çalıkuşu romanının yazarı kimdir?",
+"secenekler": [
+"Halide Edib",
+"Ömer Seyfettin",
+"Reşat Nuri"
+],
+"dogru_indeks": 2,
+"zorluk": 3,
+"kaynak": "Sanat ve edebiyat"
+},
+{
+"id": "g3-022",
+"kategori": "sanat-edebiyat",
+"tip": "coktan",
+"soru": "Don Kişot'u hangi yazar yazdı?",
+"secenekler": [
+"Cervantes",
+"Dante",
+"Goethe"
+],
+"dogru_indeks": 0,
+"zorluk": 3,
+"kaynak": "Sanat ve edebiyat"
+},
+{
+"id": "g3-023",
+"kategori": "sanat-edebiyat",
+"tip": "coktan",
+"soru": "Senfonileri seslendiren büyük topluluğa ne denir?",
+"secenekler": [
+"Koro",
+"Orkestra",
+"Kuartet"
+],
+"dogru_indeks": 1,
+"zorluk": 3,
+"kaynak": "Sanat ve edebiyat"
+},
+{
+"id": "g3-024",
+"kategori": "tarih",
+"tip": "coktan",
+"soru": "Osmanlı Devleti geleneksel olarak hangi yıl kuruldu?",
+"secenekler": [
+"1071",
+"1453",
+"1299"
+],
+"dogru_indeks": 2,
+"zorluk": 3,
+"kaynak": "Genel tarih"
+},
+{
+"id": "g3-025",
+"kategori": "tarih",
+"tip": "coktan",
+"soru": "Fransız İhtilali hangi yıl başladı?",
+"secenekler": [
+"1789",
+"1815",
+"1848"
+],
+"dogru_indeks": 0,
+"zorluk": 3,
+"kaynak": "Genel tarih"
+},
+{
+"id": "g3-026",
+"kategori": "tarih",
+"tip": "coktan",
+"soru": "Lozan Antlaşması hangi yıl imzalandı?",
+"secenekler": [
+"1920",
+"1923",
+"1918"
+],
+"dogru_indeks": 1,
+"zorluk": 3,
+"kaynak": "Genel tarih"
+},
+{
+"id": "g3-027",
+"kategori": "tarih",
+"tip": "coktan",
+"soru": "1492'de Amerika kıtasına ulaşan denizci kimdir?",
+"secenekler": [
+"Macellan",
+"Vasco da Gama",
+"Kolomb"
+],
+"dogru_indeks": 2,
+"zorluk": 3,
+"kaynak": "Genel tarih"
+},
+{
+"id": "g3-028",
+"kategori": "tarih",
+"tip": "coktan",
+"soru": "Berlin Duvarı hangi yıl yıkıldı?",
+"secenekler": [
+"1989",
+"1991",
+"1985"
+],
+"dogru_indeks": 0,
+"zorluk": 3,
+"kaynak": "Genel tarih"
+},
+{
+"id": "g3-029",
+"kategori": "tarih",
+"tip": "coktan",
+"soru": "Matbaayı Avrupa'da yaygınlaştıran kişi kimdir?",
+"secenekler": [
+"Galileo",
+"Gutenberg",
+"Kopernik"
+],
+"dogru_indeks": 1,
+"zorluk": 3,
+"kaynak": "Genel tarih"
+},
+{
+"id": "g3-030",
+"kategori": "spor",
+"tip": "coktan",
+"soru": "Satranç tahtasında kaç kare vardır?",
+"secenekler": [
+"36",
+"81",
+"64"
+],
+"dogru_indeks": 2,
+"zorluk": 3,
+"kaynak": "Spor kuralları"
+},
+{
+"id": "g3-031",
+"kategori": "spor",
+"tip": "coktan",
+"soru": "Futbolda bir maçın normal süresi kaç dakikadır?",
+"secenekler": [
+"90",
+"80",
+"100"
+],
+"dogru_indeks": 0,
+"zorluk": 3,
+"kaynak": "Spor kuralları"
+},
+{
+"id": "g3-032",
+"kategori": "spor",
+"tip": "coktan",
+"soru": "Wimbledon tenis turnuvası hangi zeminde oynanır?",
+"secenekler": [
+"Toprak",
+"Çim",
+"Sert kort"
+],
+"dogru_indeks": 1,
+"zorluk": 3,
+"kaynak": "Spor kuralları"
+},
+{
+"id": "g3-033",
+"kategori": "spor",
+"tip": "coktan",
+"soru": "İlk modern olimpiyatlar hangi şehirde yapıldı?",
+"secenekler": [
+"Paris",
+"Roma",
+"Atina"
+],
+"dogru_indeks": 2,
+"zorluk": 3,
+"kaynak": "Spor kuralları"
+},
+{
+"id": "g3-034",
+"kategori": "spor",
+"tip": "coktan",
+"soru": "Golfte deliği standart vuruş sayısında bitirmeye ne denir?",
+"secenekler": [
+"Par",
+"Birdie",
+"Eagle"
+],
+"dogru_indeks": 0,
+"zorluk": 3,
+"kaynak": "Spor kuralları"
+},
+{
+"id": "g3-035",
+"kategori": "teknoloji",
+"tip": "coktan",
+"soru": "İlk yapay uydunun adı nedir?",
+"secenekler": [
+"Apollo",
+"Sputnik",
+"Hubble"
+],
+"dogru_indeks": 1,
+"zorluk": 3,
+"kaynak": "Teknoloji tarihi"
+},
+{
+"id": "g3-036",
+"kategori": "teknoloji",
+"tip": "coktan",
+"soru": "Ay'a ilk ayak basan astronot kimdir?",
+"secenekler": [
+"Yuri Gagarin",
+"Buzz Aldrin",
+"Neil Armstrong"
+],
+"dogru_indeks": 2,
+"zorluk": 3,
+"kaynak": "Teknoloji tarihi"
+},
+{
+"id": "g3-037",
+"kategori": "teknoloji",
+"tip": "coktan",
+"soru": "Uzaya çıkan ilk insan kimdir?",
+"secenekler": [
+"Yuri Gagarin",
+"Neil Armstrong",
+"John Glenn"
+],
+"dogru_indeks": 0,
+"zorluk": 3,
+"kaynak": "Teknoloji tarihi"
+},
+{
+"id": "g3-038",
+"kategori": "teknoloji",
+"tip": "coktan",
+"soru": "İkilik sayı sisteminde hangi rakamlar kullanılır?",
+"secenekler": [
+"1 ve 2",
+"0 ve 1",
+"0 ve 9"
+],
+"dogru_indeks": 1,
+"zorluk": 3,
+"kaynak": "Teknoloji tarihi"
+},
+{
+"id": "g3-039",
+"kategori": "teknoloji",
+"tip": "coktan",
+"soru": "HTML ile ne oluşturulur?",
+"secenekler": [
+"Fotoğraf",
+"Ses dosyası",
+"Web sayfası"
+],
+"dogru_indeks": 2,
+"zorluk": 3,
+"kaynak": "Teknoloji tarihi"
+},
+{
+"id": "g3-040",
+"kategori": "doğa",
+"tip": "coktan",
+"soru": "Fotosentezde bitkiler havadan hangi gazı alır?",
+"secenekler": [
+"Karbondioksit",
+"Oksijen",
+"Azot"
+],
+"dogru_indeks": 0,
+"zorluk": 3,
+"kaynak": "Canlılar bilgisi"
+},
+{
+"id": "g3-041",
+"kategori": "doğa",
+"tip": "coktan",
+"soru": "Bir arı kovanında yumurtlayan arıya ne denir?",
+"secenekler": [
+"İşçi arı",
+"Ana arı",
+"Erkek arı"
+],
+"dogru_indeks": 1,
+"zorluk": 3,
+"kaynak": "Canlılar bilgisi"
+},
+{
+"id": "g3-042",
+"kategori": "doğa",
+"tip": "coktan",
+"soru": "Hangisi yumurtlayan bir memelidir?",
+"secenekler": [
+"Kanguru",
+"Koala",
+"Ornitorenk"
+],
+"dogru_indeks": 2,
+"zorluk": 3,
+"kaynak": "Canlılar bilgisi"
+},
+{
+"id": "g3-043",
+"kategori": "doğa",
+"tip": "coktan",
+"soru": "Kaktüsler en çok hangi ortama uyum sağlamıştır?",
+"secenekler": [
+"Çöl",
+"Kutup",
+"Bataklık"
+],
+"dogru_indeks": 0,
+"zorluk": 3,
+"kaynak": "Canlılar bilgisi"
+},
+{
+"id": "g4-001",
+"kategori": "bilim",
+"tip": "coktan",
+"soru": "Periyodik tabloda 'Au' hangi elementtir?",
+"secenekler": [
+"Gümüş",
+"Altın",
+"Alüminyum"
+],
+"dogru_indeks": 1,
+"zorluk": 4,
+"kaynak": "Temel bilim"
+},
+{
+"id": "g4-002",
+"kategori": "bilim",
+"tip": "coktan",
+"soru": "Hangisi atom çekirdeğinde bulunmaz?",
+"secenekler": [
+"Proton",
+"Nötron",
+"Elektron"
+],
+"dogru_indeks": 2,
+"zorluk": 4,
+"kaynak": "Temel bilim"
+},
+{
+"id": "g4-003",
+"kategori": "bilim",
+"tip": "coktan",
+"soru": "Ses havada saniyede yaklaşık kaç metre yol alır?",
+"secenekler": [
+"340 m",
+"34 m",
+"3400 m"
+],
+"dogru_indeks": 0,
+"zorluk": 4,
+"kaynak": "Temel bilim"
+},
+{
+"id": "g4-004",
+"kategori": "bilim",
+"tip": "coktan",
+"soru": "Görelilik kuramını kim geliştirdi?",
+"secenekler": [
+"Bohr",
+"Einstein",
+"Faraday"
+],
+"dogru_indeks": 1,
+"zorluk": 4,
+"kaynak": "Temel bilim"
+},
+{
+"id": "g4-005",
+"kategori": "bilim",
+"tip": "coktan",
+"soru": "İnsan hücresinde normalde kaç kromozom bulunur?",
+"secenekler": [
+"23",
+"48",
+"46"
+],
+"dogru_indeks": 2,
+"zorluk": 4,
+"kaynak": "Temel bilim"
+},
+{
+"id": "g4-006",
+"kategori": "bilim",
+"tip": "coktan",
+"soru": "Gökyüzünün mavi görünmesinin nedeni nedir?",
+"secenekler": [
+"Işık saçılması",
+"Deniz yansıması",
+"Bulut rengi"
+],
+"dogru_indeks": 0,
+"zorluk": 4,
+"kaynak": "Temel bilim"
+},
+{
+"id": "g4-007",
+"kategori": "coğrafya",
+"tip": "coktan",
+"soru": "Dünyanın en derin noktası hangi çukurdadır?",
+"secenekler": [
+"Java Çukuru",
+"Mariana Çukuru",
+"Tonga Çukuru"
+],
+"dogru_indeks": 1,
+"zorluk": 4,
+"kaynak": "Dünya coğrafyası"
+},
+{
+"id": "g4-008",
+"kategori": "coğrafya",
+"tip": "coktan",
+"soru": "Hangi ülkenin denize kıyısı yoktur?",
+"secenekler": [
+"İtalya",
+"Portekiz",
+"İsviçre"
+],
+"dogru_indeks": 2,
+"zorluk": 4,
+"kaynak": "Dünya coğrafyası"
+},
+{
+"id": "g4-009",
+"kategori": "coğrafya",
+"tip": "coktan",
+"soru": "İzlanda'nın başkenti hangi şehirdir?",
+"secenekler": [
+"Reykjavik",
+"Oslo",
+"Helsinki"
+],
+"dogru_indeks": 0,
+"zorluk": 4,
+"kaynak": "Dünya coğrafyası"
+},
+{
+"id": "g4-010",
+"kategori": "coğrafya",
+"tip": "coktan",
+"soru": "Süveyş Kanalı hangi ülkededir?",
+"secenekler": [
+"Panama",
+"Mısır",
+"Ürdün"
+],
+"dogru_indeks": 1,
+"zorluk": 4,
+"kaynak": "Dünya coğrafyası"
+},
+{
+"id": "g4-011",
+"kategori": "coğrafya",
+"tip": "coktan",
+"soru": "Kilimanjaro Dağı hangi ülkededir?",
+"secenekler": [
+"Kenya",
+"Etiyopya",
+"Tanzanya"
+],
+"dogru_indeks": 2,
+"zorluk": 4,
+"kaynak": "Dünya coğrafyası"
+},
+{
+"id": "g4-012",
+"kategori": "coğrafya",
+"tip": "coktan",
+"soru": "Dünyanın en büyük adası hangisidir?",
+"secenekler": [
+"Grönland",
+"Madagaskar",
+"Borneo"
+],
+"dogru_indeks": 0,
+"zorluk": 4,
+"kaynak": "Dünya coğrafyası"
+},
+{
+"id": "g4-013",
+"kategori": "türkiye",
+"tip": "coktan",
+"soru": "Sümela Manastırı hangi ildedir?",
+"secenekler": [
+"Rize",
+"Trabzon",
+"Giresun"
+],
+"dogru_indeks": 1,
+"zorluk": 4,
+"kaynak": "Türkiye coğrafyası/kültürü"
+},
+{
+"id": "g4-014",
+"kategori": "türkiye",
+"tip": "coktan",
+"soru": "Ani Harabeleri hangi ildedir?",
+"secenekler": [
+"Ardahan",
+"Erzurum",
+"Kars"
+],
+"dogru_indeks": 2,
+"zorluk": 4,
+"kaynak": "Türkiye coğrafyası/kültürü"
+},
+{
+"id": "g4-015",
+"kategori": "türkiye",
+"tip": "coktan",
+"soru": "Türkiye'nin en doğu ucu hangi ildedir?",
+"secenekler": [
+"Iğdır",
+"Van",
+"Hakkâri"
+],
+"dogru_indeks": 0,
+"zorluk": 4,
+"kaynak": "Türkiye coğrafyası/kültürü"
+},
+{
+"id": "g4-016",
+"kategori": "türkiye",
+"tip": "coktan",
+"soru": "Hititlerin başkenti Hattuşa hangi ildedir?",
+"secenekler": [
+"Kayseri",
+"Çorum",
+"Konya"
+],
+"dogru_indeks": 1,
+"zorluk": 4,
+"kaynak": "Türkiye coğrafyası/kültürü"
+},
+{
+"id": "g4-017",
+"kategori": "türkiye",
+"tip": "coktan",
+"soru": "Safranbolu hangi ilin ilçesidir?",
+"secenekler": [
+"Bartın",
+"Kastamonu",
+"Karabük"
+],
+"dogru_indeks": 2,
+"zorluk": 4,
+"kaynak": "Türkiye coğrafyası/kültürü"
+},
+{
+"id": "g4-018",
+"kategori": "türkiye",
+"tip": "coktan",
+"soru": "Türkiye'nin en büyük adası hangisidir?",
+"secenekler": [
+"Gökçeada",
+"Bozcaada",
+"Marmara Adası"
+],
+"dogru_indeks": 0,
+"zorluk": 4,
+"kaynak": "Türkiye coğrafyası/kültürü"
+},
+{
+"id": "g4-019",
+"kategori": "tarih",
+"tip": "coktan",
+"soru": "İlk yazılı barış antlaşması olarak bilinen hangisidir?",
+"secenekler": [
+"Lozan",
+"Kadeş",
+"Vestfalya"
+],
+"dogru_indeks": 1,
+"zorluk": 4,
+"kaynak": "Genel tarih"
+},
+{
+"id": "g4-020",
+"kategori": "tarih",
+"tip": "coktan",
+"soru": "Orhun (Göktürk) Yazıtları hangi ülkededir?",
+"secenekler": [
+"Kazakistan",
+"Çin",
+"Moğolistan"
+],
+"dogru_indeks": 2,
+"zorluk": 4,
+"kaynak": "Genel tarih"
+},
+{
+"id": "g4-021",
+"kategori": "tarih",
+"tip": "coktan",
+"soru": "Magna Carta hangi ülkede imzalandı?",
+"secenekler": [
+"İngiltere",
+"Fransa",
+"İspanya"
+],
+"dogru_indeks": 0,
+"zorluk": 4,
+"kaynak": "Genel tarih"
+},
+{
+"id": "g4-022",
+"kategori": "tarih",
+"tip": "coktan",
+"soru": "Osmanlı Devleti'nin son padişahı kimdir?",
+"secenekler": [
+"Abdülaziz",
+"Vahdettin",
+"Abdülhamid"
+],
+"dogru_indeks": 1,
+"zorluk": 4,
+"kaynak": "Genel tarih"
+},
+{
+"id": "g4-023",
+"kategori": "tarih",
+"tip": "coktan",
+"soru": "Rönesans hangi ülkede başladı?",
+"secenekler": [
+"Fransa",
+"Almanya",
+"İtalya"
+],
+"dogru_indeks": 2,
+"zorluk": 4,
+"kaynak": "Genel tarih"
+},
+{
+"id": "g4-024",
+"kategori": "tarih",
+"tip": "coktan",
+"soru": "Birinci Dünya Savaşı hangi yıl sona erdi?",
+"secenekler": [
+"1918",
+"1914",
+"1923"
+],
+"dogru_indeks": 0,
+"zorluk": 4,
+"kaynak": "Genel tarih"
+},
+{
+"id": "g4-025",
+"kategori": "sanat-edebiyat",
+"tip": "coktan",
+"soru": "Sefiller romanının yazarı kimdir?",
+"secenekler": [
+"Balzac",
+"Victor Hugo",
+"Flaubert"
+],
+"dogru_indeks": 1,
+"zorluk": 4,
+"kaynak": "Sanat ve edebiyat"
+},
+{
+"id": "g4-026",
+"kategori": "sanat-edebiyat",
+"tip": "coktan",
+"soru": "Guernica tablosunun ressamı kimdir?",
+"secenekler": [
+"Matisse",
+"Goya",
+"Picasso"
+],
+"dogru_indeks": 2,
+"zorluk": 4,
+"kaynak": "Sanat ve edebiyat"
+},
+{
+"id": "g4-027",
+"kategori": "sanat-edebiyat",
+"tip": "coktan",
+"soru": "İnce Memed romanının yazarı kimdir?",
+"secenekler": [
+"Yaşar Kemal",
+"Orhan Kemal",
+"Kemal Tahir"
+],
+"dogru_indeks": 0,
+"zorluk": 4,
+"kaynak": "Sanat ve edebiyat"
+},
+{
+"id": "g4-028",
+"kategori": "sanat-edebiyat",
+"tip": "coktan",
+"soru": "Mimar Sinan'ın 'ustalık eserim' dediği cami hangisidir?",
+"secenekler": [
+"Süleymaniye",
+"Selimiye",
+"Şehzade"
+],
+"dogru_indeks": 1,
+"zorluk": 4,
+"kaynak": "Sanat ve edebiyat"
+},
+{
+"id": "g4-029",
+"kategori": "sanat-edebiyat",
+"tip": "coktan",
+"soru": "Küçük Prens kitabının yazarı kimdir?",
+"secenekler": [
+"Jules Verne",
+"Andersen",
+"Saint-Exupéry"
+],
+"dogru_indeks": 2,
+"zorluk": 4,
+"kaynak": "Sanat ve edebiyat"
+},
+{
+"id": "g4-030",
+"kategori": "sanat-edebiyat",
+"tip": "coktan",
+"soru": "İşitme yetisini yitirdikten sonra da beste yapan kimdir?",
+"secenekler": [
+"Beethoven",
+"Mozart",
+"Vivaldi"
+],
+"dogru_indeks": 0,
+"zorluk": 4,
+"kaynak": "Sanat ve edebiyat"
+},
+{
+"id": "g4-031",
+"kategori": "spor",
+"tip": "coktan",
+"soru": "Maratonun tam mesafesi kaç kilometredir?",
+"secenekler": [
+"40 km",
+"42,195 km",
+"45,5 km"
+],
+"dogru_indeks": 1,
+"zorluk": 4,
+"kaynak": "Spor kuralları"
+},
+{
+"id": "g4-032",
+"kategori": "spor",
+"tip": "coktan",
+"soru": "İlk FIFA Dünya Kupası'nı hangi ülke kazandı?",
+"secenekler": [
+"Brezilya",
+"İtalya",
+"Uruguay"
+],
+"dogru_indeks": 2,
+"zorluk": 4,
+"kaynak": "Spor kuralları"
+},
+{
+"id": "g4-033",
+"kategori": "spor",
+"tip": "coktan",
+"soru": "Voleybolda bir set normalde kaç sayıda biter?",
+"secenekler": [
+"25",
+"21",
+"15"
+],
+"dogru_indeks": 0,
+"zorluk": 4,
+"kaynak": "Spor kuralları"
+},
+{
+"id": "g4-034",
+"kategori": "spor",
+"tip": "coktan",
+"soru": "Sumo güreşi hangi ülkenin geleneksel sporudur?",
+"secenekler": [
+"Çin",
+"Japonya",
+"Kore"
+],
+"dogru_indeks": 1,
+"zorluk": 4,
+"kaynak": "Spor kuralları"
+},
+{
+"id": "g4-035",
+"kategori": "spor",
+"tip": "coktan",
+"soru": "Bowlingde bir oyunda alınabilecek en yüksek puan kaçtır?",
+"secenekler": [
+"200",
+"500",
+"300"
+],
+"dogru_indeks": 2,
+"zorluk": 4,
+"kaynak": "Spor kuralları"
+},
+{
+"id": "g4-036",
+"kategori": "teknoloji",
+"tip": "coktan",
+"soru": "World Wide Web'i kim icat etti?",
+"secenekler": [
+"Berners-Lee",
+"Bill Gates",
+"Steve Jobs"
+],
+"dogru_indeks": 0,
+"zorluk": 4,
+"kaynak": "Teknoloji tarihi"
+},
+{
+"id": "g4-037",
+"kategori": "teknoloji",
+"tip": "coktan",
+"soru": "Adı bir yılan türüyle aynı olan programlama dili hangisidir?",
+"secenekler": [
+"Java",
+"Python",
+"Ruby"
+],
+"dogru_indeks": 1,
+"zorluk": 4,
+"kaynak": "Teknoloji tarihi"
+},
+{
+"id": "g4-038",
+"kategori": "teknoloji",
+"tip": "coktan",
+"soru": "Bilgisayardaki RAM nasıl bir bellektir?",
+"secenekler": [
+"Kalıcı disk",
+"Ekran kartı",
+"Geçici bellek"
+],
+"dogru_indeks": 2,
+"zorluk": 4,
+"kaynak": "Teknoloji tarihi"
+},
+{
+"id": "g4-039",
+"kategori": "teknoloji",
+"tip": "coktan",
+"soru": "İlk genel amaçlı elektronik bilgisayarlardan biri hangisidir?",
+"secenekler": [
+"ENIAC",
+"Walkman",
+"Atari"
+],
+"dogru_indeks": 0,
+"zorluk": 4,
+"kaynak": "Teknoloji tarihi"
+},
+{
+"id": "g4-040",
+"kategori": "teknoloji",
+"tip": "coktan",
+"soru": "Bluetooth adını kimden alır?",
+"secenekler": [
+"Bir mucit",
+"Danimarka kralı",
+"Bir gezegen"
+],
+"dogru_indeks": 1,
+"zorluk": 4,
+"kaynak": "Teknoloji tarihi"
+},
+{
+"id": "g4-041",
+"kategori": "doğa",
+"tip": "coktan",
+"soru": "Ahtapotun kaç kalbi vardır?",
+"secenekler": [
+"1",
+"2",
+"3"
+],
+"dogru_indeks": 2,
+"zorluk": 4,
+"kaynak": "Canlılar bilgisi"
+},
+{
+"id": "g4-042",
+"kategori": "doğa",
+"tip": "coktan",
+"soru": "Hangi kuş geriye doğru uçabilir?",
+"secenekler": [
+"Sinek kuşu",
+"Kartal",
+"Serçe"
+],
+"dogru_indeks": 0,
+"zorluk": 4,
+"kaynak": "Canlılar bilgisi"
+},
+{
+"id": "g4-043",
+"kategori": "doğa",
+"tip": "coktan",
+"soru": "Bambu hangi bitki ailesindendir?",
+"secenekler": [
+"Eğreltiler",
+"Buğdaygiller",
+"Gülgiller"
+],
+"dogru_indeks": 1,
+"zorluk": 4,
+"kaynak": "Canlılar bilgisi"
+},
+{
+"id": "g4-044",
+"kategori": "doğa",
+"tip": "coktan",
+"soru": "En hızlı koşan kara hayvanı hangisidir?",
+"secenekler": [
+"Aslan",
+"Antilop",
+"Çita"
+],
+"dogru_indeks": 2,
+"zorluk": 4,
+"kaynak": "Canlılar bilgisi"
+},
+{
+"id": "g5-001",
+"kategori": "bilim",
+"tip": "coktan",
+"soru": "Simgesi 'W' olan element hangisidir?",
+"secenekler": [
+"Tungsten",
+"Vanadyum",
+"Ksenon"
+],
+"dogru_indeks": 0,
+"zorluk": 5,
+"kaynak": "Temel bilim"
+},
+{
+"id": "g5-002",
+"kategori": "bilim",
+"tip": "coktan",
+"soru": "Mutlak sıfır kaç santigrat derecedir?",
+"secenekler": [
+"−100 °C",
+"−273,15 °C",
+"−459,67 °C"
+],
+"dogru_indeks": 1,
+"zorluk": 5,
+"kaynak": "Temel bilim"
+},
+{
+"id": "g5-003",
+"kategori": "bilim",
+"tip": "coktan",
+"soru": "Hücrenin enerji santrali sayılan organel hangisidir?",
+"secenekler": [
+"Ribozom",
+"Golgi",
+"Mitokondri"
+],
+"dogru_indeks": 2,
+"zorluk": 5,
+"kaynak": "Temel bilim"
+},
+{
+"id": "g5-004",
+"kategori": "bilim",
+"tip": "coktan",
+"soru": "Güneş sistemindeki en sıcak gezegen hangisidir?",
+"secenekler": [
+"Venüs",
+"Merkür",
+"Mars"
+],
+"dogru_indeks": 0,
+"zorluk": 5,
+"kaynak": "Temel bilim"
+},
+{
+"id": "g5-005",
+"kategori": "bilim",
+"tip": "coktan",
+"soru": "Halley Kuyruklu Yıldızı yaklaşık kaç yılda bir görünür?",
+"secenekler": [
+"50",
+"76",
+"100"
+],
+"dogru_indeks": 1,
+"zorluk": 5,
+"kaynak": "Temel bilim"
+},
+{
+"id": "g5-006",
+"kategori": "bilim",
+"tip": "coktan",
+"soru": "Elektrik direncinin birimi nedir?",
+"secenekler": [
+"Volt",
+"Amper",
+"Ohm"
+],
+"dogru_indeks": 2,
+"zorluk": 5,
+"kaynak": "Temel bilim"
+},
+{
+"id": "g5-007",
+"kategori": "coğrafya",
+"tip": "coktan",
+"soru": "Dünyanın yüzölçümü en büyük gölü hangisidir?",
+"secenekler": [
+"Hazar Denizi",
+"Baykal Gölü",
+"Superior Gölü"
+],
+"dogru_indeks": 0,
+"zorluk": 5,
+"kaynak": "Dünya coğrafyası"
+},
+{
+"id": "g5-008",
+"kategori": "coğrafya",
+"tip": "coktan",
+"soru": "Hangi ülkenin bayrağı kare biçimindedir?",
+"secenekler": [
+"Nepal",
+"İsviçre",
+"Danimarka"
+],
+"dogru_indeks": 1,
+"zorluk": 5,
+"kaynak": "Dünya coğrafyası"
+},
+{
+"id": "g5-009",
+"kategori": "coğrafya",
+"tip": "coktan",
+"soru": "Uluru (Ayers Kayası) hangi ülkededir?",
+"secenekler": [
+"Yeni Zelanda",
+"Güney Afrika",
+"Avustralya"
+],
+"dogru_indeks": 2,
+"zorluk": 5,
+"kaynak": "Dünya coğrafyası"
+},
+{
+"id": "g5-010",
+"kategori": "coğrafya",
+"tip": "coktan",
+"soru": "Baykal Gölü hangi ülkededir?",
+"secenekler": [
+"Rusya",
+"Moğolistan",
+"Kazakistan"
+],
+"dogru_indeks": 0,
+"zorluk": 5,
+"kaynak": "Dünya coğrafyası"
+},
+{
+"id": "g5-011",
+"kategori": "coğrafya",
+"tip": "coktan",
+"soru": "Bağdat'tan hangi nehir geçer?",
+"secenekler": [
+"Fırat",
+"Dicle",
+"Nil"
+],
+"dogru_indeks": 1,
+"zorluk": 5,
+"kaynak": "Dünya coğrafyası"
+},
+{
+"id": "g5-012",
+"kategori": "coğrafya",
+"tip": "coktan",
+"soru": "Madagaskar hangi okyanustadır?",
+"secenekler": [
+"Atlas Okyanusu",
+"Büyük Okyanus",
+"Hint Okyanusu"
+],
+"dogru_indeks": 2,
+"zorluk": 5,
+"kaynak": "Dünya coğrafyası"
+},
+{
+"id": "g5-013",
+"kategori": "türkiye",
+"tip": "coktan",
+"soru": "Çatalhöyük hangi ildedir?",
+"secenekler": [
+"Konya",
+"Aksaray",
+"Niğde"
+],
+"dogru_indeks": 0,
+"zorluk": 5,
+"kaynak": "Türkiye coğrafyası/kültürü"
+},
+{
+"id": "g5-014",
+"kategori": "türkiye",
+"tip": "coktan",
+"soru": "Türkiye'nin ilk milli parkı hangisidir?",
+"secenekler": [
+"Uludağ",
+"Yozgat Çamlığı",
+"Kuşcenneti"
+],
+"dogru_indeks": 1,
+"zorluk": 5,
+"kaynak": "Türkiye coğrafyası/kültürü"
+},
+{
+"id": "g5-015",
+"kategori": "türkiye",
+"tip": "coktan",
+"soru": "İshak Paşa Sarayı hangi ilçededir?",
+"secenekler": [
+"Hasankeyf",
+"Ahlat",
+"Doğubayazıt"
+],
+"dogru_indeks": 2,
+"zorluk": 5,
+"kaynak": "Türkiye coğrafyası/kültürü"
+},
+{
+"id": "g5-016",
+"kategori": "türkiye",
+"tip": "coktan",
+"soru": "Zeugma Mozaik Müzesi hangi ildedir?",
+"secenekler": [
+"Gaziantep",
+"Hatay",
+"Adana"
+],
+"dogru_indeks": 0,
+"zorluk": 5,
+"kaynak": "Türkiye coğrafyası/kültürü"
+},
+{
+"id": "g5-017",
+"kategori": "türkiye",
+"tip": "coktan",
+"soru": "Truva Antik Kenti hangi ildedir?",
+"secenekler": [
+"Balıkesir",
+"Çanakkale",
+"Edirne"
+],
+"dogru_indeks": 1,
+"zorluk": 5,
+"kaynak": "Türkiye coğrafyası/kültürü"
+},
+{
+"id": "g5-018",
+"kategori": "türkiye",
+"tip": "coktan",
+"soru": "Hangisi hem Karadeniz'e hem Marmara'ya kıyısı olan bir ildir?",
+"secenekler": [
+"Tekirdağ",
+"Bursa",
+"İstanbul"
+],
+"dogru_indeks": 2,
+"zorluk": 5,
+"kaynak": "Türkiye coğrafyası/kültürü"
+},
+{
+"id": "g5-019",
+"kategori": "tarih",
+"tip": "coktan",
+"soru": "Osmanlı'da ilk Türk matbaasını kuran kimdir?",
+"secenekler": [
+"Müteferrika",
+"Kâtip Çelebi",
+"Evliya Çelebi"
+],
+"dogru_indeks": 0,
+"zorluk": 5,
+"kaynak": "Genel tarih"
+},
+{
+"id": "g5-020",
+"kategori": "tarih",
+"tip": "coktan",
+"soru": "Ankara Savaşı hangi yıl yapıldı?",
+"secenekler": [
+"1453",
+"1402",
+"1514"
+],
+"dogru_indeks": 1,
+"zorluk": 5,
+"kaynak": "Genel tarih"
+},
+{
+"id": "g5-021",
+"kategori": "tarih",
+"tip": "coktan",
+"soru": "Mohaç Meydan Muharebesi hangi yıl yapıldı?",
+"secenekler": [
+"1517",
+"1571",
+"1526"
+],
+"dogru_indeks": 2,
+"zorluk": 5,
+"kaynak": "Genel tarih"
+},
+{
+"id": "g5-022",
+"kategori": "tarih",
+"tip": "coktan",
+"soru": "Tanzimat Fermanı hangi yıl ilan edildi?",
+"secenekler": [
+"1839",
+"1876",
+"1856"
+],
+"dogru_indeks": 0,
+"zorluk": 5,
+"kaynak": "Genel tarih"
+},
+{
+"id": "g5-023",
+"kategori": "tarih",
+"tip": "coktan",
+"soru": "Çivi yazısını hangi uygarlık geliştirdi?",
+"secenekler": [
+"Fenikeliler",
+"Sümerler",
+"Hititler"
+],
+"dogru_indeks": 1,
+"zorluk": 5,
+"kaynak": "Genel tarih"
+},
+{
+"id": "g5-024",
+"kategori": "tarih",
+"tip": "coktan",
+"soru": "Vestfalya Barışı hangi savaşı sona erdirdi?",
+"secenekler": [
+"Yüz Yıl Savaşı",
+"Kırım Savaşı",
+"Otuz Yıl Savaşı"
+],
+"dogru_indeks": 2,
+"zorluk": 5,
+"kaynak": "Genel tarih"
+},
+{
+"id": "g5-025",
+"kategori": "sanat-edebiyat",
+"tip": "coktan",
+"soru": "Kuyucaklı Yusuf romanının yazarı kimdir?",
+"secenekler": [
+"Sabahattin Ali",
+"Sait Faik",
+"Orhan Pamuk"
+],
+"dogru_indeks": 0,
+"zorluk": 5,
+"kaynak": "Sanat ve edebiyat"
+},
+{
+"id": "g5-026",
+"kategori": "sanat-edebiyat",
+"tip": "coktan",
+"soru": "Saatleri Ayarlama Enstitüsü romanının yazarı kimdir?",
+"secenekler": [
+"Peyami Safa",
+"Tanpınar",
+"Oğuz Atay"
+],
+"dogru_indeks": 1,
+"zorluk": 5,
+"kaynak": "Sanat ve edebiyat"
+},
+{
+"id": "g5-027",
+"kategori": "sanat-edebiyat",
+"tip": "coktan",
+"soru": "Nobel Edebiyat Ödülü alan ilk Türk yazar kimdir?",
+"secenekler": [
+"Yaşar Kemal",
+"Nazım Hikmet",
+"Orhan Pamuk"
+],
+"dogru_indeks": 2,
+"zorluk": 5,
+"kaynak": "Sanat ve edebiyat"
+},
+{
+"id": "g5-028",
+"kategori": "sanat-edebiyat",
+"tip": "coktan",
+"soru": "Dört Mevsim adlı eserin bestecisi kimdir?",
+"secenekler": [
+"Vivaldi",
+"Bach",
+"Chopin"
+],
+"dogru_indeks": 0,
+"zorluk": 5,
+"kaynak": "Sanat ve edebiyat"
+},
+{
+"id": "g5-029",
+"kategori": "sanat-edebiyat",
+"tip": "coktan",
+"soru": "Çığlık tablosunun ressamı kimdir?",
+"secenekler": [
+"Salvador Dalí",
+"Edvard Munch",
+"Claude Monet"
+],
+"dogru_indeks": 1,
+"zorluk": 5,
+"kaynak": "Sanat ve edebiyat"
+},
+{
+"id": "g5-030",
+"kategori": "sanat-edebiyat",
+"tip": "coktan",
+"soru": "Memleketimden İnsan Manzaraları kimin eseridir?",
+"secenekler": [
+"Orhan Veli",
+"Cemal Süreya",
+"Nazım Hikmet"
+],
+"dogru_indeks": 2,
+"zorluk": 5,
+"kaynak": "Sanat ve edebiyat"
+},
+{
+"id": "g5-031",
+"kategori": "spor",
+"tip": "coktan",
+"soru": "Okçuluk hedefinin tam merkezi kaç puandır?",
+"secenekler": [
+"10",
+"5",
+"100"
+],
+"dogru_indeks": 0,
+"zorluk": 5,
+"kaynak": "Spor kuralları"
+},
+{
+"id": "g5-032",
+"kategori": "spor",
+"tip": "coktan",
+"soru": "Modern pentatlon kaç ayrı branştan oluşur?",
+"secenekler": [
+"3",
+"5",
+"7"
+],
+"dogru_indeks": 1,
+"zorluk": 5,
+"kaynak": "Spor kuralları"
+},
+{
+"id": "g5-033",
+"kategori": "spor",
+"tip": "coktan",
+"soru": "Basketbolu icat eden kişi kimdir?",
+"secenekler": [
+"William Morgan",
+"Walter Camp",
+"James Naismith"
+],
+"dogru_indeks": 2,
+"zorluk": 5,
+"kaynak": "Spor kuralları"
+},
+{
+"id": "g5-034",
+"kategori": "spor",
+"tip": "coktan",
+"soru": "Voleybolu icat eden kişi kimdir?",
+"secenekler": [
+"William Morgan",
+"James Naismith",
+"Walter Camp"
+],
+"dogru_indeks": 0,
+"zorluk": 5,
+"kaynak": "Spor kuralları"
+},
+{
+"id": "g5-035",
+"kategori": "teknoloji",
+"tip": "coktan",
+"soru": "Bilgisayar biliminin babası sayılan matematikçi kimdir?",
+"secenekler": [
+"Blaise Pascal",
+"Alan Turing",
+"Charles Darwin"
+],
+"dogru_indeks": 1,
+"zorluk": 5,
+"kaynak": "Teknoloji tarihi"
+},
+{
+"id": "g5-036",
+"kategori": "teknoloji",
+"tip": "coktan",
+"soru": "İlk bilgisayar programcısı olarak bilinen kişi kimdir?",
+"secenekler": [
+"Marie Curie",
+"Grace Hopper",
+"Ada Lovelace"
+],
+"dogru_indeks": 2,
+"zorluk": 5,
+"kaynak": "Teknoloji tarihi"
+},
+{
+"id": "g5-037",
+"kategori": "teknoloji",
+"tip": "coktan",
+"soru": "İlk ticari mikroişlemciyi hangi şirket üretti?",
+"secenekler": [
+"Intel",
+"IBM",
+"Apple"
+],
+"dogru_indeks": 0,
+"zorluk": 5,
+"kaynak": "Teknoloji tarihi"
+},
+{
+"id": "g5-038",
+"kategori": "teknoloji",
+"tip": "coktan",
+"soru": "QR koddaki 'QR' neyin kısaltmasıdır?",
+"secenekler": [
+"Quality Read",
+"Quick Response",
+"Quick Record"
+],
+"dogru_indeks": 1,
+"zorluk": 5,
+"kaynak": "Teknoloji tarihi"
+},
+{
+"id": "g5-039",
+"kategori": "teknoloji",
+"tip": "coktan",
+"soru": "Linux çekirdeğini kim geliştirdi?",
+"secenekler": [
+"Bill Gates",
+"Steve Wozniak",
+"Linus Torvalds"
+],
+"dogru_indeks": 2,
+"zorluk": 5,
+"kaynak": "Teknoloji tarihi"
+},
+{
+"id": "g5-040",
+"kategori": "doğa",
+"tip": "coktan",
+"soru": "Parmak izleri insanınkine çok benzeyen hayvan hangisidir?",
+"secenekler": [
+"Koala",
+"Kedi",
+"Fil"
+],
+"dogru_indeks": 0,
+"zorluk": 5,
+"kaynak": "Canlılar bilgisi"
+},
+{
+"id": "g5-041",
+"kategori": "doğa",
+"tip": "coktan",
+"soru": "Denizanasının kaç kalbi vardır?",
+"secenekler": [
+"Bir",
+"Hiç yok",
+"Üç"
+],
+"dogru_indeks": 1,
+"zorluk": 5,
+"kaynak": "Canlılar bilgisi"
+},
+{
+"id": "g5-042",
+"kategori": "doğa",
+"tip": "coktan",
+"soru": "Fotosentez bitki hücresinin hangi organelinde olur?",
+"secenekler": [
+"Mitokondri",
+"Ribozom",
+"Kloroplast"
+],
+"dogru_indeks": 2,
+"zorluk": 5,
+"kaynak": "Canlılar bilgisi"
+}
+]

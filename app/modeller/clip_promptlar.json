@@ -1,0 +1,26 @@
+{
+  "meme": {
+    "kulak_cocuk": "a person covering both ears with both hands, serious face",
+    "somurtan_bebek": "a person pouting with a grumpy frown, lips turned down, annoyed look",
+    "noel_bebek": "a person looking sideways with a smug smirk, proud posture",
+    "gozluklu_bebek_basparmak": "a person giving a thumbs up and smiling",
+    "bebek_kulak": "a person touching one ear with one hand and smiling shyly",
+    "billie_kulak": "a person with eyes closed smiling playfully while touching their hair with one hand beside the face",
+    "cardi_b": "a person with wide open eyes, blank deadpan stare and pressed lips, arms down",
+    "cj_eller_basta": "a person holding both hands on top of the head, stressed and frustrated",
+    "aglayan_kadin": "a person crying with a sad face, wiping tears with a tissue",
+    "utanan_bebek": "a person smiling bashfully and embarrassed, hugging their own arms near the cheek",
+    "shrek": "a person with raised eyebrows and eyes looking sideways, uneasy awkward expression",
+    "roll_safe": "a person pointing a finger at their own temple with a smug smile",
+    "fiyonklu_kedi": "a person holding both hands up in front of the chest like cat paws, pleading with big sad eyes",
+    "vlahovic_top_isareti": "a person shouting angrily with mouth open and one arm extended low"
+  },
+  "negatif": [
+    "a person with a neutral expression looking at the camera",
+    "a person talking",
+    "a person smiling at the camera",
+    "a person looking away",
+    "a person with hands down at rest",
+    "an empty room"
+  ]
+}
