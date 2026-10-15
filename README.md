@@ -15,12 +15,13 @@ Nişantaşı Üniversitesi kulüp tanıtım haftasında **AR-GE Kulübü** stand
 
 <div align="center">
 
-**İndir → ZIP'i aç → `BASLAT.bat`'a çift tıkla.**<br/>
+**1.** Aşağıdaki düğmeyle indir &nbsp;→&nbsp; **2.** ZIP'e sağ tıkla, **Tümünü ayıkla** &nbsp;→&nbsp; **3.** Açılan klasörde **`BASLAT.bat`**'a çift tıkla
+
 Her şey içinde hazır; kurulum yok, bekleme yok.
 
 <br/>
 
-<a href="https://github.com/Enesttombas/Touchless-Arcade/releases/latest/download/Touchless-Arcade-Windows.zip"><img src="https://img.shields.io/badge/%E2%AC%87%20%C4%B0ND%C4%B0R-Windows%20ZIP-2ea44f?style=for-the-badge" alt="İndir: Windows ZIP" height="64"/></a>
+<a href="https://github.com/Enesttombas/Touchless-Arcade/releases/latest/download/Touchless-Arcade-Windows.zip"><img src="docs/media/indir.png" alt="İndir: Windows hazır paket (ZIP)" width="460"/></a>
 
 </div>
 
