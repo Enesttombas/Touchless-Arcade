@@ -13,9 +13,9 @@ Nişantaşı Üniversitesi kulüp tanıtım haftasında **AR-GE Kulübü** stand
 
 <div align="center">
 
-<a href="https://github.com/Enesttombas/Touchless-Arcade/archive/refs/heads/master.zip"><img src="https://img.shields.io/badge/%E2%AC%87%20%C4%B0ND%C4%B0R-Windows%20ZIP-2ea44f?style=for-the-badge" alt="İndir: Windows ZIP" height="44"/></a>
+<a href="https://github.com/Enesttombas/Touchless-Arcade/releases/latest/download/Touchless-Arcade-Windows.zip"><img src="https://img.shields.io/badge/%E2%AC%87%20%C4%B0ND%C4%B0R-Windows%20ZIP-2ea44f?style=for-the-badge" alt="İndir: Windows ZIP" height="44"/></a>
 
-<sub>İndir → ZIP'i aç → <b>BASLAT.bat</b>'a çift tıkla. Python ya da başka bir şey kurman gerekmez.</sub>
+<sub>İndir → ZIP'i aç → <b>BASLAT.bat</b>'a çift tıkla. Her şey içinde hazır; kurulum yok, bekleme yok.</sub>
 
 </div>
 
@@ -70,11 +70,13 @@ Nişantaşı Üniversitesi kulüp tanıtım haftasında **AR-GE Kulübü** stand
 
 ## Kurulum ve çalıştırma
 
-1. **[⬇ İndir](https://github.com/Enesttombas/Touchless-Arcade/archive/refs/heads/master.zip)**: ZIP dosyası iner.
+1. **[⬇ İndir](https://github.com/Enesttombas/Touchless-Arcade/releases/latest/download/Touchless-Arcade-Windows.zip)**: yaklaşık 200 MB'lık hazır paket iner.
 2. ZIP'e sağ tıkla → **Tümünü ayıkla**.
 3. Açılan klasördeki **`BASLAT.bat`**'a çift tıkla.
 
-İlk açılışta oyun, ihtiyacı olan her şeyi kendi klasörünün içine indirip kurar; internet gerekir, 3-5 dakika sürer. Bilgisayarına Python ya da başka bir program yüklenmez. Sonraki açılışlar anında başlar. Bir USB ya da dahili kamera yeterlidir.
+Paketin içinde oyunun kendi Python'u ve tüm kütüphaneleri hazır gelir: ilk açılışta hiçbir şey indirilmez, bilgisayarına bir şey kurulmaz. Windows 10/11 (64 bit) ve bir USB ya da dahili kamera yeterli.
+
+<sub>Kaynak kodu indirdiysen (<b>Code → Download ZIP</b>), <code>BASLAT.bat</code> ilk açılışta gerekenleri kendisi indirip kurar (internet gerekir, 3-5 dakika).</sub>
 
 > Windows "bilinmeyen yayımcı" uyarısı gösterirse **Ek bilgi → Yine de çalıştır**'a bas. Kamera açılmazsa: Ayarlar → Gizlilik → Kamera → **Masaüstü uygulamalarının kameraya erişmesine izin ver**.
 
@@ -114,10 +116,10 @@ Kodun yapısı: `oyunlar/` (oyunlar ve menü), `stand/` (ortak çizim/efekt küt
 **Touchless Arcade** is a set of 9 camera games you play with just your finger in front of a mirrored live camera. No controller or touch screen needed. It was built for the R&D Club booth during Nişantaşı University's club promotion week, and works just as well at home: grab a laptop, invite friends or kids, and try something different.
 
 **Run it on Windows:**
-1. **[Download the ZIP](https://github.com/Enesttombas/Touchless-Arcade/archive/refs/heads/master.zip)** and extract it (right-click → Extract All).
+1. **[Download the ZIP](https://github.com/Enesttombas/Touchless-Arcade/releases/latest/download/Touchless-Arcade-Windows.zip)** and extract it (right-click → Extract All).
 2. Double-click **`BASLAT.bat`**.
 
-No Python install needed: the first run downloads a portable Python and the game packages into the folder itself (3-5 minutes, internet required). Later runs start instantly.
+The download is a ready-to-run package (about 200 MB) with its own portable Python and all libraries inside: nothing is installed on your PC and nothing is downloaded on first launch.
 
 **Controls:** raise your index finger with the palm facing the camera (don't point the fingertip straight at the lens). Hold your hand over a card for 1 s to pick a game. Hold an open palm in the bottom-left corner for 3 s to return to the menu. Keyboard: `1`–`9` select, `M` menu, `F` fullscreen, `Q` quit.
 
