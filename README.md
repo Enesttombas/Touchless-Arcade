@@ -21,7 +21,7 @@ Her şey içinde hazır; kurulum yok, bekleme yok.
 
 <br/>
 
-<a href="https://github.com/Enesttombas/Touchless-Arcade/releases/latest/download/Touchless-Arcade-Windows.zip"><img src="docs/media/indir.png" alt="İndir: Windows ZIP" width="420"/></a>
+<a href="https://github.com/Enesttombas/Touchless-Arcade/releases/latest/download/Touchless-Arcade-Windows.zip"><img src="docs/media/indir-dugmesi.png" alt="İndir: Windows ZIP" width="420"/></a>
 
 </div>
 
