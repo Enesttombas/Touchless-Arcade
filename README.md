@@ -25,6 +25,10 @@
 
 **Kanat Rotası**: kuşu parmağınla uçur.
 
+<img src="docs/media/canli/ar-maskeler.jpg" alt="AR Maskeler, dört kişi aynı anda" width="640"/>
+
+**AR Maskeler**: kadrajdaki herkes kendi maskesini seçiyor.
+
 </div>
 
 <sub>Üniversite stantında gerçek oyunculardan kayıtlar. Tam videoyu açmak için önizlemeye tıkla.</sub>
