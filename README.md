@@ -56,7 +56,7 @@ Oyunun çalışması için gereken tüm dosyalar paketin içinde; ayrıca bir ş
 <div align="center">
   <img src="docs/media/menu.png" alt="Ana menü" width="720"/>
   <br/>
-  <img src="docs/media/demo.gif" alt="Oyunlardan kısa demo" width="600"/>
+  <img src="docs/media/oyun-turu.gif" alt="9 oyunun kısa turu" width="600"/>
   <p><sub>Görseller oyunun kendi render motoruyla sentetik verilerle üretildi; canlı kamera kaydı değildir.</sub></p>
 </div>
 
