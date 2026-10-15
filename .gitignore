@@ -41,6 +41,8 @@ recordings/
 captures/
 calismalar/
 *.mp4
+# İzinle çekilmiş tanıtım klipleri repoda kalır
+!docs/media/canli/*.mp4
 *.avi
 *.mkv
 *.mov

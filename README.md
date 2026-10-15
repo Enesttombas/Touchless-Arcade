@@ -1,6 +1,6 @@
-# Stant Kamera Oyunları
+# Touchless Arcade — Stant Kamera Oyunları
 
-[![CI](https://github.com/Enesttombas/stant-kamera-oyunlari/actions/workflows/ci.yml/badge.svg)](https://github.com/Enesttombas/stant-kamera-oyunlari/actions/workflows/ci.yml)
+[![CI](https://github.com/Enesttombas/Touchless-Arcade/actions/workflows/ci.yml/badge.svg)](https://github.com/Enesttombas/Touchless-Arcade/actions/workflows/ci.yml)
 [![Python 3.11](https://img.shields.io/badge/Python-3.11-blue.svg)](https://www.python.org/downloads/release/python-3119/)
 [![Platform: Windows](https://img.shields.io/badge/Platform-Windows-lightgrey.svg)](https://www.microsoft.com/windows)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -8,6 +8,20 @@
 **Dokunmadan oynanan kamera oyunları.** Ziyaretçi ekranın karşısına geçer; eliyle, yüzüyle ve bedeniyle oynar. Kumanda, dokunmatik ekran ya da kurulum gerekmez. Üniversite ve kulüp stantları için yapıldı.
 
 *Touch-free camera arcade for booths and events: just stand in front of the screen and play with your hands, face and body.* [English ↓](#english)
+
+## Stantta canlı
+
+<table>
+  <tr>
+    <td align="center"><a href="docs/media/canli/neon-kilic.mp4"><img src="docs/media/canli/neon-kilic.gif" alt="Neon Kılıç, iki oyuncu" height="220"/></a><br/><b>Neon Kılıç</b></td>
+    <td align="center"><a href="docs/media/canli/gulme-duellosu.mp4"><img src="docs/media/canli/gulme-duellosu.gif" alt="Gülme Düellosu" height="220"/></a><br/><b>Gülme Düellosu</b></td>
+    <td align="center"><a href="docs/media/canli/kanat-rotasi.mp4"><img src="docs/media/canli/kanat-rotasi.gif" alt="Kanat Rotası" height="220"/></a><br/><b>Kanat Rotası</b></td>
+  </tr>
+</table>
+
+<sub>Üniversite stantında gerçek oyunculardan kayıtlar. Tam videoyu açmak için önizlemeye tıkla.</sub>
+
+## Ekran görüntüleri
 
 <div align="center">
   <img src="docs/media/menu.png" alt="Ana menü" width="720"/>
@@ -76,6 +90,8 @@ Kodun yapısı: `oyunlar/` (oyunlar ve menü), `stand/` (ortak çizim/efekt küt
 3. Double-click **`BASLAT.bat`**. The first run installs the dependencies; later runs start instantly.
 
 **Controls:** hold your hand over a card for 1 s to pick a game. Hold an open palm in the bottom-left corner for 3 s to return to the menu. Keyboard: `1`–`9` select, `M` menu, `F` fullscreen, `Q` quit.
+
+**Live demos:** see the clips under *Stantta canlı* above, recorded with real players at a university booth.
 
 **Tech:** MediaPipe (face, hands, pose), OpenCV, ONNX Runtime (a Quick, Draw! sketch classifier) and pygame-ce audio. Everything runs locally on the CPU, and camera frames never leave memory.
 
