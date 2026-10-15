@@ -37,6 +37,18 @@ def onisle(cizgiler):
     return tuval.astype(np.float32)[None,None]/255 if tuval.any() else None
 
 
+def _uc_boyut(e,j):
+    q=e[j];return np.array([q.x*G,q.y*Y,float(getattr(q,'z',0.) or 0.)*G])
+
+
+def isaret_uzun(e):
+    """İşaret parmağı uzatılmış mı: 3B uzunluk (z dahil) avuç boyuna göre.
+    Kameraya doğru uzatılan parmak 2B'de kısa görünür; z olmadan kalem hiç inmiyordu."""
+    uc,kok,bilek=_uc_boyut(e,8),_uc_boyut(e,5),_uc_boyut(e,0)
+    avuc=np.linalg.norm(kok-bilek)
+    return bool(np.linalg.norm(uc-kok)>max(12.,.6*avuc))
+
+
 class CizModel:
     def __init__(self,yol):
         import onnxruntime as ort
@@ -59,6 +71,8 @@ class CizModel:
 class Prototip(OyunAkisi):
     AD,ACIKLAMA='Çizim Kâhini','İşaretini uzat ve çiz; bükerek kalemi kaldır.'
     IHTIYAC,SIRA={'el'},36
+    # Çizen el yüzden uzakta olabilir; "sahipsiz" reddi yeni el izini hiç açtırmıyordu (Enes 2026-10-15).
+    KAPI={'el_sahip_sart':False}
     TUR_SN=90.
     KELIME_SAYISI=3
 
@@ -165,9 +179,33 @@ class Prototip(OyunAkisi):
             panel(kare,0,0,G,48,opak=.9);yazi_koy(kare,metin,G//2,8,22,hiza='orta')
         return kare
 
+    def _anahtar_degis(self,eski,yeni):
+        for d in (self.cizimler,self.tuvaller,self.puanlar,self.siliciler,self.gericiler,self.tahminler,self.girdiler,
+                  self.neden,self.goruldu,self.uc):
+            if eski in d:d[yeni]=d.pop(eski)
+        self.kalemi_kaldir(eski);self.kapali.pop(eski,None);self.inik.pop(eski,None);self.silindi.discard(eski)
+        self.ids[self.ids.index(eski)]=yeni
+        if self.kazanan==eski:self.kazanan=yeni
+
+    def yeniden_bagla(self,algi,simdi):
+        """El 0,6 sn'den uzun kaybolunca kapı yeni kimlik verir; oyuncunun yuvasını yeni ele devret.
+        Eskiden yalnız ilk kimlik kabul edildiği için çizim o turda bir daha hiç dönmüyordu."""
+        ids=getattr(algi,'el_id',[]) or list(range(len(algi.eller)))
+        tahmini=getattr(algi,'tahmini',[])
+        canli={i:e for i,e in zip(ids,algi.eller) if ('el',i) not in tahmini}
+        bos=[i for i in canli if i not in self.ids]
+        for slot,eski in enumerate(list(self.ids)):
+            if eski in ids or not bos:continue
+            if simdi-self.goruldu.get(eski,-1e9)<.25 and eski in self.goruldu:continue
+            if len(self.ids)==1:aday=bos
+            else:aday=[i for i in bos if (px(canli[i],8)[0]<G//2)==(slot==0)]
+            if aday:
+                yeni=aday[0];bos.remove(yeni);self._anahtar_degis(eski,yeni)
+
     def ciz(self,algi,simdi=None):
         simdi=(self.onceki_t if self.onceki_t is not None else self.ciz_t+1/30) if simdi is None else simdi
         self.ciz_t=simdi
+        self.yeniden_bagla(algi,simdi)
         ids=getattr(algi,'el_id',[]) or list(range(len(algi.eller)))
         gorulen=set()
         for i,e in zip(ids,algi.eller):
@@ -184,8 +222,7 @@ class Prototip(OyunAkisi):
                 self.cizimler[i]=[];self.geri_al(i);self.tahminler[i]=[];self.girdiler.pop(i,None)
                 self.silindi.add(i);self.neden[i]='avuç: tümünü sil'
             if not sil:self.silindi.discard(i)
-            kok=np.array(px(e,5));bilek=np.array(px(e,0))
-            isaret=np.linalg.norm(raw-kok)>max(12.,.75*np.linalg.norm(kok-bilek))
+            isaret=isaret_uzun(e)
             icerde=x0<=p[0]<=x1 and 170<=p[1]<=630
             ciziyor=isaret and not sil and not geride and icerde
             son_t=self.goruldu.get(i,simdi);self.goruldu[i]=simdi
@@ -259,6 +296,7 @@ class Prototip(OyunAkisi):
             if self.mod_hedef.sec('mod' if h else None,simdi):self.tus(32)
             if self.mod=='Seyirci':yazi_koy(kare,'Fiziksel kelime kartını çiz / operatör D: doğru',G//2,600,22,hiza='orta')
         if self.durum!='oyun':return self.tani_yaz(algi,simdi,kare)
+        self.yeniden_bagla(algi,simdi)
         ids=getattr(algi,'el_id',[]) or list(range(len(algi.eller)))
         presents=set(ids)-{i for typ,i in getattr(algi,'tahmini',[]) if typ=='el'}
         if not set(self.ids).issubset(presents):

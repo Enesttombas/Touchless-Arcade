@@ -289,12 +289,13 @@ def test_parmak_izi_kendi_cizenler_disinda_her_oyunda(monkeypatch):
 
 
 def test_hayalet_klon_iki_eski_deneyimi_tek_kartta_sirayla_oynatir():
-    # Enes 2026-10-13: TKM yerine eski Zaman Klonları + Görünmezlik Pelerini, tek oyun gibi
+    # Enes 2026-10-13: TKM yerine eski Zaman Klonları + Görünmezlik Pelerini, tek oyun gibi.
+    # Enes 2026-10-15: TKM menüde soluk, devre dışı kart olarak durur.
     import p_gorunmez
     import p_hayalet_klon as H
     import p_zaman_klonu
-    assert "p_hayalet_klon" in S.DENEYIMLER and "p_tas_kagit" not in S.DENEYIMLER
-    assert not S.KAPALI
+    assert "p_hayalet_klon" in S.DENEYIMLER and S.DENEYIMLER[-1] == "p_tas_kagit"
+    assert S.KAPALI == {"p_tas_kagit"}
     p = H.Prototip(C.Ses(acik=False))
     assert isinstance(p.etkin, p_zaman_klonu.Prototip) and p.parcalar[1] is None  # ikinci model tembel
     t = 100.0

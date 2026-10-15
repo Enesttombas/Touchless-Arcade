@@ -38,12 +38,13 @@ DENEYIMLER = [
     "p_ciz_tahmin",
     "p_islem_dizisi",
     "p_cumle_dizisi",
+    "p_tas_kagit",
 ]
 RENKLER = [CAMGOBEGI, SARI, YESIL]
 SECIM_SN = 1.0
 BOS_DONUS_SN = 40.0  # 12 sn kısa kaldı, oyuncular beklerken menüye atıyordu (Enes 2026-10-13)
 EV_SN = 3.0  # sarkan el yanlışlıkla menüye atmasın (Enes 2026-10-12, 2026-10-13: 2 -> 3 sn)
-KAPALI: set = set()  # menüde soluk durur, açılmaz; TKM'nin yerine Hayalet Klonlar geldi (Enes 2026-10-13)
+KAPALI: set = {"p_tas_kagit"}  # menüde soluk durur, açılmaz; TKM devre dışı, kartı soluk görünür (Enes 2026-10-15)
 KENDI_IMLECI = {"p_neon_kilic", "p_maske"}  # parmağı kendisi çiziyor; oyun da KENDI_IMLECI=True diyebilir
 UCLAR = (8,)  # yalnız oyunu oynatan işaret parmağı ucu (Enes 2026-10-13: tek parmak izi)
 
@@ -324,6 +325,17 @@ class AnaMenu:
         self.sayfa_hedef: Optional[str] = None
         self.sayfa_sure: float = 0.0
         self.sayfa_t: float = 0.0
+        self._soluklar: Dict[int, np.ndarray] = {}
+
+    def _soluk_ikon(self, i: int) -> np.ndarray:
+        """Kapalı kartın gri ve yarı saydam ikonu (bir kez hazırlanır)."""
+        if i not in self._soluklar:
+            ikon = self.ikonlar[i].copy()
+            gri = cv2.cvtColor(np.ascontiguousarray(ikon[:, :, :3]), cv2.COLOR_BGR2GRAY)
+            ikon[:, :, :3] = cv2.cvtColor(gri, cv2.COLOR_GRAY2BGR)
+            ikon[:, :, 3] = (ikon[:, :, 3].astype(np.float32) * 0.35).astype(np.uint8)
+            self._soluklar[i] = ikon
+        return self._soluklar[i]
 
     @property
     def sayfa_sayisi(self) -> int:
@@ -436,6 +448,9 @@ class AnaMenu:
                 yazi_koy(kare, str(local_i + 1), cx, y0 + yuk + 5, 18, renk=renk, hiza="orta")
                 if global_i not in self.kapali:
                     bindir_merkez(kare, self.ikonlar[global_i], cx, y0 + yuk + 62, boyut=58)
+                else:  # soluk ikon + "KAPALI" etiketi: kart görünür ama seçilemez
+                    bindir_merkez(kare, self._soluk_ikon(global_i), cx, y0 + yuk + 62, boyut=58)
+                    yazi_koy(kare, "KAPALI", x1 - 46, y0 + yuk + 8, 16, renk=(150, 150, 160), hiza="orta")
                 satirlar = self.adlar[global_i].split(" ", 1)
                 if len(satirlar) > 1:
                     yazi_koy(kare, satirlar[0], cx, y0 + yuk + 98, 20, renk=renk, hiza="orta")

@@ -5,7 +5,7 @@ from pathlib import Path
 import json
 import cv2
 import numpy as np
-from cekirdek import G,Y,px,yazi_koy,panel,halka,bindir,SARI,YESIL,BEYAZ,CAMGOBEGI,KIRMIZI
+from cekirdek import G,Y,px,yazi_koy,panel,halka,bindir,parilti,SARI,YESIL,BEYAZ,CAMGOBEGI,KIRMIZI
 from oyun_akis import OyunAkisi,TutHedef
 from el_kontrol import parmaklar
 from filtre import OneEuro
@@ -14,6 +14,8 @@ from p_cevap_yagmuru import maske_ver
 
 TOP=np.array([G/2,Y-130.])
 R=.11
+YAKALA_R,KILIT_SN,SERBEST_R=95.,.15,140.  # topu yakalama yarıçapı, kilit süresi, yeni atış için uzaklaşma
+EKRAN_OLCEK=1000/13  # izdusus'te kale düzleminin (z=11) piksel/metre ölçeği
 
 
 def falso(yol):
@@ -36,8 +38,16 @@ def ciz_sut(ornekler,boy):
     ivme=np.maximum(0.,np.diff(hiz)/np.maximum(.015,dt[1:])) if len(hiz)>1 else np.array([0.])
     guc=float(np.clip(.25+.18*np.percentile(hiz,75)+.025*min(5.,float(np.percentile(ivme,75))),.25,1.))
     d=yol[-1]-yol[0]
-    yatay=float(np.clip(math.degrees(math.atan2(d[0],max(30.,-d[1])))*.6,-25,25))
-    dikey=float(np.clip(merkez_acisi(guc)+(283-yol[-1,1])*.04,0,18))
+    # Yol nereye çizildiyse top oraya gider: yolun ucu kale düzlemindeki nişan noktasıdır.
+    # Kısa fiske kalenin altında biterse aynı yönde kale ortasına uzatılır.
+    uc_y=yol[0,1]+d[1]
+    if d[1]<-1 and uc_y>360:
+        d=d*(yol[0,1]-290)/max(1.,-d[1])
+        uc_y=yol[0,1]+d[1]
+    hx=float(d[0])/EKRAN_OLCEK
+    yatay=float(np.clip(math.degrees(math.atan2(hx,11.)),-25,25))
+    hy=float(np.clip(.6-(uc_y-330)/EKRAN_OLCEK,.3,3.))
+    dikey=float(np.clip(hedef_acisi(guc,hy),0,18))
     return dict(guc=guc,yatay=yatay,dikey=dikey,falso=falso(yol))
 
 
@@ -61,17 +71,100 @@ def ucus(param):
 
 
 _acilar={}
-def merkez_acisi(guc):
-    key=round(float(guc),2)
+def hedef_acisi(guc,yukseklik):
+    """Topun kale çizgisinde verilen yüksekliğe varması için gereken dikey açı (önbellekli)."""
+    key=(round(float(guc),2),round(float(yukseklik),1))
     if key not in _acilar:
         lo,hi=0.,18.
         for _ in range(12):
             mid=(lo+hi)/2
-            yol,_=ucus(dict(guc=key,yatay=0,dikey=mid,falso=0))
-            if yol[-1,1]<1.22: lo=mid
+            yol,_=ucus(dict(guc=key[0],yatay=0,dikey=mid,falso=0))
+            if yol[-1,1]<key[1]: lo=mid
             else: hi=mid
         _acilar[key]=(lo+hi)/2
     return _acilar[key]
+
+
+def merkez_acisi(guc):
+    return hedef_acisi(guc,1.22)
+
+
+def _yumusak(t):
+    t=min(1.,max(0.,t));return t*t*(3-2*t)
+
+
+class SanalKaleci:
+    """Tek oyunculu modda çizilmiş neon kaleci: bekler, yalandan bir yana yatar, seçtiği köşeye uçar.
+    Kurtarış kararı çizilen eldivenlerle aynı noktalardan verilir (kol topa değmeden Tutuş yok)."""
+    Z=10.9
+
+    def __init__(self,rng):
+        self.rng=rng;self.plan=None;self.hedef=np.array([0.,1.1])
+
+    def planla(self,fizik,yon):
+        q=fizik[-1];taraf=-1 if q[0]<-.8 else 1 if q[0]>.8 else 0
+        menzil_x,menzil_y=float(self.rng.uniform(2.,3.)),float(self.rng.uniform(1.9,2.35))
+        if yon==taraf:  # doğru köşe: uzanabildiği yere kadar
+            self.hedef=np.array([np.clip(q[0],-menzil_x,menzil_x),np.clip(q[1],.3,menzil_y)])
+        elif yon==0:
+            self.hedef=np.array([float(self.rng.uniform(-.3,.3)),1.95])
+        else:
+            self.hedef=np.array([yon*float(self.rng.uniform(1.8,2.6)),float(self.rng.uniform(.5,1.6))])
+        self.plan=yon if yon else (1 if self.hedef[0]>=0 else -1)
+        return self.hedef
+
+    def eldivenler(self,fizik=None,yon=0):
+        if self.plan is None and fizik is not None:self.planla(fizik,yon)
+        h=self.hedef;return [h+np.array([0.,.11]),h-np.array([0.,.11])]
+
+    def sifirla(self):
+        self.plan=None
+
+    def poz(self,simdi,ucus_t=None,ucus_sn=1.3):
+        """Kalça, gövde yönü (birim), eldivenler ve yerdelik oranı."""
+        bekle_x=.22*math.sin(simdi*1.7);zip_=.07*abs(math.sin(simdi*3.4))
+        kalca=np.array([bekle_x,.95+zip_]);yukari=np.array([0.,1.])
+        el=[kalca+np.array([-.5,.15]),kalca+np.array([.5,.15])]
+        if ucus_t is None or self.plan is None:
+            return kalca,yukari,el,0.
+        t=simdi-ucus_t;atla_bas=max(.2,ucus_sn-.45)
+        if t<atla_bas:  # yalancıktan ters tarafa yatma (aldatma)
+            a=_yumusak((t-(atla_bas-.25))/.15)
+            kalca=kalca+np.array([-self.plan*.35*a,-.08*a])
+            return kalca,yukari,el,0.
+        e=_yumusak((t-atla_bas)/.4)
+        bas_k=kalca-np.array([self.plan*.35,.08])
+        hedef_k=self.hedef-(self.hedef-np.array([0.,.95]))/max(.01,np.linalg.norm(self.hedef-np.array([0.,.95])))*1.05
+        kalca=bas_k+(hedef_k-bas_k)*e
+        yon=self.hedef-kalca;yon=yon/max(.01,np.linalg.norm(yon))
+        govde=yukari+(yon-yukari)*e;govde=govde/max(.01,np.linalg.norm(govde))
+        el=[a+(b-a)*e for a,b in zip(el,self.eldivenler())]
+        dus=_yumusak((t-ucus_sn)/.35)
+        if dus>0:
+            alt=min(kalca[1],min(g[1] for g in el))
+            kay=np.array([0.,-max(0.,min(alt,kalca[1]-.25))*dus])
+            kalca=kalca+kay;el=[g+kay for g in el]
+        return kalca,govde,el,dus
+
+    def ciz(self,kare,simdi,ucus_t=None,ucus_sn=1.3,kurtardi=False):
+        kalca,govde,el,_=self.poz(simdi,ucus_t,ucus_sn)
+        dik=np.array([govde[1],-govde[0]])
+        boyun=kalca+govde*.62;kafa=boyun+govde*.24
+        ayak=[kalca-govde*.85+dik*.22,kalca-govde*.85-dik*.22]
+        if ucus_t is None:ayak=[np.array([kalca[0]-.28,0.]),np.array([kalca[0]+.28,0.])]
+        def e(q):return izdusus((float(q[0]),float(q[1]),self.Z))[:2]
+        isik=np.zeros_like(kare);renk=CAMGOBEGI
+        olcek=1000/(self.Z+2)
+        for a,b in ((kalca,boyun),(boyun,el[0]),(boyun,el[1]),(kalca,ayak[0]),(kalca,ayak[1])):
+            cv2.line(isik,e(a),e(b),renk,9,cv2.LINE_AA)
+        cv2.circle(isik,e(kafa),int(.15*olcek),renk,6,cv2.LINE_AA)
+        cv2.ellipse(isik,e(kalca+govde*.3),(int(.2*olcek),int(.34*olcek)),
+                    -math.degrees(math.atan2(govde[0],govde[1])),0,360,renk,5,cv2.LINE_AA)
+        parlak=SARI if not kurtardi else YESIL
+        for g in el:cv2.circle(isik,e(g),int(.13*olcek)+(6 if kurtardi else 0),parlak,-1,cv2.LINE_AA)
+        golge=np.array([kalca[0],0.]);gx,gy=e(golge)
+        cv2.ellipse(kare,(gx,gy),(int(.5*olcek),int(.07*olcek)),0,0,360,(25,40,30),-1,cv2.LINE_AA)
+        parilti(kare,isik,guc=1.4,sigma=4.0)
 
 
 def izdusus(p):
@@ -113,6 +206,7 @@ class Ag:
 class Prototip(OyunAkisi):
     AD,ACIKLAMA='Altın Vuruş','Topu tut, yol çiz, dur!'
     IHTIYAC,SIRA={'el','poz'},35
+    KAPI={'el_sahip_sart':False}  # şut eli bedenden uzakta da kabul (Enes 2026-10-15: oynaması çok zor)
     TUR_SN=240.
     KAMERA_PARLAKLIK=.85
 
@@ -130,6 +224,8 @@ class Prototip(OyunAkisi):
         self.challenge=False
         self.yz_oran,self.yz_yon=0.,0
         self.ag=Ag()
+        self.sanal=SanalKaleci(self.rng);self.serbest=True
+        self.el_kayip_t=None
         self.ucus_sn,self.gecikme=1.3,0.
         self.son_kaleci,self.kaleci_t=None,-10.
         self.ucus_t,self.atis_t=0.,None
@@ -154,6 +250,7 @@ class Prototip(OyunAkisi):
         self.rol,self.atilan,self.goller=0,[0,0],[0,0]
         self.son_kaleci,self.kaleci_t=None,-10.
         self.yeni_atis(simdi)
+        self.serbest=True  # ilk atışta kilit yok; yalnız şuttan sonra parmak toptan çekilmeli
 
     def tus(self,k):
         if k==32 and self.durum=='bekle':
@@ -166,6 +263,7 @@ class Prototip(OyunAkisi):
         self.parmak_filtre=OneEuro(2.5,.025);self.kayip_t=None
         self.hareket_t=simdi
         self.yz_yon=self.yz_sec()
+        self.sanal.sifirla();self.serbest=False  # parmak toptan uzaklaşmadan yeni atış kilitlenmez (çift şut)
         self.challenge_t=simdi
 
     def yz_sec(self):
@@ -199,43 +297,51 @@ class Prototip(OyunAkisi):
     def kontrol(self,algi,simdi,dt):
         el=self.sutcu(algi)
         if el is None:
+            # Hızlı fiskede el bulanıp kaybolur: yeterince çizildiyse şut sayılır.
+            if self.faz=='ciz' and len(self.yol)>=3 and np.linalg.norm(self.yol[-1]-TOP)>=60:
+                self.sut(simdi);return
+            if self.faz=='ciz':  # tek kare kayıp çizimi bozmasın; 0,3 sn sürerse bırak
+                if self.el_kayip_t is None:self.el_kayip_t=simdi
+                if simdi-self.el_kayip_t<.3:return
+            self.el_kayip_t=None
             self.faz,self.kilit_t,self.el_id='bekle',None,None
-            self.yol=[];self.ornekler=[];self.ham_p=None
+            self.yol=[];self.ornekler=[];self.ham_p=None;self.serbest=True
             self.parmak_filtre=OneEuro(2.5,.025);return
-        ham=np.asarray(px(el,8),dtype=float);acik=parmaklar(el)
-        kalem=acik is not None and acik[0] and not acik[1]
+        self.el_kayip_t=None
+        ham=np.asarray(px(el,8),dtype=float)
         p=self.parmak_filtre.suz(ham,simdi)
         if self.faz=='bekle':
-            if kalem and np.linalg.norm(TOP-p)<=60:
+            uzak=np.linalg.norm(TOP-ham)
+            if uzak>SERBEST_R:self.serbest=True
+            # Kalem şartı yok: parmak ucu topun üstünde kısa süre durunca yakalanır.
+            if self.serbest and uzak<=YAKALA_R:
                 if self.kilit_t is None:self.kilit_t=simdi
-                if simdi-self.kilit_t>=.3:
+                if simdi-self.kilit_t>=KILIT_SN:
                     self.faz,self.yol,self.onceki_p,self.hareket_t='ciz',[TOP.copy()],p.copy(),simdi
                     self.ornekler=[(TOP.copy(),simdi)];self.ham_p=ham.copy();self.kapali=0
             else:self.kilit_t=None
             return
         if self.faz=='ciz':
-            if self.ham_p is not None and np.linalg.norm(ham-self.ham_p)>.18*G:
-                self.faz,self.kilit_t,self.el_id='bekle',None,None;self.yol=[];return
             hareket=np.linalg.norm(ham-self.ham_p) if self.ham_p is not None else 0.
             self.ham_p=ham.copy()
-            if hareket>3:self.hareket_t=simdi
-            self.kapali=0 if kalem else self.kapali+1
-            yeterli=len(self.yol)>=6 and np.linalg.norm(self.yol[-1]-TOP)>=80
-            if yeterli and (self.kapali>=2 or simdi-self.hareket_t>=.28):
+            if hareket>4:
+                self.hareket_t=simdi
+                self.yol.append(p.copy() if hareket<.18*G else ham.copy());self.yol=self.yol[-120:]
+                self.ornekler.append((self.yol[-1].copy(),simdi));self.ornekler=self.ornekler[-120:]
+                self.param=ciz_sut(self.ornekler,self.boy(algi))
+            uzaklik=np.linalg.norm(self.yol[-1]-TOP)
+            if (uzaklik>=80 and simdi-self.hareket_t>=.22) or (len(self.yol)>=3 and self.yol[-1][1]<150):
                 self.sut(simdi);return
             if simdi-self.hareket_t>=2:
                 self.faz,self.kilit_t,self.el_id='bekle',None,None;self.yol=[];return
-            if kalem and hareket>3:
-                self.yol.append(p.copy());self.yol=self.yol[-120:]
-                self.ornekler.append((p.copy(),simdi));self.ornekler=self.ornekler[-120:]
-                self.param=ciz_sut(self.ornekler,self.boy(algi))
             self.onceki_p=p.copy()
 
     def sut(self,simdi,param=None):
         if param is not None: self.param=param
         self.fizik,v0=ucus(self.param)
         self.en_hizli=max(self.en_hizli,v0*3.6)
-        self.ucus_t,self.faz=simdi,'ucus'
+        self.ucus_t,self.faz=simdi,'ucus';self.serbest=False
+        self.sanal.planla(self.fizik,self.yz_yon)
         self.gecmis.append(-1 if self.fizik[-1,0]<-.7 else 1 if self.fizik[-1,0]>.7 else 0)
 
     def kaleci(self,algi,simdi):
@@ -267,8 +373,7 @@ class Prototip(OyunAkisi):
                 return 'Baraj'
         p=self.kaleci(algi,simdi)
         if p is None and not self.challenge and len(self.ids)<2:
-            yon=self.yz_yon
-            return kale_karari(q,[np.array([yon*2.2,1.1])])
+            return kale_karari(q,self.sanal.eldivenler(self.fizik,self.yz_yon))
         if p is None: return kale_karari(q)
         eller,konum=self.kaleci_noktalar(p)
         m=self.render_mask if self.render_mask is not None else maske_ver(kare)
@@ -365,11 +470,10 @@ class Prototip(OyunAkisi):
             # Gerçek kalecinin ellerini işaretle; çizilmiş insan/avatar yok.
             for j in (15,16):
                 if getattr(kp[j],'visibility',0)>.5:cv2.circle(kare,tuple(map(int,px(kp,j))),24,CAMGOBEGI,3,cv2.LINE_AA)
-        else:
-            x,y,_=izdusus((self.yz_yon*2.2,1.1,11))
-            if len(self.ids)<2 and not self.challenge:
-                cv2.circle(kare,(x,y),20,CAMGOBEGI,3)
-                yazi_koy(kare,'YZ hedefi',x,y+23,26,renk=CAMGOBEGI,hiza='orta')
+        elif len(self.ids)<2 and not self.challenge:
+            ucusta=self.faz in ('ucus','atis_sonuc') and self.sanal.plan is not None
+            self.sanal.ciz(kare,simdi,self.ucus_t if ucusta else None,self.ucus_sn,
+                           kurtardi=self.faz=='atis_sonuc' and self.sonuc=='Tutuş')
         if self.mod=='Frikik':
             for x in (-1.,-.33,.33,1.):
                 a=izdusus((x,0,9.15));b=izdusus((x,2,9.15))
@@ -381,7 +485,9 @@ class Prototip(OyunAkisi):
                     self.sut(simdi,dict(guc=power,yatay=float(self.rng.uniform(-12,12)),dikey=merkez_acisi(power),falso=float(self.rng.uniform(-.6,.6))))
             else:self.kontrol(algi,simdi,dt)
             self.top_ciz(kare,np.array([0.,R,0.]),simdi)
-            if self.kilit_t is not None:halka(kare,*TOP,min(1.,(simdi-self.kilit_t)/.3),r=55,renk=YESIL)
+            if self.kilit_t is not None:halka(kare,*TOP,min(1.,(simdi-self.kilit_t)/KILIT_SN),r=55,renk=YESIL)
+            elif self.faz=='bekle' and self.serbest:
+                halka(kare,*TOP,.5+.5*math.sin(simdi*4),r=int(YAKALA_R*.7),renk=SARI)
             if self.faz=='ciz':
                 key=tuple(round(self.param[k],2) for k in ('guc','yatay','dikey','falso'))
                 if key!=self.onizleme_key:self.onizleme_yol,_=ucus(self.param);self.onizleme_key=key
@@ -404,7 +510,7 @@ class Prototip(OyunAkisi):
             if sure>=self.ucus_sn and self.kayip_t is None:self.atis_sonuc(self.karar(algi,asil,simdi),simdi)
         elif self.faz=='atis_sonuc':
             t=simdi-self.atis_t;gol=self.sonuc=='GOL';renk=YESIL if gol else KIRMIZI
-            sonuc='KURTARIŞ!' if self.sonuc in ('Tutuş','Sektirme') else 'GOL!' if gol else self.sonuc.upper()
+            sonuc='KURTARDI!' if self.sonuc in ('Tutuş','Sektirme') else 'GOL!' if gol else self.sonuc.upper()
             yazi_koy(kare,sonuc,G//4,420,int(72+16*max(0,1-t/.3)),renk=renk,hiza='orta')
             patlama(kare,G//2,450,t,renk)
             if 0<=t<.12:cv2.addWeighted(kare,.85,np.full_like(kare,renk),.15,0,dst=kare)
@@ -416,7 +522,7 @@ class Prototip(OyunAkisi):
                 if len(self.ids)>=2 and not self.challenge:self.rol=1-self.rol
                 self.yeni_atis(simdi)
         yazi_koy(kare,f'{self.goller[0]} : {self.goller[1]} / Şutçu {self.rol+1} / {self.en_hizli:.0f} km/sa',G//2,75,32,hiza='orta')
-        ipucu='Kaleye doğru çiz; yol sonunda dur' if self.faz=='ciz' else 'Topta tek parmağını tut' if self.faz=='bekle' else 'Kaleci: bedeninle topu karşıla' if self.faz=='ucus' else 'Roller değişiyor...'
-        yazi_koy(kare,ipucu,G//2,650,30,hiza='orta')
+        ipucu='Nişan aldığın yere çiz ve dur' if self.faz=='ciz' else ('Parmağını topun üstüne getir' if self.serbest else 'Parmağını toptan çek') if self.faz=='bekle' else '' if len(self.ids)<2 and not self.challenge else 'Kaleci: bedeninle topu karşıla' if self.faz=='ucus' else 'Roller değişiyor...'
+        if ipucu:yazi_koy(kare,ipucu,G//2,650,30,hiza='orta')
         if self.kayip_t is not None and simdi-self.kayip_t>=.5:yazi_koy(kare,'Kaleciyi göremiyorum; kadraja dön',G//2,475,32,renk=SARI,hiza='orta')
         return kare

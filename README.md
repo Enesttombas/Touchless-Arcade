@@ -33,12 +33,14 @@
 5. **Bilgi Yağmuru** (`p_cevap_yagmuru`): Yukarıdan düşen doğru cevap kutusunun altına bedenle geçerek puan toplama.
 6. **Silahşor Düellosu / Refleks** (`p_refleks`): İki oyuncunun 'ÇEK' sinyaliyle ellerini en hızlı şekilde doğrulttuğu kovboy düellosu.
 7. **Hayalet Klonlar** (`p_hayalet_klon`): Zaman klonları ve görünmezlik pelerini efektlerinin birleşimi.
-8. **Altın Vuruş / Penaltı** (`p_penalti`): Beden duruşuyla yön ve falsolu şut çekerek kaleciyi avlama.
-9. **Çizim Kâhini** (`p_ciz_tahmin`): Havada parmakla çizilen nesneleri yerel Quick, Draw! ONNX sinir ağıyla tahmin etme.
+8. **Altın Vuruş / Penaltı** (`p_penalti`): Parmağını topa koy, kalede nişan aldığın noktaya yol çiz; çizginin kavisi falso, hızı şut gücü olur. Tek oyuncuda yalandan bir yana yatıp köşeye uçan neon sanal kaleci, iki oyuncuda gerçek kaleci.
+9. **Çizim Kâhini** (`p_ciz_tahmin`): Havada parmakla çizilen nesneleri yerel Quick, Draw! ONNX sinir ağıyla tahmin etme (işaret parmağı uzatılınca kalem iner, bükülünce kalkar; avuç 1 sn geri al, 2 sn sil).
 
 #### 2 Ek Çok Oyunculu Dizi Oyunu (2 Extra Multiplayer Sequence Games)
 10. **İşlem Dizisi** (`p_islem_dizisi`): 3–5 oyuncunun üzerlerindeki sayılar ve işlem kartlarıyla matematiksel eşitliği sağlamak için yer değiştirdiği takım oyunu.
 11. **Cümle Dizisi** (`p_cumle_dizisi`): 3–5 oyuncunun başlarının üzerindeki kelimeleri doğru sıraya dizerek anlamlı cümle oluşturduğu işbirlikli yarışma.
+
+> **Taş Kağıt Makas** (`p_tas_kagit`) menünün ikinci sayfasında soluk ve **devre dışı** bir kart olarak durur; seçilemez.
 
 ### Hızlı Başlangıç (Windows)
 
@@ -110,12 +112,14 @@ A turnkey collection of touch-free, vision-based arcade games designed for exhib
 5. **Answer Shower** (`p_cevap_yagmuru`): Physical trivia game positioning your body under the correct falling answer column.
 6. **Cowboy Duel / Reflex** (`p_refleks`): Quick-draw reaction duel triggered on visual draw signals.
 7. **Ghost Clones** (`p_hayalet_klon`): Fusion of temporal silhouette echo clones and invisibility cloak effects.
-8. **Golden Strike / Penalty** (`p_penalti`): Full-body penalty shootout with kick velocity and curve detection.
-9. **Drawing Oracle** (`p_ciz_tahmin`): Air-canvas drawing with real-time classification powered by a local Quick, Draw! ONNX model.
+8. **Golden Strike / Penalty** (`p_penalti`): Put your fingertip on the ball and draw a path to the spot you aim at; the path's curve becomes spin and its speed becomes power. Solo play faces an animated neon goalkeeper that feints and dives; two-player mode uses a real keeper.
+9. **Drawing Oracle** (`p_ciz_tahmin`): Air-canvas drawing with real-time classification powered by a local Quick, Draw! ONNX model (extended index finger = pen down, curled = pen up; open palm 1 s undo, 2 s clear).
 
 #### 2 Extra Multiplayer Sequence Games
 10. **Operation Sequence** (`p_islem_dizisi`): 3–5 players physically swap positions to satisfy arithmetic equality.
 11. **Sentence Sequence** (`p_cumle_dizisi`): 3–5 players sort overhead word tokens into valid syntax sentences.
+
+> **Rock Paper Scissors** (`p_tas_kagit`) stays on the second menu page as a dimmed, **disabled** card and cannot be selected.
 
 ### Quick Start (Windows)
 

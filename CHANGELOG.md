@@ -2,6 +2,23 @@
 
 All notable changes to the **Stant Kamera Oyunları** project are documented here.
 
+## [v0.2.1] - 2026-10-15
+
+### Fixed
+- **Drawing Oracle (`p_ciz_tahmin`) — drawing did not work on the live camera**:
+  - When a hand was lost for more than 0.6 s the tracker issued a new hand ID, but the game only accepted the ID captured at round start, so ink never came back and the round froze on "Seni göremiyorum". Player slots now rebind to the returning hand.
+  - Pen-down used a 2D finger-length test, so an index finger pointed toward the camera looked "curled". It now measures 3D length (MediaPipe `z`).
+  - The hand gate no longer rejects a drawing hand held away from the face (`el_sahip_sart` off for this game).
+- **Golden Strike (`p_penalti`) — hard controls, double shots, no goalkeeper**:
+  - Ball pickup: any fingertip within 95 px for 0.15 s (was index-only pose, 60 px, 0.3 s).
+  - A fast flick or a hand that blurs out mid-flick now counts as a shot; one dropped frame no longer cancels the drawing.
+  - The fingertip must leave the ball (140 px) before the next shot can lock, so one gesture fires exactly one shot.
+  - The end of the drawn path is now the aim point on the goal plane.
+  - New animated neon virtual goalkeeper for solo play: idle sway/hop, a feint to the wrong side, a full-stretch dive and a landing. Saves are decided from the same glove positions that are drawn; measured save rate on 200 random shots is 20–40 %.
+
+### Changed
+- Rock Paper Scissors is back in the menu as a dimmed, disabled card (greyed icon + "KAPALI" badge).
+
 ## [v0.2.0] - 2026-10-15
 
 ### Fixed & Refined

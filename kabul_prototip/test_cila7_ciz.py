@@ -95,3 +95,39 @@ def test_fare_el_yolu_uc_sekil(ad,tmp_path,monkeypatch):
     F.fare('p_ciz_tahmin')
     assert kapsam(p,ad)>=.92 and len(p.cizimler[10])==1
     assert F.cv2.imwrite(str(tmp_path/(ad+'_fare.png')),cikti[-1])
+
+
+def test_el_yeni_kimlikle_donunce_cizim_surer():
+    # Kapı 0,6 sn'den uzun kayıpta yeni kimlik verir; oyuncu yuvası yeni ele geçmeli (Enes 2026-10-15: çizim olmuyor).
+    p=oyun()
+    for t,x in ((0.,.3),(.07,.32),(.14,.34)):p.ciz(algi(1,x=x,y=.4),t)
+    assert p.tuvaller[10].any()
+    for t in (.3,.6,.9):p.ciz(algi(0),t)
+    for j,t in enumerate((1.0,1.07,1.14,1.21)):
+        a=algi(1,x=.5+j*.02,y=.4);a.el_id=[77];p.ciz(a,t)
+    assert p.ids==[77] and 77 in p.kalem and len(p.cizimler[77])==2
+    assert p.tuvaller[77][:,600:760].any()
+
+
+def test_isle_yeni_kimlikte_donmaz():
+    p=oyun();p.ciz(algi(1,y=.4),0.)
+    a=algi(1,x=.5,y=.4);a.el_id=[55]
+    for t in np.arange(1.,1.5,.07):p.isle(np.zeros((C.Y,C.G,3),np.uint8),a,float(t))
+    assert p.ids==[55] and p.kayip_t is None
+
+
+def test_kameraya_dogru_uzanan_isaret_kalem_indirir():
+    # 2B'de kısa görünen ama z ile öne uzanan işaret parmağı çizmeli; yumruk çizmemeli.
+    def egik(jest):
+        a=algi(1,x=.5,y=.4,jest=jest)
+        e=a.eller[0]
+        for j in (6,7,8):
+            e[j].y=e[5].y-.012*(j-5);e[j].z=-.045*(j-5)
+        for j in range(21):
+            if not hasattr(e[j],'z'):e[j].z=0.
+        return a
+    assert M.isaret_uzun(egik('Pointing_Up').eller[0])
+    assert not M.isaret_uzun(algi(1,jest='Closed_Fist').eller[0])
+    p=oyun()
+    for t in (0.,.07,.14):p.ciz(egik('Pointing_Up'),t)
+    assert 10 in p.kalem

@@ -21,9 +21,9 @@ def param(guc=.6,falso=0.):
 
 
 def test_kilit_sure_ve_kimlik_sarti():
-    p=oyun();p.kontrol(el(),0.,.03);p.kontrol(el(),.2,.03)
+    p=oyun();p.kontrol(el(),0.,.03);p.kontrol(el(),.1,.03)
     assert p.faz=='bekle'
-    p.kontrol(el(),.31,.03);assert p.faz=='ciz'
+    p.kontrol(el(),.16,.03);assert p.faz=='ciz'
     q=oyun();q.kontrol(el(id=None),0.,.03);q.kontrol(el(id=None),1.,.03)
     assert q.faz=='bekle'
 
@@ -116,7 +116,8 @@ def test_frikik_baraj_falso_gecer():
 
 def test_el_kaybi_ve_durgun_iptal_hak_yakmaz():
     p=oyun();p.kontrol(el(),0.,.03);p.kontrol(el(),.31,.03)
-    p.kontrol(algi(),.4,.03)
+    p.kontrol(algi(),.4,.03);assert p.faz=='ciz'  # tek kare kayıp tolere edilir
+    p.kontrol(algi(),.75,.03)
     assert p.faz=='bekle' and p.atilan==[0,0]
     p.kontrol(el(),1.,.03);p.kontrol(el(),1.31,.03);p.kontrol(el(),3.5,.03)
     assert p.faz=='bekle' and p.atilan==[0,0]
@@ -146,3 +147,74 @@ def test_kaleci_challenge_on_atis_skoru():
     p.fizik=M.ucus(param())[0]
     for i in range(10):p.atis_sonuc('Tutuş',i)
     assert p.durum=='sonuc' and p.skor==10
+
+
+def test_tek_hareket_tek_sut_parmak_topta_kalsa_da():
+    # Enes 2026-10-13/15: "topu atıyorum 2 kez gidiyor". Dokun, çiz, dur, parmak topta 3 sn kalsın.
+    p=oyun();sayac=[];asil=p.sut
+    p.sut=lambda simdi,param=None:(sayac.append(simdi),asil(simdi,param))
+    p.kontrol(el(),0.,.03);p.kontrol(el(),.16,.03)
+    for j in range(1,8):p.kontrol(el(y=M.TOP[1]-j*35),.16+j/15,1/15)
+    for j in range(4):p.kontrol(el(y=M.TOP[1]-245),.7+j*.1,.1)
+    assert len(sayac)==1
+    p.atis_sonuc('GOL',2.);p.isle(KARE(),el(),4.1)
+    t=4.2
+    while t<7.2:p.kontrol(el(),t,1/15);t+=1/15
+    assert len(sayac)==1 and p.atilan[0]==1 and p.faz=='bekle'
+    p.kontrol(el(y=M.TOP[1]-200),7.3,.1)
+    p.kontrol(el(),7.4,.1);p.kontrol(el(),7.6,.1)
+    assert p.faz=='ciz'
+
+
+def test_hizli_fiske_ve_el_kaybi_sut_sayilir_rastgele_sallama_saymaz():
+    rng=np.random.default_rng(3);tamam=0
+    for n in range(20):
+        p=oyun();t=0.
+        p.kontrol(el(),t,1/15);t+=.16;p.kontrol(el(),t,1/15)
+        dx=rng.uniform(-150,150)
+        for j in range(1,4):
+            t+=1/15
+            if rng.random()<.1:p.kontrol(algi(),t,1/15);continue
+            p.kontrol(el(x=M.TOP[0]+dx*j/3+rng.uniform(-6,6),y=M.TOP[1]-j*60+rng.uniform(-6,6)),t,1/15)
+        p.kontrol(algi(),t+1/15,1/15)  # fiske sonunda el bulanıp kaybolur
+        tamam+=p.faz=='ucus' and p.atilan==[0,0]
+    assert tamam>=19
+    p=oyun()
+    for j in range(60):p.kontrol(el(x=200+rng.uniform(-80,80),y=250+rng.uniform(-80,80)),j/15,1/15)
+    assert p.faz=='bekle' and p.fizik is None
+
+
+def test_cizilen_nokta_nisan_noktasidir():
+    sag=M.ciz_sut([(M.TOP,0.),(M.TOP+[260,-330],.5)],200)
+    yol,_=M.ucus(sag)
+    assert 2.6<yol[-1,0]<3.66 and yol[-1,1]>1.
+    alt=M.ciz_sut([(M.TOP,0.),(M.TOP+[0,-100],.15)],200)
+    assert 0<M.ucus(alt)[0][-1,1]<2.44
+
+
+def test_sanal_kaleci_adil_ve_cizimle_tutarli():
+    rng=np.random.default_rng(11);kurtaris=0;n=200
+    for _ in range(n):
+        p=oyun();p.rng=rng;p.sanal.rng=rng;p.yz_yon=p.yz_sec()
+        hx=rng.uniform(-3.4,3.4);hy=rng.uniform(.3,2.2)
+        p.sut(0.,M.ciz_sut([(M.TOP,0.),(M.TOP+[hx*M.EKRAN_OLCEK,-(240+(hy-.6)*M.EKRAN_OLCEK)],.45)],200))
+        karar=p.karar(algi(),KARE(),1.5)
+        eld=p.sanal.eldivenler()
+        degdi=any(np.linalg.norm(p.fizik[-1,:2]-g)<=.18+M.R for g in eld)
+        assert (karar=='Tutuş')==(degdi and karar not in ('Direk','Dışarı'))
+        kurtaris+=karar=='Tutuş'
+    assert .2<=kurtaris/n<=.4, kurtaris/n
+
+
+def test_sanal_kaleci_aldatir_atlar_ve_yere_duser():
+    k=M.SanalKaleci(np.random.default_rng(0))
+    fizik,_=M.ucus(dict(guc=.7,yatay=12.,dikey=M.hedef_acisi(.7,1.),falso=0.))
+    k.planla(fizik,1)
+    bas=k.poz(10.,10.,1.3)[0]
+    aldat=k.poz(10.9,10.,1.3)[0]
+    atla=k.poz(11.3,10.,1.3)
+    yer=k.poz(11.8,10.,1.3)
+    assert aldat[0]<bas[0]-.1  # önce ters tarafa
+    assert atla[0][0]>.8 and abs(atla[1][0])>.5  # sonra uzanarak köşeye
+    assert yer[3]>.9 and yer[0][1]<atla[0][1]
+    kare=KARE();k.ciz(kare,11.3,10.,1.3);assert kare.any()
