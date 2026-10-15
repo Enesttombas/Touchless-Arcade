@@ -11,13 +11,21 @@
 
 ## Stantta canlı
 
-<table>
-  <tr>
-    <td align="center"><a href="docs/media/canli/neon-kilic.mp4"><img src="docs/media/canli/neon-kilic.gif" alt="Neon Kılıç, iki oyuncu" height="220"/></a><br/><b>Neon Kılıç</b></td>
-    <td align="center"><a href="docs/media/canli/gulme-duellosu.mp4"><img src="docs/media/canli/gulme-duellosu.gif" alt="Gülme Düellosu" height="220"/></a><br/><b>Gülme Düellosu</b></td>
-    <td align="center"><a href="docs/media/canli/kanat-rotasi.mp4"><img src="docs/media/canli/kanat-rotasi.gif" alt="Kanat Rotası" height="220"/></a><br/><b>Kanat Rotası</b></td>
-  </tr>
-</table>
+<div align="center">
+
+<a href="docs/media/canli/neon-kilic.mp4"><img src="docs/media/canli/neon-kilic.gif" alt="Neon Kılıç, iki oyuncu" width="640"/></a>
+
+**Neon Kılıç**: iki oyuncu aynı anda meyve dilimliyor.
+
+<a href="docs/media/canli/gulme-duellosu.mp4"><img src="docs/media/canli/gulme-duellosu.gif" alt="Gülme Düellosu" width="640"/></a>
+
+**Gülme Düellosu**: ilk gülen kaybeder.
+
+<a href="docs/media/canli/kanat-rotasi.mp4"><img src="docs/media/canli/kanat-rotasi.gif" alt="Kanat Rotası" height="560"/></a>
+
+**Kanat Rotası**: kuşu parmağınla uçur.
+
+</div>
 
 <sub>Üniversite stantında gerçek oyunculardan kayıtlar. Tam videoyu açmak için önizlemeye tıkla.</sub>
 
