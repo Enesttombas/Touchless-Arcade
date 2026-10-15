@@ -132,7 +132,8 @@ class Prototip:
         self.meyve_dis: List[np.ndarray] = [m["dis"] for m in ms]
         self.meyve_ic: List[np.ndarray] = [m["ic"] for m in ms]
         self.meyve_suyu: List[Tuple[int, int, int]] = [m["suyu"] for m in ms]
-        self.memeler = ()  # meme modu kaldırıldı, yalnız meyve (Enes 2026-10-13)
+        # İki mod: Meyve veya Meme (Enes 2026-10-15). Meme görselleri (app/assets/gorsel) yoksa yalnız Meyve görünür.
+        self.memeler = _memeler()
         self.mod = "meyve"  # "meyve" | "meme"; bekle ekranında avuçla ya da boşlukla seçilir
         self.tur_modu = "meyve"  # tur boyunca sabit
         self.secim_mod = "meyve"

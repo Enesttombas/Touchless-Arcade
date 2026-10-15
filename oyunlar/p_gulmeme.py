@@ -38,6 +38,7 @@ from cekirdek import (
 
 class Prototip:
     AD = "Gülme Düellosu"
+    MEMELER = False  # True: her 4 sn kışkırtma memesi ve kaybedene meme damgası
     ACIKLAMA = "İki kişi bakışır: ilk gülen kaybeder!"
     IHTIYAC = {"yuz", "blend", "yuz2"}
     SIRA = 7
@@ -98,7 +99,8 @@ class Prototip:
         self.sag_r: float = 110.0
 
         # Kışkırtma: her 4 sn'de ortada bir meme çıkartması (sesi varsa çalar); emoji yok
-        memeler = meyve_ciz.memeler(220)
+        # Bu oyunda meme yok: ekrana meme çıkıp durması istenmedi (Enes 2026-10-15)
+        memeler = meyve_ciz.memeler(220) if self.MEMELER else ()
         self.meme_ses: Dict[str, Optional[str]] = {ad: ses for ad, _, ses, _ in memeler}
         self.emojiler = [ad for ad, _, _, _ in memeler] or ["tac"]
         self.emoji_onbellek: Dict[str, np.ndarray] = {ad: sp for ad, sp, _, _ in memeler}
@@ -411,8 +413,8 @@ class Prototip:
                         ky = random.randint(25, 110)
                         self.parcaciklar.yay(kx, ky, adet=25, renk=renk_k, hiz=5.0)
 
-                # Her 4 sn'de kışkırtma emojisi
-                if self.sure >= self.sonraki_kiskirtma:
+                # Her 4 sn'de kışkırtma memesi (MEMELER açıksa)
+                if self.MEMELER and self.sure >= self.sonraki_kiskirtma:
                     self.sonraki_kiskirtma += 4.0
                     self.kiskirtma_zamani = simdi
                     if not self.deste:
