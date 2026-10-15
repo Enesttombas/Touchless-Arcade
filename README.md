@@ -15,11 +15,11 @@
 
 <a href="docs/media/canli/neon-kilic.mp4"><img src="docs/media/canli/neon-kilic.gif" alt="Neon Kılıç, iki oyuncu" width="640"/></a>
 
-**Neon Kılıç**: iki oyuncu aynı anda uçuşan meyve ve memeleri dilimliyor.
+**Neon Kılıç**: iki oyuncu birlikte dilimliyor. Tur başında **Meyve** ya da **Meme** modu seçilir; bu klip Meme modundan.
 
-<a href="docs/media/canli/gulme-duellosu.mp4"><img src="docs/media/canli/gulme-duellosu.gif" alt="Gülme Düellosu" width="640"/></a>
+<a href="docs/media/canli/gulme-duellosu.mp4"><img src="docs/media/canli/gulme-duellosu.gif" alt="Gülme Düellosu" width="600"/></a>
 
-**Gülme Düellosu**: ilk gülen kaybeder.
+**Gülme Düellosu**: ekrana çıkan memelere rağmen ilk gülen kaybeder.
 
 <a href="docs/media/canli/kanat-rotasi.mp4"><img src="docs/media/canli/kanat-rotasi.gif" alt="Kanat Rotası" height="560"/></a>
 
@@ -46,7 +46,7 @@
 
 | | Oyun | Nasıl oynanır |
 |---|---|---|
-| 1 | **Neon Kılıç** | İşaret parmağın kılıç olur; uçuşan meyve ve memeleri dilimle. |
+| 1 | **Neon Kılıç** | İşaret parmağın kılıç olur; **Meyve** ya da **Meme** modunda uçuşanları dilimle. |
 | 2 | **Gülme Düellosu** | İki kişi karşı karşıya: ilk gülen ya da göz kırpan kaybeder. |
 | 3 | **AR Maskeler** | Yüzüne gerçek zamanlı 3B maskeler ve filtreler. |
 | 4 | **Kanat Rotası** | Parmağının yüksekliğiyle kuşu boruların arasından geçir. |
