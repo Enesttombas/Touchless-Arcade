@@ -18,7 +18,7 @@ import numpy as np
 from PIL import Image
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(REPO_ROOT / "prototipler"))
+sys.path.insert(0, str(REPO_ROOT / "oyunlar"))
 
 import cekirdek as ck
 import stant_app
@@ -33,8 +33,6 @@ OYUN_BILGILERI = [
     ("p_hayalet_klon", "Hayalet Klonlar"),
     ("p_penalti", "Altın Vuruş"),
     ("p_ciz_tahmin", "Çizim Kâhini"),
-    ("p_islem_dizisi", "İşlem Dizisi"),
-    ("p_cumle_dizisi", "Cümle Dizisi"),
 ]
 
 
@@ -124,11 +122,6 @@ def sahte_oyun_algi(o_idx: int, t: float, step: int) -> ck.Algi:
         a.el_skor = [0.95]
         a.jestler = ["Pointing_Up"]
         a.jest_skor = [0.95]
-    elif o_idx in (9, 10):  # p_islem_dizisi, p_cumle_dizisi
-        pz1 = ck.sahte_poz(0.25, 0.50)
-        pz2 = ck.sahte_poz(0.50, 0.50)
-        pz3 = ck.sahte_poz(0.75, 0.50)
-        a.pozlar = [pz1, pz2, pz3]
     return a
 
 
@@ -198,7 +191,7 @@ def render_demo(cikis_yolu: Path, quick: bool = False) -> None:
         durations.append(180)
 
     # 2. Deneyimler
-    oyun_secim = [0, 3, 9] if quick else list(range(len(OYUN_BILGILERI)))
+    oyun_secim = [0, 3, 8] if quick else list(range(len(OYUN_BILGILERI)))
     for o_idx in oyun_secim:
         mod_ad, ad_tr = OYUN_BILGILERI[o_idx]
         uyg.sec(o_idx, t)

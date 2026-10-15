@@ -51,25 +51,20 @@ Common deployment, hardware, and operational questions for **Stant Kamera Oyunla
 |---|---|---|
 | **Anywhere** | `Q` or `Esc` | Exit application |
 | **Anywhere** | `F` | Toggle Fullscreen |
-| **Main Menu** | `1`–`9` | Select card on the **current** page |
-| **Main Menu** | `N` / `B` | Next / Previous menu page |
+| **Main Menu** | `1`–`9` | Select a game card |
 | **In-Game** | `M` | Return to main menu |
 | **In-Game** | `N` / `B` | Switch to Next / Previous game |
 | **In-Game** | `1`–`9` | Jump directly to game index |
-| **Sequence Games** | `3`, `4`, `5`, Space | Switch player count or game mode |
 
 ---
 
 ## 4. Setup & Model Errors
 
 ### Missing `.venv` or Import Errors
-- Re-run the clean installation script from the project root:
-  ```cmd
-  KUR.bat
-  ```
+- Delete the `app\.venv` folder and double-click `BASLAT.bat` again; it reinstalls everything on first run.
 - Verify that Python **3.11** is installed and accessible in `PATH`.
 - Verify that bundled task models exist under `app/modeller/`:
   - `face_landmarker.task`
   - `gesture_recognizer.task`
   - `pose_landmarker_lite.task`
-  and sketch ONNX classifier under `prototipler/modeller/ciz_tanima.onnx`.
+  and sketch ONNX classifier under `oyunlar/modeller/ciz_tanima.onnx`.

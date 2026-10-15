@@ -27,7 +27,7 @@ hata.txt
 stand_hata.txt
 
 # Model & calibration runtime caches
-prototipler/modeller/quickdraw_cache/
+oyunlar/modeller/quickdraw_cache/
 stand/duvar/
 
 # IDE & Editor artifacts

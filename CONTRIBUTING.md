@@ -16,22 +16,18 @@ Welcome! This repository hosts interactive camera-based arcade games built for p
 ## Development Setup / Geliştirme Ortamı
 
 1. **Prerequisites**: Python 3.11 on Windows (64-bit).
-2. **Environment Setup**:
-   ```cmd
-   KUR.bat
-   ```
-   Or manually:
+2. **Environment Setup**: `BASLAT.bat` creates `app\.venv` automatically on first run. Or manually:
    ```cmd
    py -3.11 -m venv app\.venv
    app\.venv\Scripts\python.exe -m pip install -r requirements.txt
    ```
-3. **Launch without compiling .exe**:
+3. **Launch**:
    ```cmd
    BASLAT.bat
    ```
 4. **Run Acceptance & Unit Tests**:
    ```cmd
-   app\.venv\Scripts\python.exe -m pytest -q kabul_prototip -p no:cacheprovider
+   app\.venv\Scripts\python.exe -m pytest -q tests -p no:cacheprovider
    ```
 5. **Generate Synthetic Preview**:
    ```cmd
@@ -46,5 +42,5 @@ Welcome! This repository hosts interactive camera-based arcade games built for p
 - Maintain test integrity: do not relax assertions or skip tests to mask regressions.
 - Ensure `compileall` clean checks:
   ```cmd
-  app\.venv\Scripts\python.exe -m compileall -q prototipler stand tools
+  app\.venv\Scripts\python.exe -m compileall -q oyunlar stand tools
   ```

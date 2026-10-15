@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ main, master, codex/* ]
+    branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
 
@@ -28,7 +28,7 @@ jobs:
 
       - name: Bytecode compilation check
         run: |
-          python -m compileall -q prototipler stand tools
+          python -m compileall -q oyunlar stand tools
 
       - name: Run quick synthetic preview render
         run: |
@@ -36,4 +36,4 @@ jobs:
 
       - name: Run test suite
         run: |
-          python -m pytest -q kabul_prototip -p no:cacheprovider
+          python -m pytest -q tests -p no:cacheprovider

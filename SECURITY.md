@@ -4,8 +4,7 @@
 
 | Version | Supported |
 |---|---|
-| Main / Release Branch | :white_check_mark: |
-| Legacy Prototypes | :x: |
+| `master` | :white_check_mark: |
 
 ---
 
@@ -14,7 +13,7 @@
 If you discover a security issue or privacy concern (such as unintended frame persistence, memory leaks, or network transmission during booth runs):
 
 1. Please do not open public GitHub issues.
-2. Report vulnerabilities privately to the project maintainers with a reproducible scenario.
+2. Report it privately via **Security → Report a vulnerability** on this GitHub repository, with steps to reproduce.
 3. Include your environment details (OS, Python version, camera hardware index).
 
 ---
