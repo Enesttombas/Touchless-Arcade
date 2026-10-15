@@ -15,7 +15,7 @@
 
 <a href="docs/media/canli/neon-kilic.mp4"><img src="docs/media/canli/neon-kilic.gif" alt="Neon Kılıç, iki oyuncu" width="640"/></a>
 
-**Neon Kılıç**: iki oyuncu aynı anda meyve dilimliyor.
+**Neon Kılıç**: iki oyuncu aynı anda uçuşan meyve ve memeleri dilimliyor.
 
 <a href="docs/media/canli/gulme-duellosu.mp4"><img src="docs/media/canli/gulme-duellosu.gif" alt="Gülme Düellosu" width="640"/></a>
 
@@ -46,7 +46,7 @@
 
 | | Oyun | Nasıl oynanır |
 |---|---|---|
-| 1 | **Neon Kılıç** | İşaret parmağın kılıç olur; uçuşan meyveleri dilimle. |
+| 1 | **Neon Kılıç** | İşaret parmağın kılıç olur; uçuşan meyve ve memeleri dilimle. |
 | 2 | **Gülme Düellosu** | İki kişi karşı karşıya: ilk gülen ya da göz kırpan kaybeder. |
 | 3 | **AR Maskeler** | Yüzüne gerçek zamanlı 3B maskeler ve filtreler. |
 | 4 | **Kanat Rotası** | Parmağının yüksekliğiyle kuşu boruların arasından geçir. |
