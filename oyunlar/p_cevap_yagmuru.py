@@ -72,7 +72,7 @@ class Prototip(OyunAkisi):
     def tus(self, k):
         if k == 32 and self.durum == 'bekle':
             self.mod = 'Hayatta Kalma' if self.mod == 'Puan' else 'Puan'
-        elif k in (ord('s'), ord('S')):
+        elif k in (ord('k'), ord('K')):  # operatör şerit kalibrasyonu (S artık ses tuşu)
             self.kalibre = not self.kalibre
         elif self.kalibre and k in (81, 83, 2424832, 2555904):
             self.sinir_kayma = float(np.clip(self.sinir_kayma+(-.01 if k in (81, 2424832) else .01), -.1, .1))

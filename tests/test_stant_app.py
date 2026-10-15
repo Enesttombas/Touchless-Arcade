@@ -1,5 +1,7 @@
 """Stant uygulaması: 3 ayrı deneyim arasında geçiş (içerik birleşmez), kamerasız."""
 import importlib
+import numpy as np
+import pytest
 
 from test_ozel import C, KARE, algi
 
@@ -290,3 +292,26 @@ def test_hayalet_klon_iki_eski_deneyimi_tek_kartta_sirayla_oynatir():
     p.tus(32)  # boşluk etkin deneyimin kendi modunu değiştirir
     assert klon.mod == "Neon"
     assert isinstance(p.durum, str)
+
+
+def test_ses_a_s_tuslari_kademeli_sinirli_ve_panel_soner(monkeypatch):
+    # Enes 2026-10-15: A kıs / S aç, ekranda animasyonlu panel, sol altta ipucu
+    monkeypatch.setattr(C.Ses, "ANA_SES", 0.3)
+    u = _uyg()
+    sag, sol = ord("s"), ord("a")
+    assert u.tus(sag, 1.0) is True and C.Ses.ANA_SES == pytest.approx(0.4)
+    assert u.tus(sol, 1.1) is True and C.Ses.ANA_SES == pytest.approx(0.3)
+    for _ in range(20):
+        u.tus(sag, 1.2)
+    assert C.Ses.ANA_SES == pytest.approx(1.0)
+    for _ in range(20):
+        u.tus(sol, 1.3)
+    assert C.Ses.ANA_SES == 0.0
+    assert u.etkin is None  # ses tuşları oyun seçmez
+    orta = (slice(C.Y // 2 - 30, C.Y // 2 + 30), slice(C.G // 2 - 150, C.G // 2 + 150))
+    acik, sonmus = KARE(), KARE()
+    u._ses_katmani(acik, 1.5)  # panel görünür
+    u._ses_katmani(sonmus, 1.3 + S.SES_GOSTER_SN + 0.1)  # süresi doldu, yalnız ipucu
+    assert not np.array_equal(acik[orta], KARE()[orta])
+    assert np.array_equal(sonmus[orta], KARE()[orta])
+    assert not np.array_equal(sonmus[C.Y - 40:, :300], KARE()[C.Y - 40:, :300])  # sol alt ipucu hep var
