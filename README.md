@@ -11,13 +11,20 @@ Nişantaşı Üniversitesi kulüp tanıtım haftasında **AR-GE Kulübü** stand
 
 *Camera games you play with just your finger. Built for the R&D Club booth at Nişantaşı University's club week, and just as fun at home with friends or kids.* [English ↓](#english)
 
+<br/>
+
 <div align="center">
 
-<a href="https://github.com/Enesttombas/Touchless-Arcade/releases/latest/download/Touchless-Arcade-Windows.zip"><img src="https://img.shields.io/badge/%E2%AC%87%20%C4%B0ND%C4%B0R-Windows%20ZIP-2ea44f?style=for-the-badge" alt="İndir: Windows ZIP" height="44"/></a>
+**İndir → ZIP'i aç → `BASLAT.bat`'a çift tıkla.**<br/>
+Her şey içinde hazır; kurulum yok, bekleme yok.
 
-<sub>İndir → ZIP'i aç → <b>BASLAT.bat</b>'a çift tıkla. Her şey içinde hazır; kurulum yok, bekleme yok.</sub>
+<br/>
+
+<a href="https://github.com/Enesttombas/Touchless-Arcade/releases/latest/download/Touchless-Arcade-Windows.zip"><img src="https://img.shields.io/badge/%E2%AC%87%20%C4%B0ND%C4%B0R-Windows%20ZIP-2ea44f?style=for-the-badge" alt="İndir: Windows ZIP" height="64"/></a>
 
 </div>
+
+<br/>
 
 ## Stantta canlı
 
