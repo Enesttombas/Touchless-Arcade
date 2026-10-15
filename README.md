@@ -7,9 +7,9 @@
 
 **Bir kamera, bir ekran ve parmağın yeter.** Kumanda yok, dokunmatik ekran yok: kameranın karşısına geç ve sadece parmağınla oyna.
 
-Nişantaşı Üniversitesi kulüp tanıtım haftasında AR-GE Kulübü standı için yaptığımız, eğlence amaçlı bir proje. Evde arkadaşınla ya da çocuğunla da deneyebilirsin.
+Bu oyunları Nişantaşı Üniversitesi'nin kulüp tanıtım haftasında, AR-GE Kulübü standına uğrayanlar biraz eğlensin diye yaptık. Stant bitti ama oyunlar duruyor: bir akşam evde arkadaşınla ya da çocuğunla laptopun karşısına geçip deneyebilirsin.
 
-*A fun side project: camera games we made for our R&D Club booth at Nişantaşı University. You can also try them at home with friends or kids.* [English ↓](#english)
+*We made these games so visitors at our R&D Club booth at Nişantaşı University could have some fun. The booth is over, but the games are still here: try them at home with a friend or your kids.* [English ↓](#english)
 
 <br/>
 
@@ -121,7 +121,7 @@ Kodun yapısı: `oyunlar/` (oyunlar ve menü), `stand/` (ortak çizim/efekt küt
 <a name="english"></a>
 ## English
 
-**Touchless Arcade** is a set of 9 camera games you play with just your finger in front of a mirrored live camera. No controller or touch screen needed. We made it for fun, for our R&D Club booth at Nişantaşı University's club week. You can also play it at home with friends or kids.
+**Touchless Arcade** is a set of 9 camera games you play with just your finger in front of a mirrored live camera. No controller or touch screen needed. We made it so visitors at our R&D Club booth during Nişantaşı University's club week could have some fun. The booth is over, but the games are still here: try them at home with a friend or your kids.
 
 **Run it on Windows:**
 1. **[Download the ZIP](https://github.com/Enesttombas/Touchless-Arcade/releases/latest/download/Touchless-Arcade-Windows.zip)** and extract it (right-click → Extract All).
