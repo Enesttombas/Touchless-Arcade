@@ -11,6 +11,14 @@ Nişantaşı Üniversitesi kulüp tanıtım haftasında **AR-GE Kulübü** stand
 
 *Camera games you play with just your finger. Built for the R&D Club booth at Nişantaşı University's club week, and just as fun at home with friends or kids.* [English ↓](#english)
 
+<div align="center">
+
+<a href="https://github.com/Enesttombas/Touchless-Arcade/archive/refs/heads/master.zip"><img src="https://img.shields.io/badge/%E2%AC%87%20%C4%B0ND%C4%B0R-Windows%20ZIP-2ea44f?style=for-the-badge" alt="İndir: Windows ZIP" height="44"/></a>
+
+<sub>İndir → ZIP'i aç → <b>BASLAT.bat</b>'a çift tıkla. Python ya da başka bir şey kurman gerekmez.</sub>
+
+</div>
+
 ## Stantta canlı
 
 <div align="center">
@@ -62,11 +70,13 @@ Nişantaşı Üniversitesi kulüp tanıtım haftasında **AR-GE Kulübü** stand
 
 ## Kurulum ve çalıştırma
 
-1. [Python 3.11](https://www.python.org/downloads/release/python-3119/)'i kur. Kurulumda **"Add python.exe to PATH"** kutusunu işaretle.
-2. Bu depoyu indir (**Code → Download ZIP**) ve klasörü aç.
-3. **`BASLAT.bat`**'a çift tıkla.
+1. **[⬇ İndir](https://github.com/Enesttombas/Touchless-Arcade/archive/refs/heads/master.zip)**: ZIP dosyası iner.
+2. ZIP'e sağ tıkla → **Tümünü ayıkla**.
+3. Açılan klasördeki **`BASLAT.bat`**'a çift tıkla.
 
-İlk açılışta gerekli paketleri kendisi kurar; bu birkaç dakika sürer. Sonraki açılışlar anında başlar. Bir USB ya da dahili kamera yeterlidir.
+İlk açılışta oyun, ihtiyacı olan her şeyi kendi klasörünün içine indirip kurar; internet gerekir, 3-5 dakika sürer. Bilgisayarına Python ya da başka bir program yüklenmez. Sonraki açılışlar anında başlar. Bir USB ya da dahili kamera yeterlidir.
+
+> Windows "bilinmeyen yayımcı" uyarısı gösterirse **Ek bilgi → Yine de çalıştır**'a bas. Kamera açılmazsa: Ayarlar → Gizlilik → Kamera → **Masaüstü uygulamalarının kameraya erişmesine izin ver**.
 
 ## Kontroller
 
@@ -104,9 +114,10 @@ Kodun yapısı: `oyunlar/` (oyunlar ve menü), `stand/` (ortak çizim/efekt küt
 **Touchless Arcade** is a set of 9 camera games you play with just your finger in front of a mirrored live camera. No controller or touch screen needed. It was built for the R&D Club booth during Nişantaşı University's club promotion week, and works just as well at home: grab a laptop, invite friends or kids, and try something different.
 
 **Run it on Windows:**
-1. Install [Python 3.11](https://www.python.org/downloads/release/python-3119/) and tick **"Add python.exe to PATH"**.
-2. Download this repository (**Code → Download ZIP**).
-3. Double-click **`BASLAT.bat`**. The first run installs the dependencies; later runs start instantly.
+1. **[Download the ZIP](https://github.com/Enesttombas/Touchless-Arcade/archive/refs/heads/master.zip)** and extract it (right-click → Extract All).
+2. Double-click **`BASLAT.bat`**.
+
+No Python install needed: the first run downloads a portable Python and the game packages into the folder itself (3-5 minutes, internet required). Later runs start instantly.
 
 **Controls:** raise your index finger with the palm facing the camera (don't point the fingertip straight at the lens). Hold your hand over a card for 1 s to pick a game. Hold an open palm in the bottom-left corner for 3 s to return to the menu. Keyboard: `1`–`9` select, `M` menu, `F` fullscreen, `Q` quit.
 

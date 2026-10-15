@@ -37,3 +37,22 @@ jobs:
       - name: Run test suite
         run: |
           python -m pytest -q tests -p no:cacheprovider
+
+  install-windows:
+    name: Windows one-click install (BASLAT.bat)
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install with BASLAT.bat (portable Python, no system Python used)
+        shell: cmd
+        run: BASLAT.bat --kur
+
+      - name: Import game stack with the portable Python
+        shell: cmd
+        run: app\python\python.exe -c "import sys; sys.path.insert(0, 'oyunlar'); import cv2, mediapipe, onnxruntime, numpy, pygame, stant_app; print('ok', sys.version)"
+
+      - name: Render preview with the portable Python
+        shell: cmd
+        run: app\python\python.exe tools\render_preview.py --quick

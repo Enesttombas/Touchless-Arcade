@@ -1,5 +1,6 @@
 # Virtual environment
 app/.venv/
+app/python/
 .venv/
 env/
 venv/
