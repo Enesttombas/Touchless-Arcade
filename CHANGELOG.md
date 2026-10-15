@@ -2,7 +2,7 @@
 
 ## v0.3.1 (2026-10-15)
 
-- README'ye stantta gerçek oyuncularla çekilmiş canlı klipler eklendi (Neon Kılıç, Gülme Düellosu, Kanat Rotası).
+- README'ye stantta gerçek oyuncularla çekilmiş canlı klipler eklendi (Neon Kılıç, Gülme Düellosu, Kanat Rotası) ve bir AR Maskeler fotoğrafı.
 
 ## v0.3.0 (2026-10-15)
 
