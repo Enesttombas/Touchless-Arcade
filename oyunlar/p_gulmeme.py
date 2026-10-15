@@ -65,7 +65,7 @@ class Prototip:
             import pygame
 
             pygame.mixer.music.load(yol)
-            pygame.mixer.music.set_volume(0.85)
+            pygame.mixer.music.set_volume(0.85 * Ses.ANA_SES)
             pygame.mixer.music.play()
             pygame.mixer.music.fadeout(2200)
             return True

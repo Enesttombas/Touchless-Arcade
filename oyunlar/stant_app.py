@@ -489,7 +489,7 @@ class StantUygulama:
         self.gecis_t = simdi
         self.son_kisi_t = simdi
         self.ev_sure = 0.0
-        self.ses.cal("woosh" if i is None else "basari", 0.7)
+        # Oyun açma ve menüye dönüşte ses yok (Enes 2026-10-15)
 
     def isle(self, kare: np.ndarray, algi: Any, simdi: float) -> np.ndarray:
         dt = 0.033 if self.onceki_t is None else min(max(simdi - self.onceki_t, 0.0), 0.1)
