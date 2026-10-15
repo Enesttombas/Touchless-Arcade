@@ -62,5 +62,5 @@ The project is structured into three primary layers:
 - Operates single-frame low-latency buffering with zero disk writes.
 
 ### 2.3 Headless Preview Engine (`tools/render_preview.py`)
-- Enables synthetic offline rendering of `docs/media/menu.png` and `docs/media/demo.gif` without requiring a physical camera or MediaPipe initialization.
+- Enables synthetic offline rendering of `docs/media/menu.png` and `docs/media/demo.gif` (README uses `docs/media/oyun-turu.gif`, made with `tools/oyun_turu.py`) without requiring a physical camera or MediaPipe initialization.
 - The menu snapshot is pixel-reproducible. The demo uses fixed synthetic times and inputs, while game randomness can vary. Acceptance tests guard against camera and detector initialization.

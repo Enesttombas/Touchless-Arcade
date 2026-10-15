@@ -51,3 +51,6 @@ calismalar/
 *.wav
 /tmp_test/
 /Stant.exe
+
+# render_preview.py eski demo çıktısı (README artık oyun-turu.gif kullanır)
+docs/media/demo.gif
