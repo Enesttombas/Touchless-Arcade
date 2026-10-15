@@ -1,5 +1,11 @@
 # Değişiklikler
 
+## v0.4.0 (2026-10-15)
+
+- **Tek tık kurulum:** Python kurmak gerekmiyor. `BASLAT.bat` ilk açılışta oyunun kendi taşınabilir Python'unu ve paketlerini `app\python` içine kurar.
+- README'nin en üstüne **İndir** düğmesi eklendi; kurulum 3 adıma indi.
+- CI'da bu kurulumu sıfırdan deneyen bir Windows işi eklendi.
+
 ## v0.3.1 (2026-10-15)
 
 - README'ye stantta gerçek oyuncularla çekilmiş canlı klipler eklendi (Neon Kılıç, Gülme Düellosu, Kanat Rotası) ve bir AR Maskeler fotoğrafı.

@@ -61,7 +61,7 @@ Common deployment, hardware, and operational questions for **Stant Kamera Oyunla
 ## 4. Setup & Model Errors
 
 ### Missing `.venv` or Import Errors
-- Delete the `app\.venv` folder and double-click `BASLAT.bat` again; it reinstalls everything on first run.
+- Delete the `app\python` folder (or `app\.venv` from older versions) and double-click `BASLAT.bat` again; it reinstalls everything on first run. No system Python is needed.
 - Verify that Python **3.11** is installed and accessible in `PATH`.
 - Verify that bundled task models exist under `app/modeller/`:
   - `face_landmarker.task`

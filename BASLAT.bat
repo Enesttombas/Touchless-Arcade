@@ -1,33 +1,27 @@
 @echo off
-rem Stant Kamera Oyunlari: cift tikla ve oyna.
-rem Ilk acilista paketleri kendisi kurar (internet gerekir, birkac dakika surer); sonraki acilislar aninda baslar.
+rem Touchless Arcade: cift tikla ve oyna.
+rem Ilk acilista oyun kendi tasinabilir Python'unu app\python icine kurar (internet gerekir, birkac dakika surer).
+rem Bilgisayarda Python kurulu olmasi gerekmez. Sonraki acilislar aninda baslar.
+rem BASLAT.bat --kur : yalniz kurar, oyunu acmaz (otomatik test icin).
 cd /d "%~dp0"
 
-if exist app\.venv\Scripts\python.exe goto basla
+set "PY=app\python\python.exe"
+rem Eski surumlerle kurulmus app\.venv varsa onu kullan
+if not exist "%PY%" if exist app\.venv\Scripts\python.exe set "PY=app\.venv\Scripts\python.exe"
 
-echo [1/2] Ilk kurulum: Python 3.11 araniyor...
-set "PY_CMD="
-py -3.11 --version >nul 2>&1 && set "PY_CMD=py -3.11"
-if not defined PY_CMD (
-  python --version 2>nul | findstr /R "3\.11" >nul 2>&1 && set "PY_CMD=python"
-)
-if not defined PY_CMD (
-  echo.
-  echo Python 3.11 bulunamadi.
-  echo https://www.python.org/downloads/release/python-3119/ adresinden kurun
-  echo ^(kurulumda "Add python.exe to PATH" kutusunu isaretleyin^), sonra BASLAT.bat'i tekrar acin.
-  pause
-  exit /b 1
-)
+if exist "%PY%" goto hazir
+echo.
+echo  Touchless Arcade ilk kez aciliyor.
+echo  Oyunun calismasi icin gerekenler indirilip bu klasore kuruluyor (yaklasik 3-5 dakika).
+echo  Bilgisayarina baska bir sey yuklenmez.
+echo.
+powershell -NoProfile -ExecutionPolicy Bypass -File "app\kur.ps1"
+if errorlevel 1 goto hata
+set "PY=app\python\python.exe"
 
-echo [2/2] Paketler kuruluyor, birkac dakika surebilir...
-%PY_CMD% -m venv app\.venv || goto hata
-app\.venv\Scripts\python.exe -m pip install --quiet --upgrade pip
-app\.venv\Scripts\python.exe -m pip install --quiet -r requirements.txt || goto hata
-echo Kurulum tamam.
-
-:basla
-app\.venv\Scripts\python.exe oyunlar\stant_app.py %*
+:hazir
+if /i "%~1"=="--kur" exit /b 0
+"%PY%" oyunlar\stant_app.py %*
 if errorlevel 1 (
   echo Uygulama bir hatayla kapandi. Cozum onerileri: docs\troubleshooting.md
   pause
@@ -35,8 +29,5 @@ if errorlevel 1 (
 exit /b 0
 
 :hata
-echo.
-echo Kurulum basarisiz. Internet baglantisini kontrol edip BASLAT.bat'i tekrar acin.
-if exist app\.venv rmdir /s /q app\.venv
-pause
+if /i not "%~1"=="--kur" pause
 exit /b 1
