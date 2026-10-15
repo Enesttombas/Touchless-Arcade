@@ -17,7 +17,7 @@ Bu oyunları Nişantaşı Üniversitesi'nin kulüp tanıtım haftasında, AR-GE 
 
 **1.** Aşağıdaki düğmeyle indir &nbsp;→&nbsp; **2.** ZIP'e sağ tıkla, **Tümünü ayıkla** &nbsp;→&nbsp; **3.** Açılan klasörde **`BASLAT.bat`**'a çift tıkla
 
-Her şey içinde hazır; kurulum yok, bekleme yok.
+Oyunun çalışması için gereken tüm dosyalar paketin içinde; ayrıca bir şey indirmen ya da kurman gerekmez.
 
 <br/>
 
