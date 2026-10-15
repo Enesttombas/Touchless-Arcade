@@ -1,6 +1,6 @@
-# Stant Kamera Oyunları
+# Touchless Arcade — Stant Kamera Oyunları
 
-[![CI](https://github.com/Enesttombas/stant-kamera-oyunlari/actions/workflows/ci.yml/badge.svg)](https://github.com/Enesttombas/stant-kamera-oyunlari/actions/workflows/ci.yml)
+[![CI](https://github.com/Enesttombas/Touchless-Arcade/actions/workflows/ci.yml/badge.svg)](https://github.com/Enesttombas/Touchless-Arcade/actions/workflows/ci.yml)
 [![Python 3.11](https://img.shields.io/badge/Python-3.11-blue.svg)](https://www.python.org/downloads/release/python-3119/)
 [![Platform: Windows](https://img.shields.io/badge/Platform-Windows-lightgrey.svg)](https://www.microsoft.com/windows)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
