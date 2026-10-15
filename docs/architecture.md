@@ -41,10 +41,9 @@ The project is structured into three primary layers:
                                   |
                                   v
 +-------------------------------------------------------------------+
-|               Render Canvas & Audio Output (1280x720 BGR)         |
+|               Render Canvas (1280x720 BGR)                        |
 |   - Procedural Neon & Particle Glow                               |
 |   - PIL Turkish TTF Typography & Segoe UI Emoji Support           |
-|   - Synthesized Pygame-CE Audio Mixer (bips, swooshes, chimes)    |
 +-------------------------------------------------------------------+
 ```
 

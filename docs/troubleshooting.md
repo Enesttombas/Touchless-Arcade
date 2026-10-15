@@ -52,7 +52,6 @@ Common deployment, hardware, and operational questions for **Stant Kamera Oyunla
 | **Anywhere** | `Q` or `Esc` | Exit application |
 | **Anywhere** | `F` | Toggle Fullscreen |
 | **Main Menu** | `1`–`9` | Select a game card |
-| **Anywhere** | `A` / `S` | Volume down / up (on-screen volume panel) |
 | **In-Game** | `M` | Return to main menu |
 | **In-Game** | `N` / `B` | Switch to Next / Previous game |
 | **In-Game** | `1`–`9` | Jump directly to game index |

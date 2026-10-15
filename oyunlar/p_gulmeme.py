@@ -59,18 +59,7 @@ class Prototip:
 
 
     def _meme_sesi(self, yol: Optional[str]) -> bool:
-        if not yol or not getattr(self.ses, "acik", False):
-            return False
-        try:
-            import pygame
-
-            pygame.mixer.music.load(yol)
-            pygame.mixer.music.set_volume(0.85 * Ses.ANA_SES)
-            pygame.mixer.music.play()
-            pygame.mixer.music.fadeout(2200)
-            return True
-        except Exception:
-            return False
+        return False  # oyunda ses yok
 
     def __init__(self, ses: Ses):
         self.ses = ses

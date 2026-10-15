@@ -162,31 +162,10 @@ class Prototip:
         return self.deste.pop()
 
     def _meme_sesi(self, tur: int, simdi: float) -> bool:
-        if self.tur_modu != "meme" or not self.memeler or not self.ses.acik:
-            return False
-        yol = self.memeler[tur][1]
-        if not yol:
-            return False
-        try:
-            import pygame
-
-            pygame.mixer.music.load(yol)
-            pygame.mixer.music.set_volume(0.85 * Ses.ANA_SES)
-            pygame.mixer.music.play()
-            self.muzik_bitis = simdi + 1.6
-            return True
-        except Exception:
-            return False
+        return False  # oyunda ses yok
 
     def _muzik_kis(self, simdi: float) -> None:
-        if self.muzik_bitis and simdi > self.muzik_bitis:
-            self.muzik_bitis = 0.0
-            try:
-                import pygame
-
-                pygame.mixer.music.fadeout(350)
-            except Exception:
-                pass
+        return None
 
     def _oyun_baslat(self, simdi: float) -> None:
         self.durum = "oyun"

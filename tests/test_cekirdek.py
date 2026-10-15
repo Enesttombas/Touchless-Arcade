@@ -12,18 +12,9 @@ sys.path.insert(0, str(PROTO))
 C = importlib.import_module("cekirdek")
 
 
-@pytest.mark.parametrize("ad", ["kick", "snare", "hihat", "clap", "pop", "ding", "bonk", "woosh", "basari", "zap",
-                                "nota60", "nota72", "bilinmeyen"])
-def test_sentez_sesleri_sonlu_ve_sinirli(ad):
-    d = C.sentez(ad, 44100)
-    assert d.ndim == 1 and 400 < len(d) < 44100 * 2
-    assert np.isfinite(d).all() and np.abs(d).max() <= 1.0 + 1e-6 and np.abs(d).max() > 0.01
-
-
-def test_ses_kapaliyken_sessiz_gecer():
-    s = C.Ses(acik=False)
-    s.cal("kick")
-    s.cal("yok_boyle_ses")
+def test_oyunda_ses_yok():
+    s = C.Ses(acik=True)  # açık istense bile sessiz
+    assert s.acik is False and s.cal("kick") is None and not hasattr(C, "sentez")
 
 
 def test_sahte_el_durumlari_stand_el_durumu_ile_uyumlu():
