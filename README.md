@@ -37,7 +37,7 @@ Her şey içinde hazır; kurulum yok, bekleme yok.
 
 <a href="docs/media/canli/gulme-duellosu.mp4"><img src="docs/media/canli/gulme-duellosu.gif" alt="Gülme Düellosu" width="600"/></a>
 
-**Gülme Düellosu**: iki kişi bakışır, ilk gülen kaybeder.
+**Gülme Düellosu**: iki kişi yarışır, ilk gülen kaybeder.
 
 <a href="docs/media/canli/kanat-rotasi.mp4"><img src="docs/media/canli/kanat-rotasi.gif" alt="Kanat Rotası" height="560"/></a>
 
