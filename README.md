@@ -5,9 +5,11 @@
 [![Platform: Windows](https://img.shields.io/badge/Platform-Windows-lightgrey.svg)](https://www.microsoft.com/windows)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-**Dokunmadan oynanan kamera oyunları.** Ziyaretçi ekranın karşısına geçer; eliyle, yüzüyle ve bedeniyle oynar. Kumanda, dokunmatik ekran ya da kurulum gerekmez. Üniversite ve kulüp stantları için yapıldı.
+**Bir kamera, bir ekran ve elin yeter.** Kumanda yok, dokunmatik ekran yok: kameranın karşısına geç; elinle, yüzünle ve bedeninle oyna.
 
-*Touch-free camera arcade for booths and events: just stand in front of the screen and play with your hands, face and body.* [English ↓](#english)
+Nişantaşı Üniversitesi kulüp tanıtım haftasında **AR-GE Kulübü** standı için yapıldı. Ama stant şart değil: evde arkadaşlarınla, ailenle ya da çocuğunla laptopun karşısına geçip farklı bir şey denemek istersen tam sana göre.
+
+*Camera games you play with your hands, face and body. Built for the R&D Club booth at Nişantaşı University's club week, and just as fun at home with friends or kids.* [English ↓](#english)
 
 ## Stantta canlı
 
@@ -99,7 +101,7 @@ Kodun yapısı: `oyunlar/` (oyunlar ve menü), `stand/` (ortak çizim/efekt küt
 <a name="english"></a>
 ## English
 
-**Stant Kamera Oyunları** is a collection of 9 touch-free arcade games for exhibition booths. Visitors play with their hands, face and body in front of a mirrored live camera. No controller, touch screen or sign-up is needed.
+**Touchless Arcade** is a set of 9 camera games you play with your hands, face and body in front of a mirrored live camera. No controller or touch screen needed. It was built for the R&D Club booth during Nişantaşı University's club promotion week, and works just as well at home: grab a laptop, invite friends or kids, and try something different.
 
 **Run it on Windows:**
 1. Install [Python 3.11](https://www.python.org/downloads/release/python-3119/) and tick **"Add python.exe to PATH"**.
