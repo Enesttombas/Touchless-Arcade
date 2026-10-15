@@ -309,119 +309,83 @@ def on_plan(m: np.ndarray, oran: float = 0.3, min_alan: float = 0.004) -> np.nda
 
 
 # ---------------------------------------------------------------- Ses Sentezi ve Çalma
-def sentez(ad: str, hz: int = 44100) -> np.ndarray:
-    """Kısa ses efektleri veya MIDI notası sentezler.
+def _kare(f: float, t: np.ndarray, gorev: float = 0.5) -> np.ndarray:
+    """Sabit frekanslı kare dalga; 8-bit konsol sesinin temeli."""
+    return np.where(((f * t) % 1.0) < gorev, 1.0, -1.0)
 
-    Çıktı float64/float32 dizisi [-1.0, 1.0], 0.01sn .. 2.0sn, tepe > 0.01.
+
+def _kirp(dalga: np.ndarray, hz: int) -> np.ndarray:
+    """Bit kırma: ~11 kHz örnek tut ve 4 bit (16 seviye) nicemle; sesi 'pixel' yapar."""
+    adim = max(1, hz // 11025)
+    dalga = np.repeat(dalga[::adim], adim)[: len(dalga)]
+    return np.round(dalga * 7.0) / 7.0
+
+
+def _notalar(frekanslar, nota_sn: float, hz: int, gorev: float = 0.5, sonum: float = 6.0) -> np.ndarray:
+    parcalar = []
+    for f in frekanslar:
+        t = np.arange(int(hz * nota_sn)) / hz
+        parcalar.append(_kare(f, t, gorev) * np.exp(-t * sonum))
+    return np.concatenate(parcalar)
+
+
+def _surukle(f0: float, f1: float, sure: float, hz: int, gorev: float = 0.5, sonum: float = 8.0) -> np.ndarray:
+    t = np.arange(int(hz * sure)) / hz
+    f = f0 + (f1 - f0) * (t / sure)
+    faz = np.cumsum(f) / hz
+    return np.where((faz % 1.0) < gorev, 1.0, -1.0) * np.exp(-t * sonum)
+
+
+def sentez(ad: str, hz: int = 44100) -> np.ndarray:
+    """Kısa 8-bit (pixel) ses efektleri ve nota: kare dalga + bit kırma.
+
+    Çıktı float32 dizisi [-1.0, 1.0], 0.01sn .. 2.0sn, tepe > 0.01.
     """
     rng = np.random.RandomState(42)
 
+    def gurultu(sure, sonum):
+        n = int(hz * sure)
+        tut = max(1, hz // 8000)  # kaba, 'NES' tipi gürültü
+        g = np.repeat(np.sign(rng.uniform(-1, 1, n // tut + 1)), tut)[:n]
+        return g * np.exp(-np.arange(n) / hz * sonum)
+
     if ad == "kick":
-        sure = 0.22
-        t = np.linspace(0, sure, int(hz * sure), endpoint=False)
-        f = 140 * np.exp(-t * 22) + 35
-        faz = 2 * np.pi * np.cumsum(f) / hz
-        dalga = np.sin(faz) * np.exp(-t * 14)
-
+        dalga = _surukle(180, 50, 0.12, hz, sonum=18)
     elif ad == "snare":
-        sure = 0.18
-        t = np.linspace(0, sure, int(hz * sure), endpoint=False)
-        ton = np.sin(2 * np.pi * 180 * t) * np.exp(-t * 28)
-        gurultu = rng.uniform(-1.0, 1.0, len(t)) * np.exp(-t * 18)
-        dalga = 0.4 * ton + 0.6 * gurultu
-
+        dalga = 0.7 * gurultu(0.1, 30) + 0.3 * _surukle(220, 160, 0.1, hz, sonum=30)
     elif ad == "hihat":
-        sure = 0.06
-        t = np.linspace(0, sure, int(hz * sure), endpoint=False)
-        gurultu = rng.uniform(-1.0, 1.0, len(t))
-        dalga = gurultu * np.exp(-t * 60)
-
+        dalga = gurultu(0.04, 80)
     elif ad == "clap":
-        sure = 0.2
-        N = int(hz * sure)
-        dalga = np.zeros(N, dtype=np.float64)
-        for gecikme_ms in [0, 12, 24]:
-            bas = int(hz * (gecikme_ms / 1000.0))
-            kalan = N - bas
-            if kalan > 0:
-                tk = np.linspace(0, kalan / hz, kalan, endpoint=False)
-                gk = rng.uniform(-1.0, 1.0, kalan) * np.exp(-tk * 35)
-                dalga[bas:] += gk * 0.5
-
+        dalga = gurultu(0.08, 45)
     elif ad == "pop":
-        sure = 0.05
-        t = np.linspace(0, sure, int(hz * sure), endpoint=False)
-        f = 400 + 400 * np.exp(-t * 40)
-        faz = 2 * np.pi * np.cumsum(f) / hz
-        dalga = np.sin(faz) * np.exp(-t * 50)
-
+        dalga = _notalar([1046.5], 0.045, hz, gorev=0.25, sonum=30)
     elif ad == "ding":
-        sure = 0.5
-        t = np.linspace(0, sure, int(hz * sure), endpoint=False)
-        dalga = (np.sin(2 * np.pi * 1200 * t) * 0.7 + np.sin(2 * np.pi * 2400 * t) * 0.3) * np.exp(-t * 7)
-
+        dalga = _notalar([1318.5, 1760.0], 0.06, hz, gorev=0.25, sonum=14)
     elif ad == "bonk":
-        sure = 0.15
-        t = np.linspace(0, sure, int(hz * sure), endpoint=False)
-        f = 320 * np.exp(-t * 25)
-        faz = 2 * np.pi * np.cumsum(f) / hz
-        dalga = np.sin(faz) * np.exp(-t * 18)
-
+        dalga = _surukle(330, 110, 0.14, hz, sonum=12)
     elif ad == "woosh":
-        sure = 0.35
-        t = np.linspace(0, sure, int(hz * sure), endpoint=False)
-        zarf = np.sin(np.pi * t / sure) ** 2
-        gurultu = rng.uniform(-1.0, 1.0, len(t))
-        dalga = gurultu * zarf
-
+        dalga = gurultu(0.12, 25)  # artık çalınmıyor (Ses.SESSIZ); test uyumu için kısa
     elif ad == "basari":
-        sure = 0.4
-        t = np.linspace(0, sure, int(hz * sure), endpoint=False)
-        aralik = int(len(t) / 3)
-        dalga = np.zeros(len(t), dtype=np.float64)
-        farkli_f = [523.25, 659.25, 783.99]  # C5, E5, G5
-        for i, f_nota in enumerate(farkli_f):
-            bas = i * aralik
-            son = (i + 1) * aralik if i < 2 else len(t)
-            alt_t = np.linspace(0, (son - bas) / hz, son - bas, endpoint=False)
-            dalga[bas:son] = np.sin(2 * np.pi * f_nota * alt_t) * np.exp(-alt_t * 5)
-
+        dalga = _notalar([523.25, 659.25, 783.99, 1046.5], 0.07, hz, gorev=0.25, sonum=8)
     elif ad == "zap":
-        sure = 0.15
-        t = np.linspace(0, sure, int(hz * sure), endpoint=False)
-        f = 1200 * (1.0 - t / sure) ** 2 + 100
-        faz = 2 * np.pi * np.cumsum(f) / hz
-        dalga = np.sin(faz) * np.exp(-t * 10)
-
+        dalga = _surukle(1600, 200, 0.12, hz, gorev=0.25, sonum=10)
     elif ad.startswith("nota") and ad[4:].isdigit():
         nn = int(ad[4:])
-        frec = 440.0 * (2.0 ** ((nn - 69) / 12.0))
-        sure = 0.6
-        t = np.linspace(0, sure, int(hz * sure), endpoint=False)
-        # Yumuşak çan: temel ve harmonikler
-        dalga = (
-            np.sin(2 * np.pi * frec * t) * 0.7
-            + np.sin(2 * np.pi * frec * 2 * t) * 0.2
-            + np.sin(2 * np.pi * frec * 3 * t) * 0.1
-        ) * np.exp(-t * 4.5)
+        dalga = _notalar([440.0 * (2.0 ** ((nn - 69) / 12.0))], 0.25, hz, gorev=0.25, sonum=7)
+    else:  # bilinmeyen ad: kısa bip
+        dalga = _notalar([880.0], 0.05, hz, gorev=0.5, sonum=20)
 
-    else:
-        # Bilinmeyen ad: kısa bip
-        sure = 0.08
-        t = np.linspace(0, sure, int(hz * sure), endpoint=False)
-        dalga = np.sin(2 * np.pi * 600 * t) * np.exp(-t * 15)
-
+    dalga = _kirp(np.asarray(dalga, dtype=np.float64), hz)
     tepe = np.abs(dalga).max()
-    if tepe > 1e-6:
-        dalga = dalga / tepe * 0.95
-    else:
-        dalga = np.full_like(dalga, 0.5)
-
+    dalga = dalga / tepe * 0.95 if tepe > 1e-6 else np.full_like(dalga, 0.5)
     return dalga.astype(np.float32)
 
 
 class Ses:
     """Pygame mikserini yönetir ve ses çalar; hataları sessizce yutar."""
+
+    ANA_SES = 0.3  # bütün efektler kısık çalar (Enes 2026-10-15: çok daha az sesli)
+    SESSIZ = {"woosh"}  # gereksiz hışırtı; hiç çalınmaz
 
     def __init__(self, acik: bool = True):
         self.acik = acik
@@ -445,7 +409,7 @@ class Ses:
             self.acik = False
 
     def cal(self, ad: str, ses: float = 0.7) -> None:
-        if not self.acik:
+        if not self.acik or ad in self.SESSIZ:
             return
 
         try:
@@ -462,7 +426,7 @@ class Ses:
                 snd = pygame.sndarray.make_sound(d_ses)
                 self.onbellek[ad] = snd
 
-            snd.set_volume(max(0.0, min(1.0, float(ses))))
+            snd.set_volume(max(0.0, min(1.0, float(ses) * self.ANA_SES)))
             snd.play()
         except Exception:
             pass
