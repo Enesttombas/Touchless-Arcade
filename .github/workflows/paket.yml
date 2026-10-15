@@ -29,7 +29,7 @@ jobs:
 
       - name: Duman testi (paketler ve oyun içe aktarılıyor mu)
         shell: cmd
-        run: app\python\python.exe -c "import sys; sys.path.insert(0, 'oyunlar'); import cv2, mediapipe, onnxruntime, numpy, pygame, stant_app; print('ok', sys.version)"
+        run: app\python\python.exe -c "import sys; sys.path.insert(0, 'oyunlar'); import cv2, mediapipe, onnxruntime, numpy, stant_app; print('ok', sys.version)"
 
       - name: ZIP'i hazırla
         shell: pwsh

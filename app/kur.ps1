@@ -35,7 +35,7 @@ try {
         & $py -m pip install --no-warn-script-location --quiet -r $gerekenler
     } else {  # klasorde requirements.txt yoksa ayni sabit surumler
         & $py -m pip install --no-warn-script-location --quiet mediapipe==1.0.1 numpy==2.4.6 `
-            opencv-contrib-python==5.0.0.93 onnxruntime==1.30.0 pillow==12.3.0 pygame-ce==2.5.8 sounddevice==0.5.6
+            opencv-contrib-python==5.0.0.93 onnxruntime==1.30.0 pillow==12.3.0
     }
     if ($LASTEXITCODE -ne 0) { throw 'oyun paketleri kurulamadi' }
 

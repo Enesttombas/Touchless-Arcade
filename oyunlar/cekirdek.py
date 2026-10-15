@@ -1,4 +1,4 @@
-"""Ortak çekirdek modülü: algılama, ses sentezi, görsel yardımcılar ve stant arayüzü.
+"""Ortak çekirdek modülü: algılama, görsel yardımcılar ve stant arayüzü.
 
 Prototip arayüzü:
   Her p_*.py dosyası bir `Prototip` sınıfı tanımlar:
@@ -309,127 +309,19 @@ def on_plan(m: np.ndarray, oran: float = 0.3, min_alan: float = 0.004) -> np.nda
 
 
 # ---------------------------------------------------------------- Ses Sentezi ve Çalma
-def _kare(f: float, t: np.ndarray, gorev: float = 0.5) -> np.ndarray:
-    """Sabit frekanslı kare dalga; 8-bit konsol sesinin temeli."""
-    return np.where(((f * t) % 1.0) < gorev, 1.0, -1.0)
-
-
-def _kirp(dalga: np.ndarray, hz: int) -> np.ndarray:
-    """Bit kırma: ~11 kHz örnek tut ve 4 bit (16 seviye) nicemle; sesi 'pixel' yapar."""
-    adim = max(1, hz // 11025)
-    dalga = np.repeat(dalga[::adim], adim)[: len(dalga)]
-    return np.round(dalga * 7.0) / 7.0
-
-
-def _notalar(frekanslar, nota_sn: float, hz: int, gorev: float = 0.5, sonum: float = 6.0) -> np.ndarray:
-    parcalar = []
-    for f in frekanslar:
-        t = np.arange(int(hz * nota_sn)) / hz
-        parcalar.append(_kare(f, t, gorev) * np.exp(-t * sonum))
-    return np.concatenate(parcalar)
-
-
-def _surukle(f0: float, f1: float, sure: float, hz: int, gorev: float = 0.5, sonum: float = 8.0) -> np.ndarray:
-    t = np.arange(int(hz * sure)) / hz
-    f = f0 + (f1 - f0) * (t / sure)
-    faz = np.cumsum(f) / hz
-    return np.where((faz % 1.0) < gorev, 1.0, -1.0) * np.exp(-t * sonum)
-
-
-def sentez(ad: str, hz: int = 44100) -> np.ndarray:
-    """Kısa 8-bit (pixel) ses efektleri ve nota: kare dalga + bit kırma.
-
-    Çıktı float32 dizisi [-1.0, 1.0], 0.01sn .. 2.0sn, tepe > 0.01.
-    """
-    rng = np.random.RandomState(42)
-
-    def gurultu(sure, sonum):
-        n = int(hz * sure)
-        tut = max(1, hz // 8000)  # kaba, 'NES' tipi gürültü
-        g = np.repeat(np.sign(rng.uniform(-1, 1, n // tut + 1)), tut)[:n]
-        return g * np.exp(-np.arange(n) / hz * sonum)
-
-    if ad == "kick":
-        dalga = _surukle(180, 50, 0.12, hz, sonum=18)
-    elif ad == "snare":
-        dalga = 0.7 * gurultu(0.1, 30) + 0.3 * _surukle(220, 160, 0.1, hz, sonum=30)
-    elif ad == "hihat":
-        dalga = gurultu(0.04, 80)
-    elif ad == "clap":
-        dalga = gurultu(0.08, 45)
-    elif ad == "pop":
-        dalga = _notalar([1046.5], 0.045, hz, gorev=0.25, sonum=30)
-    elif ad == "ding":
-        dalga = _notalar([1318.5, 1760.0], 0.06, hz, gorev=0.25, sonum=14)
-    elif ad == "bonk":
-        dalga = _surukle(330, 110, 0.14, hz, sonum=12)
-    elif ad == "woosh":
-        dalga = gurultu(0.12, 25)  # artık çalınmıyor (Ses.SESSIZ); test uyumu için kısa
-    elif ad == "basari":
-        dalga = _notalar([523.25, 659.25, 783.99, 1046.5], 0.07, hz, gorev=0.25, sonum=8)
-    elif ad == "zap":
-        dalga = _surukle(1600, 200, 0.12, hz, gorev=0.25, sonum=10)
-    elif ad.startswith("nota") and ad[4:].isdigit():
-        nn = int(ad[4:])
-        dalga = _notalar([440.0 * (2.0 ** ((nn - 69) / 12.0))], 0.25, hz, gorev=0.25, sonum=7)
-    else:  # bilinmeyen ad: kısa bip
-        dalga = _notalar([880.0], 0.05, hz, gorev=0.5, sonum=20)
-
-    dalga = _kirp(np.asarray(dalga, dtype=np.float64), hz)
-    tepe = np.abs(dalga).max()
-    dalga = dalga / tepe * 0.95 if tepe > 1e-6 else np.full_like(dalga, 0.5)
-    return dalga.astype(np.float32)
-
-
 class Ses:
-    """Pygame mikserini yönetir ve ses çalar; hataları sessizce yutar."""
+    """Oyunda ses yok (Enes 2026-10-15: sesler kökten kaldırıldı).
 
-    ANA_SES = 0.3  # bütün efektler kısık çalar (Enes 2026-10-15: çok daha az sesli)
-    SESSIZ = {"woosh"}  # gereksiz hışırtı; hiç çalınmaz
+    Oyunlar hâlâ `ses` nesnesi alıp `cal()` çağırabilir; hiçbir şey çalmaz, ses kütüphanesi yüklenmez.
+    """
 
-    def __init__(self, acik: bool = True):
-        self.acik = acik
-        self.onbellek: Dict[str, Any] = {}
-        self.kanallar = 1
-        if not self.acik:
-            return
+    acik = False
 
-        try:
-            import pygame
-
-            if not pygame.mixer.get_init():
-                pygame.mixer.init(frequency=44100, size=-16, channels=1, buffer=1024)
-            aktif = pygame.mixer.get_init()
-            if aktif:
-                self.kanallar = aktif[2]
-                pygame.mixer.set_num_channels(24)
-            else:
-                self.acik = False
-        except Exception:
-            self.acik = False
+    def __init__(self, acik: bool = True) -> None:
+        self.acik = False
 
     def cal(self, ad: str, ses: float = 0.7) -> None:
-        if not self.acik or ad in self.SESSIZ:
-            return
-
-        try:
-            import pygame
-
-            snd = self.onbellek.get(ad)
-            if snd is None:
-                d = sentez(ad, 44100)
-                d16 = (d * 32767).clip(-32768, 32767).astype(np.int16)
-                if self.kanallar == 2:
-                    d_ses = np.column_stack([d16, d16])
-                else:
-                    d_ses = d16
-                snd = pygame.sndarray.make_sound(d_ses)
-                self.onbellek[ad] = snd
-
-            snd.set_volume(max(0.0, min(1.0, float(ses) * self.ANA_SES)))
-            snd.play()
-        except Exception:
-            pass
+        return None
 
 
 # ---------------------------------------------------------------- Görsel Yardımcılar

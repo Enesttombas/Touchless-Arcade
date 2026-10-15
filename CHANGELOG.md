@@ -2,8 +2,8 @@
 
 ## v0.4.1 (2026-10-15)
 
-- **Sesler:** Oyun açılırken ve menüye dönülürken ses çalmıyor. Bütün efektler 8-bit (pixel) kare dalga seslere çevrildi ve yaklaşık üçte bir seviyeye kısıldı; meme sesleri de aynı oranda kısık. Gereksiz "woosh" hışırtısı kaldırıldı.
-- **Ses kontrolü:** `A` kısar, `S` açar (10 kademe). Ses değişince ekranın ortasında animasyonlu ses paneli çıkar; sol altta her zaman küçük bir ipucu durur. Bilgi Yağmuru'nun operatör kalibrasyon tuşu `S`'den `K`'ye taşındı.
+- **Ses kaldırıldı:** Oyunda hiç ses yok. Ses sentezi, meme mp3'leri ve ses kütüphaneleri (`pygame-ce`, `sounddevice`) kaldırıldı; indirme paketi küçüldü.
+- **Kısayol şeridi:** Oyun ekranının sol altında göze batmayan küçük bir şerit hep duruyor: `[F] tam ekran`, `[M] menü`.
 
 ## v0.4.0 (2026-10-15)
 

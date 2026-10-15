@@ -94,13 +94,7 @@ Kameranın parmağını en iyi algılaması için **işaret parmağını yukarı
 
 <div align="center"><img src="docs/media/parmak-durusu.gif" alt="Doğru parmak duruşu: işaret parmağı yukarı, avuç kameraya" width="600"/></div>
 
-
-| Ne | Hareketle | Klavyeyle |
-|---|---|---|
-| Oyun seç | Elini kartın üstünde 1 sn tut | `1`–`9` |
-| Menüye dön | Sol alt köşede avucunu 3 sn aç | `M` |
-| Ses kıs / aç | | `A` / `S` |
-| Tam ekran / çıkış | | `F` / `Q` |
+Oyun seçmek için elini kartın üstünde tut. Klavye kısayolları (ses, tam ekran, menü) oyun ekranının sol altında hep yazılı.
 
 ## Nasıl çalışıyor?
 
@@ -130,11 +124,11 @@ Kodun yapısı: `oyunlar/` (oyunlar ve menü), `stand/` (ortak çizim/efekt küt
 
 The download is a ready-to-run package (about 200 MB) with its own portable Python and all libraries inside: nothing is installed on your PC and nothing is downloaded on first launch.
 
-**Controls:** raise your index finger with the palm facing the camera (don't point the fingertip straight at the lens). Hold your hand over a card for 1 s to pick a game. Hold an open palm in the bottom-left corner for 3 s to return to the menu. Keyboard: `1`–`9` select, `A`/`S` volume down/up, `M` menu, `F` fullscreen, `Q` quit.
+**Controls:** raise your index finger with the palm facing the camera (don't point the fingertip straight at the lens). Hold your hand over a card for 1 s to pick a game. Hold an open palm in the bottom-left corner for 3 s to return to the menu. Keyboard: `1`–`9` select, `M` menu, `F` fullscreen, `Q` quit.
 
 **Live demos:** see the clips under *Stantta canlı* above, recorded with real players at a university booth.
 
-**Tech:** MediaPipe (face, hands, pose), OpenCV, ONNX Runtime (a Quick, Draw! sketch classifier) and pygame-ce audio. Everything runs locally on the CPU, and camera frames never leave memory.
+**Tech:** MediaPipe (face, hands, pose), OpenCV, ONNX Runtime (a Quick, Draw! sketch classifier). Everything runs locally on the CPU, and camera frames never leave memory.
 
 ## Lisans
 

@@ -686,7 +686,6 @@ def meme_cikartma(yol: Path, boy: int = 150) -> Optional[np.ndarray]:
 
 
 _ASSETS = Path(__file__).resolve().parent.parent / "app" / "assets"
-_MEME_SES = {"gozluklu_bebek_basparmak": "basparmak"}
 
 
 @lru_cache(maxsize=4)
@@ -702,10 +701,10 @@ def memeler(boy: int = 170) -> Tuple[Tuple[str, np.ndarray, Optional[str], Tuple
         sp = meme_cikartma(yol, boy=boy)
         if sp is None:
             continue
-        ses = _ASSETS / "ses" / f"{_MEME_SES.get(yol.stem, yol.stem)}.mp3"
+        ses = None  # oyunda ses yok
         a = sp[:, :, 3] > 200
         renk = tuple(int(v) for v in sp[:, :, :3][a].mean(0)) if a.any() else (200, 200, 200)
-        sonuc.append((yol.stem, sp, str(ses) if ses.exists() else None, renk))
+        sonuc.append((yol.stem, sp, ses, renk))
     return tuple(sonuc)
 
 

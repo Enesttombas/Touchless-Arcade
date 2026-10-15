@@ -44,10 +44,6 @@ BOS_DONUS_SN = 40.0  # 12 sn kısa kaldı, oyuncular beklerken menüye atıyordu
 EV_SN = 3.0  # sarkan el yanlışlıkla menüye atmasın (Enes 2026-10-12, 2026-10-13: 2 -> 3 sn)
 KAPALI: set = {"p_tas_kagit"}  # menüde soluk durur, açılmaz; TKM devre dışı, kartı soluk görünür (Enes 2026-10-15)
 KENDI_IMLECI = {"p_neon_kilic", "p_maske"}  # parmağı kendisi çiziyor; oyun da KENDI_IMLECI=True diyebilir
-SES_ADIM = 0.1  # + / - tuşu ses kademesi; 0 = sessiz, 1 = en yüksek
-SES_GOSTER_SN = 1.6  # ses değişince panelin ekranda kalma süresi
-SES_KIS = (ord("a"), ord("A"))  # yan yana A: kıs, S: aç (Enes 2026-10-15)
-SES_AC = (ord("s"), ord("S"))
 UCLAR = (8,)  # yalnız oyunu oynatan işaret parmağı ucu (Enes 2026-10-13: tek parmak izi)
 
 
@@ -86,6 +82,39 @@ def parmak_izi(kare: np.ndarray, algi: Any, izler: List[list], simdi: float) -> 
         parilti(kare, katman, guc=1.6, sigma=3.0)
     else:
         cv2.addWeighted(kare, 1.0, katman, 0.7, 0, dst=kare)
+
+
+KISAYOLLAR = (("F", "tam ekran"), ("M", "menü"))
+_KISAYOL_SERIT: Optional[np.ndarray] = None
+
+
+def _kisayol_serit() -> np.ndarray:
+    """Sol alttaki tuş şeridi: klavye tuşu gibi küçük çerçeveli harf + soluk etiket (bir kez çizilir, BGRA)."""
+    global _KISAYOL_SERIT
+    if _KISAYOL_SERIT is None:
+        from PIL import Image, ImageDraw, ImageFont
+        yol = ck.stand.FONT_YAZI
+        f = ImageFont.truetype(yol, 13) if yol else ImageFont.load_default()
+        olcu = ImageDraw.Draw(Image.new("RGBA", (1, 1)))
+        w = 10 + sum(22 + 6 + int(olcu.textlength(e, font=f)) + 16 for _, e in KISAYOLLAR) - 6
+        h, taban = 34, 22  # yazılar ortak taban çizgisine oturur
+        im = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+        d = ImageDraw.Draw(im)
+        d.rounded_rectangle((0, 0, w - 1, h - 1), radius=8, fill=(28, 18, 22, 120))
+        x = 10
+        for tus, etiket in KISAYOLLAR:
+            d.rounded_rectangle((x, 6, x + 22, 28), radius=4, outline=(165, 150, 150, 230), width=1)
+            d.text((x + 11, taban), tus, font=f, fill=(240, 235, 235, 255), anchor="ms")
+            d.text((x + 28, taban), etiket, font=f, fill=(178, 165, 165, 255), anchor="ls")
+            x += 22 + 6 + int(d.textlength(etiket, font=f)) + 16
+        _KISAYOL_SERIT = cv2.cvtColor(np.array(im), cv2.COLOR_RGBA2BGRA)
+    return _KISAYOL_SERIT
+
+
+def _kisayollar(kare: np.ndarray) -> None:
+    """Sol altta her zaman duran, göze batmayan tuş ipuçları."""
+    serit = _kisayol_serit()
+    ck.stand.bindir(kare, serit, 12, Y - serit.shape[0] - 10, 0.85)
 
 
 # ---------------------------------------------------------------- kart ikonları (prosedürel, emoji yok)
@@ -434,7 +463,6 @@ class StantUygulama:
         self.onceki_t: Optional[float] = None
         self.cokmeler: Dict[int, List[float]] = {}
         self.dinlenme_t = -10.0
-        self.ses_t = -10.0  # son ses değişikliği (panel animasyonu)
         self.parmak_izler: List[list] = []
         adlar = [getattr(getattr(m, "Prototip", None), "AD", getattr(m, "__name__", f"Oyun {i + 1}"))
                  for i, m in enumerate(self.moduller)]
@@ -498,55 +526,8 @@ class StantUygulama:
 
     def isle(self, kare: np.ndarray, algi: Any, simdi: float) -> np.ndarray:
         kare = self._isle_ic(kare, algi, simdi)
-        self._ses_katmani(kare, simdi)
+        _kisayollar(kare)
         return kare
-
-    # ---------------------------------------------------------------- ses kontrolü (+ / -)
-    def ses_degistir(self, yon: int, simdi: float) -> None:
-        """Ana ses seviyesini bir kademe değiştirir; ekranda animasyonlu panel gösterir."""
-        ck.Ses.ANA_SES = round(min(1.0, max(0.0, ck.Ses.ANA_SES + yon * SES_ADIM)), 2)
-        self.ses_t = simdi
-        self.ses.cal("pop", 1.0)
-
-    def _ses_katmani(self, kare: np.ndarray, simdi: float) -> None:
-        # Sol altta kalıcı küçük ipucu
-        yazi_koy(kare, "Ses:  A  kıs   /   S  aç", 18, Y - 30, 16, renk=(185, 185, 195))
-        gecen = simdi - self.ses_t
-        if not 0.0 <= gecen < SES_GOSTER_SN:
-            return
-        seviye = ck.Ses.ANA_SES
-        opak = min(1.0, (SES_GOSTER_SN - gecen) / 0.4)  # son 0,4 sn'de söner
-        olcek = 1.0 if _az_hareket() else 1.0 + 0.12 * max(0.0, 1.0 - gecen / 0.15)  # basışta küçük zıplama
-        w, h = int(380 * olcek), int(72 * olcek)
-        cx, cy = G // 2, Y // 2  # TV gibi ortada, kısa süreli
-        x0, y0 = cx - w // 2, cy - h // 2
-        katman = kare.copy()
-        panel(katman, x0, y0, x0 + w, y0 + h, renk=(20, 16, 28), opak=0.9)
-        cv2.rectangle(katman, (x0, y0), (x0 + w, y0 + h), CAMGOBEGI, 2, cv2.LINE_AA)
-        # hoparlör simgesi
-        sx, sy = x0 + int(34 * olcek), cy
-        govde = np.array([(sx - 14, sy - 7), (sx - 6, sy - 7), (sx + 4, sy - 15), (sx + 4, sy + 15),
-                          (sx - 6, sy + 7), (sx - 14, sy + 7)], np.int32)
-        cv2.fillPoly(katman, [govde], BEYAZ, cv2.LINE_AA)
-        if seviye <= 0.0:
-            cv2.line(katman, (sx + 10, sy - 9), (sx + 24, sy + 9), (60, 60, 255), 3, cv2.LINE_AA)
-            cv2.line(katman, (sx + 24, sy - 9), (sx + 10, sy + 9), (60, 60, 255), 3, cv2.LINE_AA)
-        else:
-            for k, r in enumerate((10, 17, 24)):
-                if seviye > k / 3.0:
-                    cv2.ellipse(katman, (sx + 4, sy), (r, r), 0, -40, 40, BEYAZ, 2, cv2.LINE_AA)
-        # 10 bölmeli seviye çubuğu
-        dolu = int(round(seviye / SES_ADIM))
-        bx0, bgen = x0 + int(76 * olcek), int(212 * olcek)
-        for k in range(10):
-            ax = bx0 + k * bgen // 10
-            renk = CAMGOBEGI if k < dolu else (70, 64, 80)
-            yuks = int((10 + k * 2) * olcek)
-            cv2.rectangle(katman, (ax, cy + int(14 * olcek) - yuks), (ax + bgen // 10 - 5, cy + int(14 * olcek)),
-                          renk, -1, cv2.LINE_AA)
-        yazi_koy(katman, "SESSİZ" if seviye <= 0.0 else f"%{int(round(seviye * 100))}",
-                 x0 + w - int(52 * olcek), cy - 12, 20, renk=BEYAZ, hiza="orta")
-        cv2.addWeighted(katman, opak, kare, 1.0 - opak, 0, dst=kare)
 
     def _isle_ic(self, kare: np.ndarray, algi: Any, simdi: float) -> np.ndarray:
         dt = 0.033 if self.onceki_t is None else min(max(simdi - self.onceki_t, 0.0), 0.1)
@@ -653,12 +634,6 @@ class StantUygulama:
 
     def tus(self, k: int, simdi: float) -> bool:
         """Uygulama tuşu ise True; değilse etkin deneyime aktarılır."""
-        if k in SES_AC:
-            self.ses_degistir(1, simdi)
-            return True
-        if k in SES_KIS:
-            self.ses_degistir(-1, simdi)
-            return True
         if self.etkin is not None:
             if k in (ord("m"), ord("M")):
                 self.sec(None, simdi)

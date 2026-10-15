@@ -66,6 +66,4 @@ The application relies on the following open-source packages:
 | `numpy` | Matrix transformations and geometry calculations | BSD 3-Clause |
 | `pillow` | Typography rendering, image encoding, animated preview export | HPND License |
 | `onnxruntime` | CPU inference engine for sketch classification | MIT License |
-| `pygame-ce` | Real-time audio engine and frequency synthesizer | LGPL v2.1+ |
-| `sounddevice` | Cross-platform audio streaming wrapper | MIT License |
 | `pytest` | Acceptance and unit testing framework | MIT License |
