@@ -68,6 +68,11 @@
 
 ## Kontroller
 
+Kameranın parmağını en iyi algılaması için **işaret parmağını yukarı kaldır, avuç içini kameraya dön**, diğer parmakları kapat. Parmak ucunu doğrudan kameraya uzatırsan kamera parmağı kısaltılmış görür ve takip kopabilir.
+
+<div align="center"><img src="docs/media/parmak-durusu.gif" alt="Doğru parmak duruşu: işaret parmağı yukarı, avuç kameraya" width="600"/></div>
+
+
 | Ne | Hareketle | Klavyeyle |
 |---|---|---|
 | Oyun seç | Elini kartın üstünde 1 sn tut | `1`–`9` |
@@ -101,7 +106,7 @@ Kodun yapısı: `oyunlar/` (oyunlar ve menü), `stand/` (ortak çizim/efekt küt
 2. Download this repository (**Code → Download ZIP**).
 3. Double-click **`BASLAT.bat`**. The first run installs the dependencies; later runs start instantly.
 
-**Controls:** hold your hand over a card for 1 s to pick a game. Hold an open palm in the bottom-left corner for 3 s to return to the menu. Keyboard: `1`–`9` select, `M` menu, `F` fullscreen, `Q` quit.
+**Controls:** raise your index finger with the palm facing the camera (don't point the fingertip straight at the lens). Hold your hand over a card for 1 s to pick a game. Hold an open palm in the bottom-left corner for 3 s to return to the menu. Keyboard: `1`–`9` select, `M` menu, `F` fullscreen, `Q` quit.
 
 **Live demos:** see the clips under *Stantta canlı* above, recorded with real players at a university booth.
 
