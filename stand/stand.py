@@ -40,7 +40,10 @@ BASLIK = os.environ.get("STANT_BASLIK", "MEME KAMERA")
 RENKLER = [(255, 255, 255), (60, 60, 255), (60, 220, 255), (80, 220, 80), (255, 160, 40), (230, 80, 230)]  # BGR
 EFEKTLER = ["Dev gözler", "Emoji kafa", "Kocaman kafa", "Thug life", "Dev ağız", "Kral tacı", "Minik yüz"]
 EMOJILER = ["😎", "🤡", "👽", "🐸", "🤖", "💀", "😂", "🦄", "🐵", "🎃"]
-FONT_YAZI = next((f for f in (r"C:\Windows\Fonts\segoeuib.ttf", r"C:\Windows\Fonts\arialbd.ttf") if Path(f).is_file()), None)
+FONT_YAZI = next((f for f in (r"C:\Windows\Fonts\segoeuib.ttf", r"C:\Windows\Fonts\arialbd.ttf",
+                                "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",  # Linux (Türkçe harfler)
+                                "/System/Library/Fonts/Supplemental/Arial Bold.ttf")  # macOS
+                   if Path(f).is_file()), None)
 FONT_EMOJI = r"C:\Windows\Fonts\seguiemj.ttf"
 
 

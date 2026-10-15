@@ -1,39 +1,33 @@
-# Changelog
+# Değişiklikler
 
-All notable changes to the **Stant Kamera Oyunları** project are documented here.
+## v0.3.0 (2026-10-15)
 
-## [v0.2.0] - 2026-10-15
+**Düzeltmeler**
+- **Çizim Kâhini:** Canlı kamerada çizim çıkmıyordu.
+  - El bir an kaybolup geri gelince takipçi ona yeni bir kimlik veriyordu; oyun bu eli tanımıyor, tur donuyordu. Artık oyuncu dönen elle devam eder.
+  - Kameraya doğru uzatılan parmak "bükülü" sayılıyordu. Artık parmak uzunluğu 3B (derinlik dahil) ölçülüyor.
+  - Yüzden uzak tutulan el artık reddedilmiyor.
+- **Altın Vuruş:** Oynaması çok zordu ve top bazen iki kez gidiyordu.
+  - Topu yakalamak için parmak ucunu topun yakınında kısa süre tutmak yetiyor.
+  - Hızlı fiske de şut sayılıyor. Tek hareket her zaman tek şut olur.
+  - Yol çizdiğin nokta, topun gittiği yerdir.
+  - Yeni neon sanal kaleci: bekler, yalandan ters tarafa yatar, köşeye uçar, yere düşer. Kurtarışlar çizilen eldivenlerden hesaplanır; 200 rastgele şutta kurtarış oranı %20–40.
 
-### Fixed & Refined
-- **Menu Geometry & Footer Clearance**:
-  - Recomputed menu card boundaries: cards now occupy `y = 134` to `y = 628` (nominal height 154px, vertical gap 16px).
-  - Reserved a clear `>30px` separation between row 3 cards and footer navigation (`y = 672..708`), fully accommodating animated +/-6px vertical bob, +6px hover expansion, and border strokes.
-  - Formatted multi-line card titles so both lines strictly fit inside the card container with bottom padding.
-  - Added comprehensive geometry unit tests verifying nominal bounds, dynamic animated separation, and interior text constraints (`kabul_prototip/test_motion_bounds.py`).
-- **Refined Motion System**:
-  - Implemented smooth time-bounded entrance stagger and easing for menu cards.
-  - Enhanced touch-free dwell progress with a radial progress ring around the card icon and a bottom progress bar.
-  - Added subtle hover feedback pulse and disabled all decorative bobbing when `REDUCED_MOTION=1` or `AZ_HAREKET=1` is set.
-- **Headless Synthetic Preview Engine (`tools/render_preview.py`)**:
-  - Corrected synthetic hand landmark 9 positioning for menu hover detection, properly triggering hover states and dwell progress in generated snapshots (`docs/media/menu.png`).
-  - Resolved the 1.7s transition banner occlusion bug by advancing synthetic time past entrance banners before capturing gameplay visuals.
-  - Expanded `demo.gif` to showcase all 9 core experiences + 2 multiplayer sequence games (11 total) with clear caption badges and lightweight palette optimization (<2MB).
-  - Added headless verification tests monkeypatching camera and detector instantiation to guarantee offline safety, along with pixel-reproducible menu snapshots.
-- **Launch & Setup Scripts**:
-  - Updated `BASLAT.bat` to preserve nonzero Python exit codes after user pause.
-  - Clarified prerequisite and failure messaging in `KUR.bat`.
-  - Updated `.gitignore` to explicitly exclude `.env`, `.env.*` (while allowing `.env.example`), and local capture/runtime recordings.
-- **Documentation & Legal Notices**:
-  - Corrected GitHub Actions CI badge URL and repository owner to `Enesttombas`.
-  - Explicitly labeled `menu.png` and `demo.gif` as synthetic offline renders, not live camera recordings.
-  - Clarified controls: `N`/`B` changes menu pages when in menu, but switches games inside active gameplay; `1`-`9` selects current page cards.
-  - Documented LAN camera bridge transmission scope and dependency installation behavior in privacy notice.
-  - Updated `THIRD_PARTY_NOTICES.md` with SHA256 hashes of all bundled models, MediaPipe Apache 2.0 runtime details, QuickDraw CC BY 4.0 attribution, and clear license scopes.
-  - Replaced personal pairing PINs and host-specific IPs in `kurulum/README.md` with neutral operator placeholders.
+**Sadeleştirme**
+- Bütün oyunlar tek ekranda; sayfa geçişi kaldırıldı.
+- İşlem Dizisi ve Cümle Dizisi oyunları kaldırıldı.
+- Taş Kağıt Makas menüde soluk ve devre dışı bir kart olarak duruyor.
+- Kurulum tek dosya: `BASLAT.bat` ilk açılışta kendini kurar.
+- Klasörler `oyunlar/` ve `tests/` olarak sadeleşti. Kullanılmayan prototipler, iç planlama notları ve stant ağ betikleri kaldırıldı.
+- Linux ve macOS'ta Türkçe karakterler için yedek font eklendi.
 
-## [v0.1.0] - 2026-10-13
+## v0.2.0 (2026-10-15)
 
-### Added
-- Turnkey arcade suite of 11 standalone camera-based experiences (9 core games + 2 multiplayer sequence games).
-- Unified single-window manager with touch-free hover dwell selection, automatic idle recovery, and crash isolation.
-- Acceptance test suite.
+- Menü kartlarına giriş animasyonu, seçim halkası ve ilerleme çubuğu eklendi.
+- `REDUCED_MOTION=1` ile dekoratif hareketler kapatılabiliyor.
+- Kamera gerektirmeyen önizleme aracı eklendi (`tools/render_preview.py`); README görselleri bununla üretiliyor.
+- Model lisansları ve SHA256 özetleri `THIRD_PARTY_NOTICES.md`'ye eklendi.
+
+## v0.1.0 (2026-10-13)
+
+- İlk sürüm: tek pencerede dokunmadan seçilen kamera oyunları, boşta menüye dönüş, çökme yalıtımı ve kabul testleri.

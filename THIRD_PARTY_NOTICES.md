@@ -33,11 +33,11 @@ The bundled task files are unmodified. Retain these attribution and license noti
 
 ## 2. Quick, Draw! Dataset & Sketch ONNX Model
 
-The application bundles a local sketch recognition neural network under `prototipler/modeller/`:
+The application bundles a local sketch recognition neural network under `oyunlar/modeller/`:
 
 | Bundled Artifact Name | SHA256 Checksum | Purpose |
 |---|---|---|
-| `prototipler/modeller/ciz_tanima.onnx` | `e56db75539bd4a5a638f841cb298d0548f7ff9745d846a368f3de5116a738574` | 25-category air-drawing sketch classification |
+| `oyunlar/modeller/ciz_tanima.onnx` | `e56db75539bd4a5a638f841cb298d0548f7ff9745d846a368f3de5116a738574` | 25-category air-drawing sketch classification |
 
 The locally trained `ciz_tanima.onnx` artifact is released under the project MIT license, with the following training-data attribution retained.
 
@@ -46,8 +46,8 @@ The locally trained `ciz_tanima.onnx` artifact is released under the project MIT
 - **License**: Creative Commons Attribution 4.0 International ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)).
 
 ### Local Provenance Evidence:
-- **Download Specification**: Documented in [`prototipler/modeller/ciz_indirme.json`](prototipler/modeller/ciz_indirme.json) (25 category bitmap arrays fetched from Google Cloud Storage `storage.googleapis.com/quickdraw_dataset/full/numpy_bitmap/`).
-- **Training Artifact**: Documented in [`prototipler/modeller/ciz_egitim.json`](prototipler/modeller/ciz_egitim.json):
+- **Download Specification**: Documented in [`oyunlar/modeller/ciz_indirme.json`](oyunlar/modeller/ciz_indirme.json) (25 category bitmap arrays fetched from Google Cloud Storage `storage.googleapis.com/quickdraw_dataset/full/numpy_bitmap/`).
+- **Training Artifact**: Documented in [`oyunlar/modeller/ciz_egitim.json`](oyunlar/modeller/ciz_egitim.json):
   - Categories: 25 classes (`ciz_kelimeler.json`)
   - Dataset sample size: 20,000 samples per category
   - Model architecture: 166,169 parameters
