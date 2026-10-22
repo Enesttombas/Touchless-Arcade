@@ -3,5 +3,5 @@ mediapipe==1.0.1
 numpy==2.4.6
 opencv-contrib-python==5.0.0.93
 onnxruntime==1.30.0
-pillow==12.3.0
+pillow==13.0.0
 pytest
