@@ -54,3 +54,6 @@ calismalar/
 
 # render_preview.py eski demo çıktısı (README artık oyun-turu.gif kullanır)
 docs/media/demo.gif
+
+# README vitrin intermediates
+.vitrin/

@@ -1,0 +1,13 @@
+{
+ "metrik": "pytest",
+ "deger": {
+  "passed": 261,
+  "skipped": 29
+ },
+ "birim": "test",
+ "komut": "app\\.venv\\Scripts\\python.exe -m pytest -q tests -p no:cacheprovider",
+ "rc": 0,
+ "sure_sn": 478,
+ "tarih": "2026-10-22",
+ "makine": "Windows 11, 32 logical CPUs, Python 3.11 venv"
+}

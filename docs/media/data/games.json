@@ -1,0 +1,12 @@
+{
+ "metrik": "menu entries in stant_app.DENEYIMLER",
+ "deger": {
+  "playable": 9,
+  "disabled": 1
+ },
+ "birim": "game",
+ "komut": "python -c \"from stant_app import DENEYIMLER; print(len(DENEYIMLER))\"",
+ "rc": 0,
+ "tarih": "2026-10-22",
+ "makine": "Windows 11, 32 logical CPUs, Python 3.11 venv"
+}

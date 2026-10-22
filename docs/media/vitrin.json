@@ -1,0 +1,15 @@
+{
+ "motif": "A",
+ "not": "Neon kart: menüdeki neon kart çerçeveleri. Koyu zemin, camgöbeği/sarı/yeşil neon kontur, Segoe UI Black başlık, çip = neon kenarlı kart, mono alt satır. GIF'ler mevcut gerçek stant kayıtları.",
+ "palet": {
+  "zemin": "#121216",
+  "kart": "#1a1b22",
+  "cyan": "#39d4f0",
+  "sari": "#ffd400",
+  "yesil": "#48d05a",
+  "murekkep": "#f2f4f8"
+ },
+ "font": "Segoe UI Black / Consolas",
+ "gecis": "yok (statik)",
+ "tarih": "2026-10-22"
+}

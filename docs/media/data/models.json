@@ -1,0 +1,14 @@
+{
+ "metrik": "bundled model files",
+ "birim": "byte",
+ "rc": 0,
+ "tarih": "2026-10-22",
+ "makine": "Windows 11, 32 logical CPUs, Python 3.11 venv",
+ "komut": "ls -l app/modeller/*.task oyunlar/modeller/*.onnx",
+ "deger": {
+  "face_landmarker.task": 3758596,
+  "gesture_recognizer.task": 8373440,
+  "pose_landmarker_lite.task": 5777746,
+  "ciz_tanima.onnx": 666881
+ }
+}

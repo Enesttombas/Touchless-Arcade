@@ -1,135 +1,105 @@
-# Touchless Arcade — Stant Kamera Oyunları
+<p align="center"><img src="docs/media/banner.png" width="100%" alt="Touchless Arcade: nine camera games you play with one finger, no controller or touch screen"></p>
+<p align="center"><b>English</b> · <a href="README.tr.md">Türkçe</a></p>
 
-[![CI](https://github.com/Enesttombas/Touchless-Arcade/actions/workflows/ci.yml/badge.svg)](https://github.com/Enesttombas/Touchless-Arcade/actions/workflows/ci.yml)
-[![Python 3.11](https://img.shields.io/badge/Python-3.11-blue.svg)](https://www.python.org/downloads/release/python-3119/)
-[![Platform: Windows](https://img.shields.io/badge/Platform-Windows-lightgrey.svg)](https://www.microsoft.com/windows)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+<p align="center">
+<a href="https://github.com/Enesttombas/Touchless-Arcade/actions/workflows/ci.yml"><img src="https://github.com/Enesttombas/Touchless-Arcade/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+<img src="https://img.shields.io/badge/Python-3.11-blue.svg" alt="Python 3.11">
+<img src="https://img.shields.io/badge/Platform-Windows-lightgrey.svg" alt="Platform: Windows">
+<a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a>
+</p>
 
-**Bir kamera, bir ekran ve parmağın yeter.** Kumanda yok, dokunmatik ekran yok: kameranın karşısına geç ve sadece parmağınla oyna.
+Touchless Arcade is a set of nine camera games you play with your finger, face or body in front of a mirrored live camera. I built it for the R&D Club booth at Nişantaşı University's club week, to stop people walking past and give them a few minutes of fun.
 
-Bu oyunları Nişantaşı Üniversitesi kulüp tanıtım haftasında AR-GE Kulübü standı için yaptım. Amacım, standın önünden geçenlerin ilgisini çekmek ve onları birkaç dakikalığına da olsa eğlendirmekti. İlginizi çektiyse kendi laptopunuza indirip ailenizle ya da arkadaşlarınızla deneyebilirsiniz.
+<p align="center"><a href="https://github.com/Enesttombas/Touchless-Arcade/releases/latest/download/Touchless-Arcade-Windows.zip"><img src="docs/media/indir-dugmesi.png" alt="Download: Windows ZIP" width="420"></a></p>
+<p align="center">Download · right-click the ZIP, <b>Extract All</b> · double-click <code>BASLAT.bat</code></p>
 
-*I made these games for the R&D Club booth at Nişantaşı University's club week, to catch people's attention and give them a few minutes of fun. If they caught your interest, download them to your laptop and try them with your family or friends.* [English ↓](#english)
+<p align="center"><a href="docs/media/canli/neon-kilic.mp4"><img src="docs/media/canli/neon-kilic.gif" width="720" alt="Two players slicing in Neon Kılıç at the university booth"></a></p>
+<p align="center"><sub>Recorded with real players at the booth. Click for the full video.</sub></p>
 
-<br/>
+## What it does
 
-<div align="center">
+**Play with one finger.** Raise your index finger and the game follows it. Hold it over a menu card for one second to start a game, so a booth needs no keyboard or mouse.
 
-**1.** Aşağıdaki düğmeyle indir &nbsp;→&nbsp; **2.** ZIP'e sağ tıkla, **Tümünü ayıkla** &nbsp;→&nbsp; **3.** Açılan klasörde **`BASLAT.bat`**'a çift tıkla
+<p align="center"><a href="docs/media/canli/kanat-rotasi.mp4"><img src="docs/media/canli/kanat-rotasi.gif" height="420" alt="Kanat Rotası: a player steers the bird with a fingertip"></a></p>
 
-Oyunun çalışması için gereken tüm dosyalar paketin içinde; ayrıca bir şey indirmen ya da kurman gerekmez.
+**Two players at once.** Duels track two people in the same frame: in Gülme Düellosu the first to laugh loses, and in Neon Kılıç two blades slice together. AR Maskeler gives everyone in the frame their own mask.
 
-<br/>
+<p align="center"><a href="docs/media/canli/gulme-duellosu.mp4"><img src="docs/media/canli/gulme-duellosu.gif" width="600" alt="Gülme Düellosu: two players face off, first to laugh loses"></a></p>
 
-<a href="https://github.com/Enesttombas/Touchless-Arcade/releases/latest/download/Touchless-Arcade-Windows.zip"><img src="docs/media/indir-dugmesi.png" alt="İndir: Windows ZIP" width="420"/></a>
+**Nine games, one menu.** Every game shares the same camera and perception thread, so switching games is instant.
 
-</div>
-
-<br/>
-
-## Stantta canlı
-
-<div align="center">
-
-<a href="docs/media/canli/neon-kilic.mp4"><img src="docs/media/canli/neon-kilic.gif" alt="Neon Kılıç, iki oyuncu" width="640"/></a>
-
-**Neon Kılıç**: iki oyuncu birlikte dilimliyor. Tur başında **Meyve** ya da **Meme** modu seçilir; bu klip Meme modundan.
-
-<a href="docs/media/canli/gulme-duellosu.mp4"><img src="docs/media/canli/gulme-duellosu.gif" alt="Gülme Düellosu" width="600"/></a>
-
-**Gülme Düellosu**: iki kişi yarışır, ilk gülen kaybeder.
-
-<a href="docs/media/canli/kanat-rotasi.mp4"><img src="docs/media/canli/kanat-rotasi.gif" alt="Kanat Rotası" height="560"/></a>
-
-**Kanat Rotası**: kuşu parmağınla uçur.
-
-<img src="docs/media/canli/ar-maskeler.jpg" alt="AR Maskeler, dört kişi aynı anda" width="640"/>
-
-**AR Maskeler**: kadrajdaki herkes kendi maskesini seçiyor.
-
-</div>
-
-<sub>Üniversite stantında gerçek oyunculardan kayıtlar. Tam videoyu açmak için önizlemeye tıkla.</sub>
-
-## Ekran görüntüleri
-
-<div align="center">
-  <img src="docs/media/menu.png" alt="Ana menü" width="720"/>
-  <br/>
-  <img src="docs/media/oyun-turu.gif" alt="9 oyunun kısa turu" width="600"/>
-  <p><sub>Görseller oyunun kendi render motoruyla sentetik verilerle üretildi; canlı kamera kaydı değildir.</sub></p>
-</div>
-
-## Oyunlar
-
-| | Oyun | Nasıl oynanır |
+| | Game | How you play |
 |---|---|---|
-| 1 | **Neon Kılıç** | İşaret parmağın kılıç olur; **Meyve** ya da **Meme** modunda uçuşanları dilimle. |
-| 2 | **Gülme Düellosu** | İki kişi karşı karşıya: ilk gülen ya da göz kırpan kaybeder. |
-| 3 | **AR Maskeler** | Yüzüne gerçek zamanlı 3B maskeler ve filtreler. |
-| 4 | **Kanat Rotası** | Parmağının yüksekliğiyle kuşu boruların arasından geçir. |
-| 5 | **Bilgi Yağmuru** | Düşen doğru cevabın altına bedeninle koş. |
-| 6 | **Silahşor Düellosu** | "ATEŞ!" yazınca elini en hızlı kaldıran kazanır. |
-| 7 | **Hayalet Klonlar** | Zaman klonların ve görünmezlik pelerini. |
-| 8 | **Altın Vuruş** | Parmağını topa koy, kalede nişan aldığın yere yol çiz. Neon kaleci yalandan yatıp köşeye uçar. |
-| 9 | **Çizim Kâhini** | Havada çiz; yapay zekâ ne çizdiğini tahmin etsin. |
+| 1 | **Neon Kılıç** | Your index finger is a blade. Slice in **Fruit** or **Meme** mode. |
+| 2 | **Gülme Düellosu** | Two players face to face: the first to laugh or blink loses. |
+| 3 | **AR Maskeler** | Real-time 3D masks and filters on every face. |
+| 4 | **Kanat Rotası** | The height of your finger flies the bird between the pipes. |
+| 5 | **Bilgi Yağmuru** | Run with your body under the falling correct answer. |
+| 6 | **Silahşor Düellosu** | When "ATEŞ!" appears, the fastest raised hand wins. |
+| 7 | **Hayalet Klonlar** | Time clones and an invisibility cloak. |
+| 8 | **Altın Vuruş** | Put your finger on the ball and draw the shot. The neon keeper fakes a dive. |
+| 9 | **Çizim Kâhini** | Draw in the air; a small neural net guesses what it is. |
 
-*Taş Kağıt Makas* menüde soluk ve devre dışı bir kart olarak durur.
+*Taş Kağıt Makas* stays in the menu as a faded, disabled card.
 
-## Kurulum ve çalıştırma
+<p align="center"><img src="docs/media/oyun-turu.gif" width="600" alt="A short tour of the nine games rendered with synthetic input"></p>
+<p align="center"><sub>Rendered by the game's own engine from synthetic input, not a live camera recording.</sub></p>
 
-1. **[⬇ İndir](https://github.com/Enesttombas/Touchless-Arcade/releases/latest/download/Touchless-Arcade-Windows.zip)**: yaklaşık 200 MB'lık hazır paket iner.
-2. ZIP'e sağ tıkla → **Tümünü ayıkla**.
-3. Açılan klasördeki **`BASLAT.bat`**'a çift tıkla.
+## How it works
 
-Paketin içinde oyunun kendi Python'u ve tüm kütüphaneleri hazır gelir: ilk açılışta hiçbir şey indirilmez, bilgisayarına bir şey kurulmaz. Windows 10/11 (64 bit) ve bir USB ya da dahili kamera yeterli.
+<p align="center"><img src="docs/media/architecture.svg" width="860" alt="Architecture: camera to AlgiIscisi thread to Algilayici (MediaPipe), then OyuncuKapisi, StantUygulama and the nine p_*.py games, drawn to a 1280x720 window"></p>
 
-<sub>Kaynak kodu indirdiysen (<b>Code → Download ZIP</b>), <code>BASLAT.bat</code> ilk açılışta gerekenleri kendisi indirip kurar (internet gerekir, 3-5 dakika).</sub>
+- `cekirdek.Kamera()` opens a USB camera, or a `tcp://` stream from `kamera_kopru.py` when the camera sits on a second laptop.
+- `AlgiIscisi` in `stant_app.py` runs `Algilayici` from `cekirdek.py` on its own thread: MediaPipe face, gesture and pose models (`app/modeller/*.task`).
+- `OyuncuKapisi` (`oyuncu.py`) decides who is playing. `StantUygulama` and `AnaMenu` own the menu, dwell selection and crash isolation: a game that crashes three times sends you back to the menu.
+- Each game in `oyunlar/p_*.py` exposes `Prototip.isle(kare, algi, t)` and draws with the shared `stand/stand.py`. Çizim Kâhini adds `ciz_tanima.onnx`, a sketch classifier trained on Quick, Draw! data.
 
-> Windows "bilinmeyen yayımcı" uyarısı gösterirse **Ek bilgi → Yine de çalıştır**'a bas. Kamera açılmazsa: Ayarlar → Gizlilik → Kamera → **Masaüstü uygulamalarının kameraya erişmesine izin ver**.
+More detail: [architecture](docs/architecture.md) · [troubleshooting](docs/troubleshooting.md).
 
-## Kontroller
+## Numbers
 
-Kameranın parmağını en iyi algılaması için **işaret parmağını yukarı kaldır, avuç içini kameraya dön**, diğer parmakları kapat. Parmak ucunu doğrudan kameraya uzatırsan kamera parmağı kısaltılmış görür ve takip kopabilir.
+<p align="center"><img src="docs/media/numbers.svg" width="860" alt="261 tests pass with 29 skipped, 9 playable games, 185.2 MB Windows ZIP, 18.6 MB of local models"></p>
 
-<div align="center"><img src="docs/media/parmak-durusu.gif" alt="Doğru parmak duruşu: işaret parmağı yukarı, avuç kameraya" width="600"/></div>
+Measured on 2026-10-22 (Windows 11, Python 3.11): `python -m pytest -q tests` exited 0 with 261 passed and 29 skipped in 478 s. The package size is the GitHub release asset; model sizes are the files in `app/modeller/` and `oyunlar/modeller/`. Raw data: [`docs/media/data/`](docs/media/data/).
 
-Oyun seçmek için elini kartın üstünde tut. Klavye kısayolları (ses, tam ekran, menü) oyun ekranının sol altında hep yazılı.
+## Quick start
 
-## Nasıl çalışıyor?
+1. **[Download the ZIP](https://github.com/Enesttombas/Touchless-Arcade/releases/latest/download/Touchless-Arcade-Windows.zip)** (185 MB).
+2. Right-click it and choose **Extract All**.
+3. Double-click **`BASLAT.bat`** in the extracted folder.
 
-- Yüz, el ve beden takibi: **Google MediaPipe**. Çizim tanıma: **Quick, Draw!** verisiyle eğitilmiş küçük bir **ONNX** ağı. Görüntü işleme: **OpenCV**.
-- Her şey bilgisayarda yerel çalışır. Kamera görüntüsü yalnız bellekte işlenir; diske yazılmaz, internete gönderilmez.
-- Ayrıntılar: [mimari](docs/architecture.md) · [sorun giderme](docs/troubleshooting.md) · [lisanslar](THIRD_PARTY_NOTICES.md) · [değişiklikler](CHANGELOG.md)
+The package carries its own portable Python and every library, so nothing is installed and nothing is downloaded on first launch. You need Windows 10 or 11 (64-bit) and a USB or built-in camera.
 
-## Geliştirme
+If you downloaded the source instead (**Code → Download ZIP**), `BASLAT.bat` installs what it needs on first launch (internet required, 3 to 5 minutes).
+
+> If Windows shows an "unknown publisher" warning, choose **More info → Run anyway**. If the camera does not open: Settings → Privacy → Camera → **Let desktop apps access your camera**.
+
+## Usage
+
+Raise your index finger with your **palm facing the camera** and the other fingers closed. Pointing the fingertip straight at the lens makes the finger look short and tracking can drop.
+
+<p align="center"><img src="docs/media/parmak-durusu.gif" width="600" alt="Correct finger pose: index finger up, palm facing the camera"></p>
+
+Hold your hand over a card for 1 s to pick a game. Hold an open palm in the bottom-left corner for 3 s to go back to the menu. Keyboard: `1` to `9` select, `M` menu, `F` full screen, `Q` quit; the shortcuts are always shown at the bottom left.
+
+Development:
 
 ```cmd
 app\.venv\Scripts\python.exe -m pytest -q tests
 app\.venv\Scripts\python.exe tools\render_preview.py --quick
 ```
 
-Kodun yapısı: `oyunlar/` (oyunlar ve menü), `stand/` (ortak çizim/efekt kütüphanesi), `app/modeller/` (MediaPipe modelleri), `tests/`.
+Code layout: `oyunlar/` (games and menu), `stand/` (shared drawing and effects), `app/modeller/` (MediaPipe models), `tests/`.
 
----
+## Limits
 
-<a name="english"></a>
-## English
+- Windows only. The ZIP and `BASLAT.bat` are built and tested for Windows 10/11 64-bit.
+- The release is unsigned, so Windows SmartScreen warns on first launch.
+- Tracking depends on light and camera angle. Back light and a fingertip pointed at the lens are the usual failures; see [troubleshooting](docs/troubleshooting.md).
+- The in-game text is Turkish.
 
-**Touchless Arcade** is a set of 9 camera games you play with just your finger in front of a mirrored live camera. No controller or touch screen needed. I made it for the R&D Club booth at Nişantaşı University's club week, to catch people's attention and give them a few minutes of fun. If it caught your interest, download it to your laptop and try it with your family or friends.
+## License
 
-**Run it on Windows:**
-1. **[Download the ZIP](https://github.com/Enesttombas/Touchless-Arcade/releases/latest/download/Touchless-Arcade-Windows.zip)** and extract it (right-click → Extract All).
-2. Double-click **`BASLAT.bat`**.
+[MIT](LICENSE). Third-party model licenses: [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Changes: [CHANGELOG.md](CHANGELOG.md).
 
-The download is a ready-to-run package (about 200 MB) with its own portable Python and all libraries inside: nothing is installed on your PC and nothing is downloaded on first launch.
-
-**Controls:** raise your index finger with the palm facing the camera (don't point the fingertip straight at the lens). Hold your hand over a card for 1 s to pick a game. Hold an open palm in the bottom-left corner for 3 s to return to the menu. Keyboard: `1`–`9` select, `M` menu, `F` fullscreen, `Q` quit.
-
-**Live demos:** see the clips under *Stantta canlı* above, recorded with real players at a university booth.
-
-**Tech:** MediaPipe (face, hands, pose), OpenCV, ONNX Runtime (a Quick, Draw! sketch classifier). Everything runs locally on the CPU, and camera frames never leave memory.
-
-## Lisans
-
-[MIT](LICENSE). Üçüncü taraf modellerin lisansları: [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+The previous README is kept in [docs/NOTES.md](docs/NOTES.md).

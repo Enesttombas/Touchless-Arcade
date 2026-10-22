@@ -1,0 +1,9 @@
+{
+ "metrik": "Windows release asset",
+ "deger": 185150952,
+ "birim": "byte",
+ "komut": "gh api repos/Enesttombas/Touchless-Arcade/releases --jq '.[0].assets[0].size'",
+ "rc": 0,
+ "tarih": "2026-10-22",
+ "makine": "GitHub API"
+}
